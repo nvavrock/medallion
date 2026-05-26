@@ -6,10 +6,19 @@ See [docs/charter.md](docs/charter.md) and [docs/disclaimer.md](docs/disclaimer.
 
 ## Quick start
 
+**Prerequisites:** Python 3.11+ and either [uv](https://docs.astral.sh/uv/) (recommended) or the OS `python3-venv` package:
+
 ```bash
-make install
-make reproduce
+# Debian/Ubuntu if you do not use uv:
+sudo apt install python3-venv
 ```
+
+```bash
+make install      # creates .venv and installs dependencies
+make reproduce    # tests, claim audit, and smoke experiments
+```
+
+If a previous `make install` failed, remove the broken venv first: `make clean && make install`
 
 ## Structure
 
