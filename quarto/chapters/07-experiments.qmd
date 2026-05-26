@@ -1,0 +1,37 @@
+---
+title: "Phase VII — Computational Reconstruction"
+---
+
+{{< include ../../research/phase_07_compute/README.md >}}
+
+## Experiment results (frozen)
+
+Results from `make smoke` (toy simulations with costs). Re-run locally to refresh.
+
+### EXP-03 — Mean reversion
+
+```json
+{{< include ../../experiments/03_mean_reversion/results/summary.json >}}
+```
+
+### EXP-04 — Almgren–Chriss execution edge
+
+```json
+{{< include ../../experiments/04_almgren_chriss/results/summary.json >}}
+```
+
+### EXP-05 — Vol target / banded leverage
+
+```json
+{{< include ../../experiments/05_vol_target_kelly/results/summary.json >}}
+```
+
+### EXP-07 — Multi-signal ensemble
+
+```json
+{{< include ../../experiments/07_multi_signal/results/summary.json >}}
+```
+
+::: {.callout-warning}
+Negative or extreme Sharpe values in toys indicate model misspecification or cost drag—not Medallion performance claims.
+:::

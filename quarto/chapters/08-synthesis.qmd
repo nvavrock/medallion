@@ -1,0 +1,5 @@
+---
+title: "Phase VIII — Synthesis"
+---
+
+{{< include ../../research/phase_08_synthesis/synthesis.md >}}

@@ -1,42 +1,50 @@
 # Medallion Fund Reconstruction
 
-Evidence-driven internal research project to reconstruct plausible operating principles behind Renaissance Technologies' Medallion Fund using **public sources only**.
+[![Release](https://img.shields.io/github/v/tag/nvavrock/medallion?label=release)](https://github.com/nvavrock/medallion/releases)
+[![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/research-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE-CONTENT)
 
-See [docs/charter.md](docs/charter.md) and [docs/disclaimer.md](docs/disclaimer.md).
+Public, evidence-driven reconstruction of plausible operating principles behind Renaissance Technologies’ Medallion Fund—**public sources only**, with reproducible experiments and a [Quarto](https://quarto.org/) research site.
+
+> **Site:** [https://nvavrock.github.io/medallion/](https://nvavrock.github.io/medallion/) (available after the repository is public and GitHub Pages is enabled). Build locally with `make site` / `make preview`.
+
+See [docs/disclaimer.md](docs/disclaimer.md) — not investment advice; not affiliated with RenTech.
 
 ## Quick start
 
-**Prerequisites:** Python 3.11+ and either [uv](https://docs.astral.sh/uv/) (recommended) or the OS `python3-venv` package:
+**Prerequisites:** Python 3.11+, [Quarto](https://quarto.org/docs/get-started/), and [uv](https://docs.astral.sh/uv/) (recommended) or `python3-venv`:
 
 ```bash
-# Debian/Ubuntu if you do not use uv:
-sudo apt install python3-venv
+sudo apt install python3-venv   # if not using uv
 ```
 
 ```bash
-make install      # creates .venv and installs dependencies
-make reproduce    # tests, claim audit, and smoke experiments
+make install       # Python deps
+make reproduce     # tests, claim audit, experiments
+make site          # build Quarto website
+make preview       # live preview of the site
 ```
-
-If a previous `make install` failed, remove the broken venv first: `make clean && make install`
 
 ## Structure
 
 | Path | Purpose |
 |------|---------|
-| `docs/` | SDLC docs (charter, requirements, rubric, architecture, test plan) |
-| `research/` | Phase I–VIII write-ups |
+| `quarto/` | Public Quarto website (chapters, appendices) |
+| `docs/` | Charter, requirements, [publishing](docs/publishing.md) |
+| `research/` | Phase I–VIII source markdown (included by Quarto) |
 | `data/` | Evidence DB, signal DB, bibliography |
-| `src/medallion/` | Python library (evidence, signals, simulation) |
+| `src/medallion/` | Python library |
 | `experiments/` | Reproducible hypothesis tests |
-| `schemas/` | JSON Schema validation |
 
 ## Evidence citations
 
-In research markdown: `[[claim:CLM-2024-001]]`
+In research markdown: `[[claim:CLM-2024-001]]` → links to the [evidence registry](quarto/appendices/evidence-registry.qmd) in the built site.
 
-Run audit: `make claim-audit`
+```bash
+make claim-audit
+```
 
-## Release
+## Releases
 
-Internal **v0.1.0** — see [CHANGELOG.md](CHANGELOG.md).
+- **v0.2.0** — Public Quarto site (preview; repo may remain private until launch)
+- **v0.1.0** — Research corpus + code — [CHANGELOG.md](CHANGELOG.md)

@@ -1,0 +1,32 @@
+---
+title: "About, disclaimer & licenses"
+---
+
+## Disclaimer
+
+This project is an **educational, evidence-driven reconstruction** based solely on **publicly available** information.
+
+- **Not** investment advice, solicitation, or a statement of fact about proprietary RenTech operations.
+- **Not affiliated** with Renaissance Technologies, the Medallion Fund, or related entities.
+- **Trademarks** belong to their respective owners; names used for identification only.
+
+Many conclusions are **hypotheses** labeled with evidence level (E0–E4), source quality, replication status, and confidence. Performance figures (Sharpe, leverage) are often **ranges**, not audited facts. Simulations are **partial** and cannot replicate Medallion’s full edge.
+
+## Licenses
+
+| Material | License |
+|----------|---------|
+| Code (`src/`, `scripts/`, `experiments/`) | [MIT](../LICENSE) |
+| Research & this website | [CC BY-NC 4.0](../LICENSE-CONTENT) |
+
+## Contributing
+
+Issues and pull requests are welcome when the repository is public. Please:
+
+1. Add evidence records to `data/evidence.yaml` for new claims
+2. Run `make claim-audit` and `make site` before submitting
+3. Follow the [evidence rubric](../docs/evidence_rubric.md)
+
+## SDLC documentation
+
+Developer docs: `docs/charter.md`, `docs/requirements.md`, `docs/publishing.md`.

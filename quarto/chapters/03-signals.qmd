@@ -1,0 +1,7 @@
+---
+title: "Phase III — Signal Reconstruction"
+---
+
+{{< include ../../research/phase_03_signals/README.md >}}
+
+See the full [signal database](../appendices/signal-database.qmd).

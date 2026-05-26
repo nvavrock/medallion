@@ -1,0 +1,5 @@
+---
+title: "Appendix — Signal database"
+---
+
+{{< include _generated-signals.md >}}

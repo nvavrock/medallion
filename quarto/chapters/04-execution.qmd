@@ -1,0 +1,5 @@
+---
+title: "Phase IV — Microstructure & Execution"
+---
+
+{{< include ../../research/phase_04_execution/README.md >}}

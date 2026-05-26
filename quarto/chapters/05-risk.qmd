@@ -1,0 +1,5 @@
+---
+title: "Phase V — Portfolio Construction & Risk"
+---
+
+{{< include ../../research/phase_05_risk/risk_stack.md >}}

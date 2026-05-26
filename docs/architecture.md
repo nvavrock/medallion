@@ -2,7 +2,7 @@
 
 ## Overview
 
-Monorepo combining an **evidence-graded research corpus** (`research/`) with a **reproducible Python package** (`src/medallion/`) and **numbered experiments** (`experiments/`). Structured data lives in `data/` as YAML; schemas in `schemas/` validate records.
+Monorepo combining an **evidence-graded research corpus** (`research/`), a **Quarto public website** (`quarto/`), a **reproducible Python package** (`src/medallion/`), and **numbered experiments** (`experiments/`). Structured data lives in `data/` as YAML; schemas in `schemas/` validate records.
 
 ```mermaid
 flowchart TB
@@ -10,12 +10,17 @@ flowchart TB
     Charter[charter]
     Req[requirements]
     Rubric[evidence_rubric]
+    Publishing[publishing]
   end
   subgraph data_layer [data]
     Evidence[evidence.yaml]
     Signals[signals.yaml]
     Bib[bibliography.yaml]
-    Manifest[manifest.yaml]
+  end
+  subgraph quarto_layer [quarto]
+    Qmd[chapters_qmd]
+    Filter[claim_refs_lua]
+    Site[_site_output]
   end
   subgraph code_layer [src_medallion]
     EvidenceMod[evidence.py]
@@ -25,62 +30,55 @@ flowchart TB
   subgraph research_layer [research]
     Phases[phase_01_to_08]
   end
-  subgraph exp_layer [experiments]
-    ExpScripts[numbered_experiments]
-  end
-  Phases -->|claim_refs| Evidence
-  ExpScripts --> SignalsMod
-  ExpScripts --> Sim
-  EvidenceMod --> Evidence
-  SignalsMod --> Signals
+  Phases -->|include| Qmd
+  Evidence --> Filter
+  Qmd --> Site
+  ExpScripts[experiments] --> Sim
 ```
 
 ## Repository Layout
 
 ```text
 medallion/
-  docs/                 # SDLC documentation
-  schemas/              # JSON Schema for evidence, signals, experiments
-  data/                 # YAML databases (committed, small)
-  research/             # Phase write-ups (markdown)
-  src/medallion/        # Shared Python library
-  experiments/          # One folder per experiment
-  r/                    # Optional R scripts
-  scripts/              # claim_audit, build_db
-  tests/                # pytest
+  docs/                 # SDLC + publishing docs
+  quarto/               # Public Quarto website
+    _quarto.yml
+    chapters/
+    appendices/
+    filters/
+  schemas/
+  data/
+  research/
+  src/medallion/
+  experiments/
+  scripts/              # claim_audit, build_quarto_assets
+  tests/
+  .github/workflows/    # quarto-publish (Pages when public)
   pyproject.toml
   Makefile
-  README.md
-  CHANGELOG.md
 ```
 
 ## Data Model
 
-### Evidence record
+See schemas in `schemas/`. Evidence and signals stored in `data/*.yaml`.
 
-See `schemas/evidence_record.schema.json`. Stored in `data/evidence.yaml` as a list under `claims`.
+## Publication Pipeline
 
-### Signal hypothesis
+1. `make quarto-assets` — bibliography.bib, appendices, claims-map.json
+2. `make claim-audit` — research claim IDs valid
+3. `quarto render quarto` — claim-refs.lua resolves `[[claim:...]]`
+4. Output: `quarto/_site/` (gitignored)
 
-See `schemas/signal_hypothesis.schema.json`. Stored in `data/signals.yaml` under `signals`.
-
-### Experiment contract
-
-See `schemas/experiment_contract.schema.json`. Each experiment folder has `contract.yaml`.
+When the GitHub repo is public: enable Pages from GitHub Actions workflow.
 
 ## Tooling
 
-| Component | Choice | Notes |
-|-----------|--------|-------|
-| Python | 3.11+ | Primary language |
-| Package manager | pip + pyproject.toml | `pip install -e ".[dev]"` |
-| Backtesting | vectorbt (light use) + custom sim in `simulation.py` | Avoid duplicate frameworks |
-| Stats | statsmodels, numpy, pandas | Core stack |
-| R | Optional | `r/cointegration_example.R` for reference |
-| Validation | jsonschema | Load YAML, validate against schemas |
-| Tests | pytest | Unit + smoke |
-
-Optional later: PyMC, PyTorch, jax — only when a hypothesis requires them (YAGNI).
+| Component | Choice |
+|-----------|--------|
+| Python | 3.11+ |
+| Quarto | System CLI (website) |
+| Package manager | uv / pip |
+| Validation | jsonschema, claim audit, Quarto build |
 
 ## Key Flows
 
@@ -88,22 +86,17 @@ Optional later: PyMC, PyTorch, jax — only when a hypothesis requires them (YAG
 
 1. Add row to `data/evidence.yaml`
 2. Reference in research: `[[claim:CLM-YYYY-NNN]]`
-3. Run `make claim-audit`
-
-### Running an experiment
-
-1. Read `experiments/NN_name/contract.yaml`
-2. Run `python -m experiments.NN_name.run` or `make experiment-NN`
-3. Results written to `experiments/NN_name/results/` (gitignored if large)
+3. `make claim-audit` and `make site`
 
 ### Release
 
-`make reproduce` → install deps → tests → smoke experiments → claim audit
+- `make reproduce` — code QA
+- `make site` — public site build
 
 ## Versioning
 
-Corpus and code share semver (e.g. v0.1.0). Tag git release; snapshot `data/*.yaml` in release notes.
+Corpus, site, and code share semver. v0.2.0 adds Quarto publication.
 
 ## Security
 
-No secrets in repo. External data paths documented in `data/manifest.yaml` only.
+No secrets in repo. `_site/` and `.venv/` gitignored.

@@ -18,6 +18,6 @@ See [experiments/04_almgren_chriss/](../../experiments/04_almgren_chriss/) — c
 
 ## Regulatory / structural edges (inference)
 
-We hypothesize (E1) that liquidity rebates, fee tiers, and tax-aware trading may add **incremental** net return but are under-documented publicly. Full treatment in [Phase VIII synthesis](../phase_08_synthesis/synthesis.md).
+We hypothesize (E1) that liquidity rebates, fee tiers, and tax-aware trading may add **incremental** net return but are under-documented publicly. Full treatment in Phase VIII — Synthesis (see `research/phase_08_synthesis/synthesis.md` or the site chapter *Phase VIII*).
 
 Requirements: R4, R4b

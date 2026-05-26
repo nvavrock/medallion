@@ -1,6 +1,6 @@
 # Requirements — Medallion Fund Reconstruction
 
-Traceability: each requirement links to `research/` folders and optional `experiments/`.
+Traceability: each requirement links to `research/` folders, `quarto/`, and optional `experiments/`.
 
 ## Functional Requirements
 
@@ -21,6 +21,7 @@ Traceability: each requirement links to `research/` folders and optional `experi
 | R6 | Org comparison matrix | VI | `research/phase_06_org/comparison_matrix.md` | vs Two Sigma, DE Shaw, Citadel |
 | R7 | Reproducible experiments (Python) | VII | `experiments/*` | Pinned deps; README per experiment |
 | R8 | Synthesis with counterarguments | VIII | `research/phase_08_synthesis/synthesis.md` | Integrates phases; survivorship; regulatory section |
+| R9 | Quarto public website | Pub | `quarto/` | `make site` succeeds; disclaimer on index and about |
 
 ## Non-Functional Requirements (NFR)
 
@@ -29,9 +30,10 @@ Traceability: each requirement links to `research/` folders and optional `experi
 | NFR1 | Every major claim has evidence metadata | `make claim-audit` passes |
 | NFR2 | Simulations include transaction costs, slippage, capacity | Experiment contracts + code review |
 | NFR3 | Sourced vs inferred language per rubric | Manual spot-check + audit |
-| NFR4 | Normalized bibliography | `data/bibliography.yaml`; no `#:~:text` in research |
+| NFR4 | Normalized bibliography | `data/bibliography.yaml` → `quarto/references.bib` |
 | NFR5 | Reproducible environment | `make reproduce` from clean venv |
-| NFR6 | Internal disclaimer linked | `docs/disclaimer.md` linked from synthesis |
+| NFR6 | Public disclaimer on Quarto site | `index.qmd` + `about.qmd` link to disclaimer |
+| NFR7 | Claim refs resolve in Quarto | `claim-refs.lua` filter; build fails on unknown IDs |
 
 ## PDF Review Remediation (acceptance)
 
@@ -44,7 +46,7 @@ Traceability: each requirement links to `research/` folders and optional `experi
 | Failed peers (LTCM, etc.) | R8 | Survivorship section |
 | Simulation rigor (not coin-flip only) | NFR2, R7 | ≥3 cost-aware experiments |
 | Reduce repetition | NFR3 | No duplicate win-rate mantra without new evidence |
-| Citation cleanup | NFR4 | Bibliography keys only in prose |
+| Citation cleanup | NFR4 | Bibliography in Quarto |
 
 ## Review Gates
 
@@ -54,6 +56,7 @@ Traceability: each requirement links to `research/` folders and optional `experi
 | B | Phase III | ≥10 signals with replication field filled |
 | C | Phase VII | ≥3 experiments with full contracts |
 | D | Release | Synthesis + claim audit + `make test` |
+| E | Quarto | `make site` + NFR6–NFR7 |
 
 ## Out of Scope
 

@@ -1,0 +1,11 @@
+---
+title: "Phase II — Data Architecture"
+---
+
+{{< include ../../research/phase_02_data/README.md >}}
+
+## Data availability matrix (YAML)
+
+```yaml
+{{< include ../../research/phase_02_data/data_availability_matrix.yaml >}}
+```

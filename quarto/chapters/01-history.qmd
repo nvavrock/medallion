@@ -1,0 +1,11 @@
+---
+title: "Phase I — Historical Reconstruction"
+---
+
+{{< include ../../research/phase_01_history/timeline.md >}}
+
+{{< include ../../research/phase_01_history/strategy_evolution.md >}}
+
+{{< include ../../research/phase_01_history/personnel_matrix.md >}}
+
+{{< include ../../research/phase_01_history/infrastructure_timeline.md >}}

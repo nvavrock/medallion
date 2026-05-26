@@ -1,12 +1,13 @@
 .PHONY: install venv deps test claim-audit reproduce experiments smoke clean
+.PHONY: quarto-assets quarto-check site preview
 
 PYTHON ?= python3
 VENV ?= .venv
 PY = $(VENV)/bin/python
 PIP = $(VENV)/bin/pip
 UV ?= $(shell command -v uv 2>/dev/null)
+QUARTO ?= quarto
 
-# Create .venv if missing (uv works without apt python3-venv; falls back to python3 -m venv)
 venv:
 ifeq ($(UV),)
 	@test -x $(PY) || ( $(PYTHON) -m venv $(VENV) || { \
@@ -35,6 +36,11 @@ test: deps
 claim-audit: deps
 	$(PY) scripts/claim_audit.py
 
+quarto-assets: deps
+	$(PY) scripts/build_quarto_assets.py
+
+quarto-check: quarto-assets claim-audit
+
 smoke: deps
 	$(PY) experiments/03_mean_reversion/run.py
 	$(PY) experiments/04_almgren_chriss/run.py
@@ -46,5 +52,22 @@ experiments: smoke
 reproduce: deps test claim-audit smoke
 	@echo "Reproduce pipeline complete."
 
+site: quarto-check smoke
+	@command -v $(QUARTO) >/dev/null 2>&1 || { \
+		echo "ERROR: Quarto CLI not found. Install: https://quarto.org/docs/get-started/"; \
+		exit 1; \
+	}
+	cd quarto && $(QUARTO) render
+
+preview: quarto-check smoke
+	@command -v $(QUARTO) >/dev/null 2>&1 || { \
+		echo "ERROR: Quarto CLI not found. Install: https://quarto.org/docs/get-started/"; \
+		exit 1; \
+	}
+	cd quarto && $(QUARTO) preview
+
 clean:
-	rm -rf $(VENV)
+	rm -rf $(VENV) quarto/_site quarto/.quarto
+	rm -f quarto/references.bib
+	rm -f quarto/filters/claims-map.json
+	rm -f quarto/appendices/_generated-*.md

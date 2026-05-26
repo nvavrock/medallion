@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Medallion Fund Reconstruction"
+  site-url: https://nvavrock.github.io/medallion/
+  repo-url: https://github.com/nvavrock/medallion
+  repo-actions: [edit, issue]
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/nvavrock/medallion
+  sidebar:
+    style: floating
+    contents:
+      - section: "Research"
+        contents:
+          - chapters/01-history.qmd
+          - chapters/02-data.qmd
+          - chapters/03-signals.qmd
+          - chapters/04-execution.qmd
+          - chapters/05-risk.qmd
+          - chapters/06-organization.qmd
+          - chapters/07-experiments.qmd
+          - chapters/08-synthesis.qmd
+      - section: "Appendices"
+        contents:
+          - appendices/evidence-registry.qmd
+          - appendices/signal-database.qmd
+          - appendices/bibliography.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles/custom.scss
+    toc: true
+    code-copy: true
+    include-after-body: _includes/disclaimer-footer.html
+
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+
+filters:
+  - filters/claim-refs.lua
+
+execute:
+  freeze: auto
+  echo: false
+  warning: false

@@ -10,3 +10,8 @@ experiments/*/results/*.csv
 experiments/*/results/*.json
 .DS_Store
 *:Zone.Identifier
+quarto/_site/
+quarto/.quarto/
+quarto/references.bib
+quarto/filters/claims-map.json
+quarto/appendices/_generated-*.md

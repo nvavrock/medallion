@@ -1,0 +1,9 @@
+---
+title: "Notebook — Mean reversion (EXP-03)"
+execute:
+  enabled: false
+---
+
+Static results are in [Phase VII — Experiments](../chapters/07-experiments.qmd).
+
+To execute: `make smoke` then `make site`.

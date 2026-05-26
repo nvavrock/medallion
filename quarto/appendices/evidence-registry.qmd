@@ -1,0 +1,5 @@
+---
+title: "Appendix — Evidence registry"
+---
+
+{{< include _generated-evidence.md >}}

@@ -1,12 +1,16 @@
-# Disclaimer — Internal Use Only
+# Disclaimer
 
-## Purpose of This Repository
+## Purpose
 
-This project is an **educational, evidence-driven reconstruction** based solely on **publicly available** information. It is intended for **internal personal learning**, not investment advice, not solicitation, and not publication as fact about Renaissance Technologies’ proprietary operations.
+This project is an **educational, evidence-driven reconstruction** based solely on **publicly available** information. It is published for general learning and discussion. It is **not** investment advice, not solicitation, and not a claim of fact about Renaissance Technologies’ proprietary operations.
 
-## No Affiliation
+## No Affiliation / Trademarks
 
-This work is **not affiliated with, endorsed by, or conducted on behalf of** Renaissance Technologies, the Medallion Fund, or any related entity. No proprietary systems, data, or trade secrets are used or targeted.
+This work is **not affiliated with, endorsed by, or conducted on behalf of** Renaissance Technologies, the Medallion Fund, or any related entity.
+
+“Renaissance Technologies,” “Medallion,” and related names are trademarks of their respective owners. References are for identification and commentary only.
+
+No proprietary systems, data, or trade secrets are used or targeted.
 
 ## Uncertainty and Hypothesis
 
@@ -21,11 +25,16 @@ Many conclusions are **hypotheses** inferred from public sources, academic analo
 
 ## Not Investment Advice
 
-Nothing in this repository constitutes financial, legal, or investment advice. Past performance of any fund or simulation does not guarantee future results.
+Nothing in this repository or its Quarto site constitutes financial, legal, or investment advice. Past performance of any fund or simulation does not guarantee future results. Consult qualified professionals before making investment decisions.
+
+## Licensing
+
+- **Code** (`src/`, `scripts/`, `experiments/`): [MIT License](../LICENSE)
+- **Research and Quarto site** (`research/`, `quarto/`): [CC BY-NC 4.0](../LICENSE-CONTENT)
 
 ## Data and Licensing
 
-Researchers must respect licenses for any external datasets. The `data/manifest.yaml` file documents data sources; do not commit large proprietary datasets.
+Respect licenses for any external datasets. See `data/manifest.yaml` for documented sources. Do not commit large proprietary datasets.
 
 ## Simulation Limits
 
