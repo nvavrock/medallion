@@ -6,7 +6,10 @@ VENV ?= .venv
 PY = $(VENV)/bin/python
 PIP = $(VENV)/bin/pip
 UV ?= $(shell command -v uv 2>/dev/null)
-QUARTO ?= quarto
+# Prefer PATH; fall back to user-local install (common on WSL)
+QUARTO ?= $(shell \
+	command -v quarto 2>/dev/null || \
+	{ test -x "$$HOME/.local/quarto/bin/quarto" && echo "$$HOME/.local/quarto/bin/quarto"; })
 
 venv:
 ifeq ($(UV),)
@@ -53,18 +56,22 @@ reproduce: deps test claim-audit smoke
 	@echo "Reproduce pipeline complete."
 
 site: quarto-check smoke
-	@command -v $(QUARTO) >/dev/null 2>&1 || { \
-		echo "ERROR: Quarto CLI not found. Install: https://quarto.org/docs/get-started/"; \
+	@test -n "$(QUARTO)" && test -x "$(QUARTO)" || { \
+		echo "ERROR: Quarto CLI not found."; \
+		echo "  Install: https://quarto.org/docs/get-started/"; \
+		echo "  Or add to PATH: export PATH=\"$$HOME/.local/quarto/bin:$$PATH\""; \
 		exit 1; \
 	}
-	cd quarto && $(QUARTO) render
+	cd quarto && "$(QUARTO)" render
 
 preview: quarto-check smoke
-	@command -v $(QUARTO) >/dev/null 2>&1 || { \
-		echo "ERROR: Quarto CLI not found. Install: https://quarto.org/docs/get-started/"; \
+	@test -n "$(QUARTO)" && test -x "$(QUARTO)" || { \
+		echo "ERROR: Quarto CLI not found."; \
+		echo "  Install: https://quarto.org/docs/get-started/"; \
+		echo "  Or add to PATH: export PATH=\"$$HOME/.local/quarto/bin:$$PATH\""; \
 		exit 1; \
 	}
-	cd quarto && $(QUARTO) preview
+	cd quarto && "$(QUARTO)" preview
 
 clean:
 	rm -rf $(VENV) quarto/_site quarto/.quarto

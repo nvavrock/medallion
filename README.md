@@ -12,7 +12,13 @@ See [docs/disclaimer.md](docs/disclaimer.md) — not investment advice; not affi
 
 ## Quick start
 
-**Prerequisites:** Python 3.11+, [Quarto](https://quarto.org/docs/get-started/), and [uv](https://docs.astral.sh/uv/) (recommended) or `python3-venv`:
+**Prerequisites:** Python 3.11+, [Quarto](https://quarto.org/docs/get-started/), and [uv](https://docs.astral.sh/uv/) (recommended) or `python3-venv`.
+
+If `make site` says Quarto is missing but you installed it locally:
+
+```bash
+export PATH="$HOME/.local/quarto/bin:$PATH"
+```
 
 ```bash
 sudo apt install python3-venv   # if not using uv
