@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medallion.local/schemas/experiment_contract.schema.json",
+  "title": "ExperimentContract",
+  "type": "object",
+  "required": [
+    "experiment_id",
+    "title",
+    "hypothesis",
+    "inputs",
+    "assumptions",
+    "cost_model",
+    "capacity_limit",
+    "outputs",
+    "limitations",
+    "linked_signals"
+  ],
+  "properties": {
+    "experiment_id": { "type": "string" },
+    "title": { "type": "string" },
+    "hypothesis": { "type": "string" },
+    "inputs": { "type": "object" },
+    "assumptions": { "type": "array", "items": { "type": "string" } },
+    "cost_model": {
+      "type": "object",
+      "properties": {
+        "commission_bps": { "type": "number" },
+        "slippage_bps": { "type": "number" },
+        "market_impact_model": { "type": "string" }
+      }
+    },
+    "capacity_limit": { "type": "string" },
+    "outputs": { "type": "array", "items": { "type": "string" } },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "linked_signals": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

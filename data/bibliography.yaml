@@ -1,0 +1,43 @@
+# Normalized bibliography — cite as [key] in research markdown
+sources:
+  zuckerman2019:
+    title: "The Man Who Solved the Market"
+    author: "Gregory Zuckerman"
+    year: 2019
+    type: book
+  patterson2010:
+    title: "The Quants"
+    author: "Scott Patterson"
+    year: 2010
+    type: book
+  lo2007:
+    title: "Efficient Markets Hypothesis and Limits of Arbitrage"
+    author: "Andrew W. Lo"
+    year: 2007
+    type: paper
+  almgren_chriss2000:
+    title: "Optimal Execution of Portfolio Transactions"
+    author: "Almgren and Chriss"
+    year: 2000
+    type: paper
+  kyle1985:
+    title: "Continuous Auctions and Insider Trading"
+    author: "Albert S. Kyle"
+    year: 1985
+    type: paper
+  hasbrouck2007:
+    title: "Empirical Market Microstructure"
+    author: "Joel Hasbrouck"
+    year: 2007
+    type: book
+  cornell_medallion:
+    title: "Medallion Fund performance commentary"
+    author: "Brad Cornell et al."
+    year: 2020
+    type: essay
+    note: "Public estimates; Sharpe not precisely disclosed"
+  renaissance_factsheet:
+    title: "SEC / public filings and fund commentary (aggregated secondary)"
+    year: null
+    type: secondary
+    note: "No official Sharpe disclosure"

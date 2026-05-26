@@ -1,0 +1,24 @@
+experiment_id: EXP-03
+title: Mean reversion with costs and capacity
+hypothesis: Short-horizon mean reversion can show positive gross Sharpe but net Sharpe degrades with costs and capacity breaches.
+inputs:
+  n_days: 1260
+  seed: 42
+assumptions:
+  - Synthetic price series with rolling z-score signal
+  - Linear transaction costs on position changes
+cost_model:
+  commission_bps: 1.0
+  slippage_bps: 2.0
+  market_impact_model: none (toy)
+capacity_limit: "1% of 500M USD AUM per day turnover proxy"
+outputs:
+  - gross_sharpe
+  - net_sharpe
+  - max_drawdown
+  - capacity_breach_pct
+limitations:
+  - Not real market data
+  - No cross-sectional portfolio
+linked_signals:
+  - SIG-002

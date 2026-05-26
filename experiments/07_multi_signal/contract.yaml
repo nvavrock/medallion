@@ -1,0 +1,21 @@
+experiment_id: EXP-07
+title: Multi-signal ensemble toy
+hypothesis: Combining mean reversion and momentum sleeves improves net Sharpe vs single sleeve under costs.
+inputs:
+  seeds: [10, 20]
+assumptions:
+  - Independent synthetic sleeves
+  - Equal risk budget
+cost_model:
+  commission_bps: 1.5
+  slippage_bps: 2.5
+  market_impact_model: none
+capacity_limit: combined turnover capped implicitly
+outputs:
+  - single_sleeve_net_sharpe
+  - ensemble_net_sharpe
+limitations:
+  - No correlation regime modeling
+linked_signals:
+  - SIG-002
+  - SIG-003

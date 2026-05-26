@@ -1,0 +1,100 @@
+claims:
+  - claim_id: CLM-2024-001
+    text: "Renaissance Technologies was founded in 1982 by Jim Simons."
+    evidence_level: E3
+    source_quality: S2
+    sources: [zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: []
+    confidence: 0.95
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2024-002
+    text: "Medallion shifted from currencies and futures toward broader statistical equity strategies over the 1990s–2000s."
+    evidence_level: E2
+    source_quality: S2
+    sources: [zuckerman2019, patterson2010]
+    replication_status: not_attempted
+    counterarguments: ["Public narrative may oversimplify continuous strategy blending"]
+    confidence: 0.75
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2024-003
+    text: "Reported Medallion gross Sharpe is often cited above 5 in secondary sources; exact values are not publicly audited."
+    evidence_level: E2
+    source_quality: S2
+    sources: [cornell_medallion, zuckerman2019]
+    replication_status: partial
+    counterarguments: ["Survivorship and reporting selection", "Fees and capacity change net metrics"]
+    confidence: 0.5
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2024-004
+    text: "We hypothesize effective leverage often operated within a band roughly 5x–12x, not a single fixed ratio."
+    evidence_level: E1
+    source_quality: S1
+    sources: [zuckerman2019]
+    replication_status: partial
+    counterarguments: ["Leverage varies by regime and instrument", "Fund structure changed over decades"]
+    confidence: 0.4
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2024-005
+    text: "Elwyn Berlekamp's early role emphasized systematic, model-driven trading discipline."
+    evidence_level: E2
+    source_quality: S2
+    sources: [zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: []
+    confidence: 0.8
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2024-006
+    text: "Peter Brown and Robert Mercer led a transition toward large-scale computational ML infrastructure in the late 1990s."
+    evidence_level: E2
+    source_quality: S2
+    sources: [zuckerman2019, patterson2010]
+    replication_status: not_attempted
+    counterarguments: ["Exact ML architectures remain undisclosed"]
+    confidence: 0.7
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2024-007
+    text: "Execution edge alone is unlikely to fully explain Medallion's multi-decade net performance without substantial predictive alpha."
+    evidence_level: E2
+    source_quality: S2
+    sources: [almgren_chriss2000, kyle1985]
+    replication_status: partial
+    counterarguments: ["Rebates and venue structure may add persistent micro edge"]
+    confidence: 0.65
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2024-008
+    text: "Options and volatility arbitrage are plausible significant components but are under-documented in public sources."
+    evidence_level: E1
+    source_quality: S1
+    sources: [patterson2010]
+    replication_status: not_attempted
+    counterarguments: ["May have been capacity-limited relative to equities/futures"]
+    confidence: 0.45
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2024-009
+    text: "Organizational design (scientist-led research, secrecy, long-horizon hiring) may itself constitute durable edge."
+    evidence_level: E2
+    source_quality: S2
+    sources: [zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Other quant peers share similar traits without identical returns"]
+    confidence: 0.6
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2024-010
+    text: "LTCM's failure illustrates leverage and model-risk concentration risks absent in a diversified short-horizon stat-arb narrative."
+    evidence_level: E3
+    source_quality: S3
+    sources: [patterson2010]
+    replication_status: not_attempted
+    counterarguments: ["Medallion may have used substantial leverage with different risk controls"]
+    confidence: 0.85
+    last_verified: "2026-05-26"

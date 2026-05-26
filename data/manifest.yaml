@@ -1,0 +1,8 @@
+# Data manifest — large datasets stay external; paths documented here
+version: 1
+datasets: []
+# Example entry:
+#   - id: crsp_daily
+#     path: /data/external/crsp
+#     license: academic
+#     earliest_year: 1926

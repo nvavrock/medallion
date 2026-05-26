@@ -1,0 +1,154 @@
+# Historical Data Availability Matrix (1980–2025)
+# Fields: earliest_year, cost, storage_gb_per_year, compute, coverage, latency, viability
+
+datasets:
+  - name: equity_tick_trades
+    category: traditional
+    earliest_year: 1993
+    cost: high
+    storage_gb_per_year: 500
+    compute: cluster
+    coverage: US equities
+    latency: ms
+    viability: high
+    notes: "Consolidated tape era"
+
+  - name: equity_daily_ohlcv
+    category: traditional
+    earliest_year: 1962
+    cost: low
+    storage_gb_per_year: 1
+    compute: desktop
+    coverage: global
+    latency: eod
+    viability: high
+
+  - name: futures_continuous
+    category: traditional
+    earliest_year: 1980
+    cost: medium
+    storage_gb_per_year: 10
+    compute: workstation
+    coverage: major contracts
+    latency: tick/eod
+    viability: high
+
+  - name: fx_spot_tick
+    category: traditional
+    earliest_year: 1990
+    cost: medium
+    storage_gb_per_year: 100
+    compute: workstation
+    coverage: G10
+    latency: ms
+    viability: high
+
+  - name: order_book_l2
+    category: traditional
+    earliest_year: 2000
+    cost: high
+    storage_gb_per_year: 1000
+    compute: cluster
+    coverage: US equities
+    latency: micro
+    viability: high
+
+  - name: options_chain_eod
+    category: traditional
+    earliest_year: 1990
+    cost: medium
+    storage_gb_per_year: 50
+    compute: workstation
+    coverage: US listed
+    latency: eod
+    viability: high
+
+  - name: volatility_surfaces
+    category: traditional
+    earliest_year: 1995
+    cost: high
+    storage_gb_per_year: 100
+    compute: cluster
+    coverage: indices + singles
+    latency: eod/intraday
+    viability: high
+
+  - name: corporate_actions
+    category: traditional
+    earliest_year: 1980
+    cost: low
+    storage_gb_per_year: 0.1
+    compute: desktop
+    coverage: US
+    latency: eod
+    viability: high
+
+  - name: weather_gridded
+    category: alternative
+    earliest_year: 1980
+    cost: low
+    storage_gb_per_year: 5
+    compute: desktop
+    coverage: regional
+    latency: daily
+    viability: medium
+
+  - name: satellite_imagery
+    category: alternative
+    earliest_year: 2005
+    cost: very_high
+    storage_gb_per_year: 10000
+    compute: gpu_cluster
+    coverage: global
+    latency: days
+    viability: medium
+
+  - name: news_wire_archives
+    category: alternative
+    earliest_year: 1995
+    cost: high
+    storage_gb_per_year: 200
+    compute: cluster
+    coverage: financial news
+    latency: minutes
+    viability: high
+
+  - name: earnings_transcripts
+    category: alternative
+    earliest_year: 2000
+    cost: medium
+    storage_gb_per_year: 5
+    compute: nlp_pipeline
+    coverage: US large cap
+    latency: event
+    viability: high
+
+  - name: economic_releases
+    category: alternative
+    earliest_year: 1980
+    cost: low
+    storage_gb_per_year: 0.5
+    compute: desktop
+    coverage: macro
+    latency: scheduled
+    viability: medium
+
+  - name: shipping_ais
+    category: alternative
+    earliest_year: 2010
+    cost: high
+    storage_gb_per_year: 500
+    compute: cluster
+    coverage: maritime
+    latency: hours
+    viability: medium
+
+  - name: sentiment_scores
+    category: alternative
+    earliest_year: 2008
+    cost: medium
+    storage_gb_per_year: 20
+    compute: nlp
+    coverage: equities
+    latency: daily
+    viability: medium

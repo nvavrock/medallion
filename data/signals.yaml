@@ -1,0 +1,195 @@
+signals:
+  - signal_id: SIG-001
+    signal: Statistical arbitrage (equity baskets)
+    theory: Mean-reverting residuals after factor neutralization
+    evidence: "Widely described in quant literature and RenTech public narrative"
+    evidence_level: E2
+    replication: partial
+    capacity: "Declines with AUM; cross-asset diversification extends"
+    confidence: 0.7
+    era_plausibility: "1990s–present"
+    failure_modes: "Crowding; factor regime shifts"
+    alpha_half_life: "Months to years"
+    tags: [core, equities]
+
+  - signal_id: SIG-002
+    signal: Mean reversion (short horizon)
+    theory: Microstructure overreaction and liquidity provision
+    evidence: "Academic support; toy replication in experiments/03"
+    evidence_level: E3
+    replication: partial
+    capacity: "High turnover strategies capacity-limited"
+    confidence: 0.65
+    era_plausibility: "1988–present"
+    failure_modes: "Transaction costs dominate at scale"
+    alpha_half_life: "Days to weeks"
+    tags: [core, microstructure]
+
+  - signal_id: SIG-003
+    signal: Momentum (time-series and cross-sectional)
+    theory: Slow information diffusion and persistence
+    evidence: "Factor literature; plausible diversifier to mean reversion"
+    evidence_level: E3
+    replication: replicated
+    capacity: "Moderate in futures; crowded in equities"
+    confidence: 0.75
+    era_plausibility: "1980s–present"
+    failure_modes: "Momentum crashes"
+    alpha_half_life: "Months"
+    tags: [core, factors]
+
+  - signal_id: SIG-004
+    signal: Cointegration / pairs
+    theory: Shared economic drivers imply stationary spreads
+    evidence: "Early RenTech era plausibility (Berlekamp)"
+    evidence_level: E2
+    replication: partial
+    capacity: "Limited pairs at scale"
+    confidence: 0.55
+    era_plausibility: "1980s–1990s primary; still auxiliary"
+    failure_modes: "Structural breaks"
+    alpha_half_life: "Weeks to months"
+    tags: [core, stat_arb]
+
+  - signal_id: SIG-005
+    signal: Hidden Markov / regime models
+    theory: Latent states govern return distributions
+    evidence: "Inference from quant culture; limited hard sourcing"
+    evidence_level: E1
+    replication: not_attempted
+    capacity: "Research overhead; supports sizing not standalone alpha"
+    confidence: 0.35
+    era_plausibility: "1990s–present"
+    failure_modes: "Overfitting states"
+    alpha_half_life: "N/A (meta-signal)"
+    tags: [ml, regime]
+
+  - signal_id: SIG-006
+    signal: Kalman filter / state-space
+    theory: Dynamic beta and spread evolution
+    evidence: "Standard in stat-arb toolkit; plausible at RenTech"
+    evidence_level: E2
+    replication: partial
+    capacity: "Implementation dependent"
+    confidence: 0.5
+    era_plausibility: "1990s–present"
+    failure_modes: "Model misspecification"
+    alpha_half_life: "Weeks"
+    tags: [stat_arb]
+
+  - signal_id: SIG-007
+    signal: Order-flow imbalance
+    theory: Signed volume predicts short-horizon prices
+    evidence: "Microstructure literature (Hasbrouck, Kyle)"
+    evidence_level: E3
+    replication: partial
+    capacity: "HFT-scale; capacity rises with holding period"
+    confidence: 0.6
+    era_plausibility: "2000s–present with tick data"
+    failure_modes: "Adverse selection"
+    alpha_half_life: "Minutes to days"
+    tags: [microstructure, execution]
+
+  - signal_id: SIG-008
+    signal: Volatility surface arbitrage
+    theory: Mispricing across strikes/tenors vs underlying dynamics
+    evidence: "Industry speculation; limited public RenTech-specific detail"
+    evidence_level: E1
+    replication: not_attempted
+    capacity: "Options market depth constraints"
+    confidence: 0.4
+    era_plausibility: "1990s–present"
+    failure_modes: "Gap risk; model risk"
+    alpha_half_life: "Weeks"
+    tags: [options, volatility]
+
+  - signal_id: SIG-009
+    signal: Variance risk premium harvesting
+    theory: Implied vol systematically exceeds realized over horizons
+    evidence: "Academic VRP literature; plausible sleeve"
+    evidence_level: E3
+    replication: partial
+    capacity: "Moderate; tail events hurt"
+    confidence: 0.55
+    era_plausibility: "1990s–present"
+    failure_modes: "Vol spikes (2008, 2020)"
+    alpha_half_life: "Months"
+    tags: [options, volatility]
+
+  - signal_id: SIG-010
+    signal: Dispersion / correlation trading
+    theory: Index vs single-name implied correlation mispricing
+    evidence: "Common institutional options strategy"
+    evidence_level: E2
+    replication: not_attempted
+    capacity: "Desk-sized; scales with liquidity"
+    confidence: 0.45
+    era_plausibility: "2000s–present"
+    failure_modes: "Correlation breakdown in crises"
+    alpha_half_life: "Weeks to months"
+    tags: [options, volatility]
+
+  - signal_id: SIG-011
+    signal: NLP on news / earnings (modern ML)
+    theory: Text features predict short-horizon drift
+    evidence: "Industry-wide post-2010; RenTech inference only"
+    evidence_level: E1
+    replication: not_attempted
+    capacity: "Data cost; decay as strategies proliferate"
+    confidence: 0.4
+    era_plausibility: "2010s–present"
+    failure_modes: "Overfitting lexicons"
+    alpha_half_life: "Months"
+    tags: [ml, nlp, alt_data]
+
+  - signal_id: SIG-012
+    signal: Satellite / shipping alt data
+    theory: Non-price data leads fundamental repricing
+    evidence: "Alt-data industry; historical availability post-2000s"
+    evidence_level: E2
+    replication: not_attempted
+    capacity: "Signal-specific"
+    confidence: 0.35
+    era_plausibility: "2005–present"
+    failure_modes: "False positives; latency arms race"
+    alpha_half_life: "Quarters"
+    tags: [ml, alt_data]
+
+  - signal_id: SIG-013
+    signal: Ensemble ML (gradient boosting / neural nets)
+    theory: Nonlinear feature interactions improve forecasts
+    evidence: "Mercer/Brown era public accounts"
+    evidence_level: E2
+    replication: partial
+    capacity: "Compute-intensive; overfit risk"
+    confidence: 0.55
+    era_plausibility: "1997–present"
+    failure_modes: "Regime change"
+    alpha_half_life: "Variable"
+    tags: [ml, core]
+
+  - signal_id: SIG-014
+    signal: Reinforcement learning for execution
+    theory: Adaptive execution reduces impact and timing costs
+    evidence: "Industry adoption; RenTech unconfirmed"
+    evidence_level: E1
+    replication: not_attempted
+    capacity: "Complements alpha"
+    confidence: 0.3
+    era_plausibility: "2015–present"
+    failure_modes: "Simulator-to-real gap"
+    alpha_half_life: "N/A"
+    tags: [ml, execution]
+
+  - signal_id: SIG-015
+    signal: Kelly / fractional Kelly sizing
+    theory: Log-utility optimal growth under estimated edge
+    evidence: "Anecdotal quant practice; not RenTech-confirmed"
+    evidence_level: E1
+    replication: partial
+    capacity: "Drawdown control variants used in practice"
+    confidence: 0.4
+    era_plausibility: "1980s–present"
+    failure_modes: "Estimation error in edge and covariance"
+    alpha_half_life: "N/A"
+    tags: [risk, sizing]

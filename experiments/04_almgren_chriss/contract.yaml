@@ -1,0 +1,24 @@
+experiment_id: EXP-04
+title: Execution edge vs Almgren-Chriss impact
+hypothesis: Execution micro-edge per trade is largely offset by costs and market impact unless edge_bps is large.
+inputs:
+  n_trades: 10000
+  edge_bps: 0.5
+  participation_rate: 0.01
+assumptions:
+  - IID trade PnL with Gaussian noise
+  - Simplified AC impact function
+cost_model:
+  commission_bps: 1.0
+  slippage_bps: 2.0
+  market_impact_model: almgren_chriss_simplified
+capacity_limit: participation_rate capped at 1% ADV
+outputs:
+  - mean_net_per_trade
+  - sharpe_aggregated
+  - impact_per_trade
+limitations:
+  - Does not model cross-asset portfolio
+  - Answers directional question only
+linked_signals:
+  - SIG-007
