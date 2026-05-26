@@ -1,12 +1,12 @@
 claims:
   - claim_id: CLM-2024-001
-    text: "Renaissance Technologies was founded in 1982 by Jim Simons."
-    evidence_level: E3
+    text: "James Simons founded predecessor Monemetrics in 1978; the firm was renamed Renaissance Technologies in 1982 (see claims CLM-2026-001 and CLM-2026-003)."
+    evidence_level: E2
     source_quality: S2
-    sources: [zuckerman2019]
+    sources: [zuckerman2019, wikipedia_renaissance_technologies]
     replication_status: not_attempted
-    counterarguments: []
-    confidence: 0.95
+    counterarguments: ["Corporate entity lineage across Axcom/Limroy is complex"]
+    confidence: 0.88
     last_verified: "2026-05-26"
 
   - claim_id: CLM-2024-002
@@ -40,23 +40,233 @@ claims:
     last_verified: "2026-05-26"
 
   - claim_id: CLM-2024-005
-    text: "Elwyn Berlekamp's early role emphasized systematic, model-driven trading discipline."
+    text: "Elwyn Berlekamp's early role emphasized systematic, model-driven trading discipline, including a documented Medallion overhaul and strong 1990 return before he sold his stake back to Simons."
     evidence_level: E2
     source_quality: S2
-    sources: [zuckerman2019]
+    sources: [zuckerman2019, berkeley_news_berlekamp2019, wikipedia_renaissance_technologies]
     replication_status: not_attempted
     counterarguments: []
     confidence: 0.8
     last_verified: "2026-05-26"
 
   - claim_id: CLM-2024-006
-    text: "Peter Brown and Robert Mercer led a transition toward large-scale computational ML infrastructure in the late 1990s."
+    text: "Peter Brown and Robert Mercer joined Renaissance in 1993 from IBM Research (computational linguistics) and later became central leaders; public sources often conflate this hire date with later ML scaling."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, patterson2010, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Wikipedia can lag corrections", "Internal promotion timelines not public"]
+    confidence: 0.82
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-001
+    text: "Jim Simons left academia in 1978 and started Monemetrics, initially focused on currency trading from a Long Island location."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Early corporate names and locations summarized differently across sources"]
+    confidence: 0.8
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-002
+    text: "Howard L. Morgan is listed among Monemetrics co-founders alongside Simons in public company summaries."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies]
+    replication_status: not_attempted
+    counterarguments: ["Wikipedia may omit later corporate restructuring details"]
+    confidence: 0.65
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-003
+    text: "The firm was renamed Renaissance Technologies in 1982 (from Monemetrics) as Simons recruited mathematicians and modelers from IDA and Stony Brook circles."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Exact month of rename not consistently reported"]
+    confidence: 0.78
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-004
+    text: "The Medallion Fund was established in 1988, building on Leonard Baum's and James Ax's model work; the name honored mathematics awards Simons and Ax had received."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Predecessor fund names (e.g. Limroy) appear in some timelines"]
+    confidence: 0.8
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-005
+    text: "By April 1989 Medallion had suffered roughly 30% peak-to-trough losses; James Ax departed after disagreement over whether to continue trading; Simons brought in Elwyn Berlekamp."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Loss measurement window and accounting differ in journalism"]
+    confidence: 0.72
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-006
+    text: "Berlekamp overhauled Medallion's trading system over about six months with Sandor Straus, Jim Simons, and Henry Laufer; Medallion reportedly returned about 55.9% net of fees in 1990, then Berlekamp sold his Axcom stake back to Simons and returned to Berkeley."
+    evidence_level: E2
+    source_quality: S2
+    sources: [berkeley_news_berlekamp2019, wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Return figures rely on fund letters and secondary reporting, not continuous public audit"]
+    confidence: 0.75
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-007
+    text: "Medallion has been closed to outside investors since 1993; only employees and related parties could invest thereafter in public accounts."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Regulatory definitions of qualified purchasers evolved"]
+    confidence: 0.8
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-008
+    text: "Renaissance bought out the last outside Medallion investor in 2005, after which external observers lacked direct return transparency."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Some secondary sources round or approximate the year"]
+    confidence: 0.72
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-009
+    text: "Sandor Straus took leadership of the revamped Medallion trading system after Berlekamp's return to academia; public timelines cite strong 1991–1993 returns in annual-report-based summaries."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Straus's public profile is thinner than founders; role inferred from timelines"]
+    confidence: 0.68
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-010
+    text: "Leonard Baum was an early collaborator on statistical currency models before moving away from pure systematic modeling in public accounts."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Baum's tenure details vary by narrator"]
+    confidence: 0.7
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-011
+    text: "James Ax expanded Baum-style models toward broader commodity futures and helped structure the entity that became Medallion before his 1989 departure."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Legal entity names across Axcom/Limroy/Medallion confuse readers"]
+    confidence: 0.74
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-012
+    text: "Between 1989 and 2005 Medallion reportedly had only one losing year (1989) in Wikipedia-cited annual-report summaries."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies]
+    replication_status: not_attempted
+    counterarguments: ["Net vs gross, fee treatment, and reporting gaps affect year classification"]
+    confidence: 0.55
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-013
+    text: "Jim Simons served as CEO until retirement at end of 2009; Peter Brown and Robert Mercer succeeded in executive leadership, with Simons later non-executive chairman until 2021 in public timelines."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Titles and board roles may differ from day-to-day control"]
+    confidence: 0.75
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-014
+    text: "Nick Patterson moved from computational genomics into Renaissance and influenced hiring and scientific culture according to Zuckerman and related journalism."
     evidence_level: E2
     source_quality: S2
     sources: [zuckerman2019, patterson2010]
     replication_status: not_attempted
-    counterarguments: ["Exact ML architectures remain undisclosed"]
-    confidence: 0.7
+    counterarguments: ["Insider anecdotes are unevenly sourced"]
+    confidence: 0.65
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-015
+    text: "Henry Laufer is named in public timelines as a consultant contributing to Medallion's early-1990s trading-system overhaul alongside Berlekamp, Simons, and Straus."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Consultant vs employee status in early years is under-documented"]
+    confidence: 0.62
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-016
+    text: "Renaissance's Long Island campus in East Setauket near Stony Brook is widely reported as the firm's primary research and trading hub."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Manhattan office handles some functions per public profiles"]
+    confidence: 0.78
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-017
+    text: "Public profiles describe petabyte-scale data warehousing and scalable compute for model research at Renaissance in the modern era; exact historical scaling milestones inside the firm remain largely undocumented."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, patterson2010]
+    replication_status: not_attempted
+    counterarguments: ["Marketing-like superlatives in journalism", "No independent audit of warehouse size"]
+    confidence: 0.5
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-018
+    text: "Secrecy, NDAs, and low turnover limit independently verifiable detail on internal infrastructure, codebases, and precise division of labor."
+    evidence_level: E2
+    source_quality: S2
+    sources: [zuckerman2019, wikipedia_renaissance_technologies]
+    replication_status: not_attempted
+    counterarguments: ["Some alumni interviews leak partial color"]
+    confidence: 0.85
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-019
+    text: "We hypothesize that Renaissance's infrastructure advantage combined industry-standard advances (tick data, co-location, options chains) with proprietary data cleaning and workflow rather than a single 'silver bullet' system visible from outside."
+    evidence_level: E1
+    source_quality: S2
+    sources: [zuckerman2019, patterson2010]
+    replication_status: not_attempted
+    counterarguments: ["Many peers had similar raw inputs", "Cannot observe internal pipelines"]
+    confidence: 0.45
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-020
+    text: "SEC IAPD can be used to verify registration and form history for Renaissance Technologies as an investment adviser; it does not disclose trading algorithms."
+    evidence_level: E3
+    source_quality: S3
+    sources: [sec_iapd_renaissance]
+    replication_status: not_attempted
+    counterarguments: ["Filings are legal snapshots, not performance truth"]
+    confidence: 0.9
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2026-021
+    text: "Jim Simons died in May 2024 at age 86; public obituaries summarized his role as founder of Renaissance and architect of the quant revolution narrative."
+    evidence_level: E2
+    source_quality: S2
+    sources: [zuckerman2019, wikipedia_renaissance_technologies]
+    replication_status: not_attempted
+    counterarguments: ["Obituary emphasis varies by outlet"]
+    confidence: 0.9
     last_verified: "2026-05-26"
 
   - claim_id: CLM-2024-007

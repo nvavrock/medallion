@@ -41,3 +41,24 @@ sources:
     year: null
     type: secondary
     note: "No official Sharpe disclosure"
+
+  wikipedia_renaissance_technologies:
+    title: "Renaissance Technologies (Wikipedia)"
+    author: "Wikipedia contributors"
+    year: 2026
+    type: secondary
+    note: "Aggregated timeline; cross-check primary sources for contentious rows"
+
+  berkeley_news_berlekamp2019:
+    title: "Elwyn Berlekamp, game theorist and coding pioneer, dies at 78"
+    author: "UC Berkeley News"
+    year: 2019
+    type: web
+    note: "Obituary; Axcom/Medallion leadership and 1990 sale to Simons"
+
+  sec_iapd_renaissance:
+    title: "SEC IAPD — Investment Adviser Public Disclosure"
+    author: "U.S. Securities and Exchange Commission"
+    year: null
+    type: web
+    note: "Search adviser CRD for Renaissance Technologies LLC; use for registration dates"

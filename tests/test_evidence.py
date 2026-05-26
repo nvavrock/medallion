@@ -4,7 +4,7 @@ from medallion.signals import load_signals, signals_by_tag
 
 def test_load_evidence():
     claims = load_evidence()
-    assert len(claims) >= 10
+    assert len(claims) >= 28
     assert all(c.claim_id.startswith("CLM-") for c in claims)
 
 

@@ -163,7 +163,7 @@ signals:
     replication: partial
     capacity: "Compute-intensive; overfit risk"
     confidence: 0.55
-    era_plausibility: "1997–present"
+    era_plausibility: "1993–present"
     failure_modes: "Regime change"
     alpha_half_life: "Variable"
     tags: [ml, core]

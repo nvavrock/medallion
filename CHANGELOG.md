@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0] - 2026-05-26
+
+### Added
+
+- Phase I historical chapter depth: expanded timeline, strategy evolution, personnel matrix, infrastructure timeline, and phase README hub
+- Twenty-one new evidence records (CLM-2026-001–021) plus refined CLM-2024-001/005/006; bibliography keys for Wikipedia, Berkeley obituary, and SEC IAPD
+
+### Changed
+
+- Corrected public IBM hire timeline for Brown/Mercer to **1993** (was sometimes misstated as late 1990s)
+- Phase II cross-links from Phase I use repo-root-relative paths for Quarto
+- SIG-013 era plausibility text aligned to 1993+
+
 ## [0.2.0] - 2026-05-26
 
 ### Added
