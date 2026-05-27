@@ -1,5 +1,5 @@
 # Historical Data Availability Matrix (1980–2025)
-# Fields: earliest_year, cost, storage_gb_per_year, compute, coverage, latency, viability
+# Validated by scripts/validate_data_matrix.py against schemas/data_availability_row.schema.json
 
 datasets:
   - name: equity_tick_trades
@@ -11,7 +11,12 @@ datasets:
     coverage: US equities
     latency: ms
     viability: high
-    notes: "Consolidated tape era"
+    predictive_viability: "Signed trade and quote updates support short-horizon microstructure signals once consolidated tape coverage is reliable."
+    medallion_era: "1993+ industry; 1988+ RenTech plausible with fragmented feeds (E1)"
+    sources: [hasbrouck2007, sec_market_structure_nms]
+    claim_ids: [CLM-2027-002, CLM-2027-011]
+    linked_signals: [SIG-002, SIG-007]
+    notes: "Consolidated tape era; pre-1993 research used vendor-specific fragments"
 
   - name: equity_daily_ohlcv
     category: traditional
@@ -22,6 +27,26 @@ datasets:
     coverage: global
     latency: eod
     viability: high
+    predictive_viability: "Daily returns and OHLCV underpin factor, momentum, and stat-arb basket construction across decades."
+    medallion_era: "1988+"
+    sources: [crsp_stock_database, wrds_research_guide]
+    claim_ids: [CLM-2027-001]
+    linked_signals: [SIG-001, SIG-003, SIG-004]
+
+  - name: equity_intraday_ohlc
+    category: traditional
+    earliest_year: 1985
+    cost: medium
+    storage_gb_per_year: 20
+    compute: workstation
+    coverage: US large cap
+    latency: minutes
+    viability: high
+    predictive_viability: "Bar aggregates below daily frequency enable regime and intraday mean-reversion research before full tick archives."
+    medallion_era: "1990+ systematic; 1988+ with manual bar construction (E1)"
+    sources: [hasbrouck2007, zuckerman2019]
+    claim_ids: [CLM-2027-002, CLM-2027-014]
+    linked_signals: [SIG-002, SIG-003]
 
   - name: futures_continuous
     category: traditional
@@ -32,6 +57,26 @@ datasets:
     coverage: major contracts
     latency: tick/eod
     viability: high
+    predictive_viability: "Continuous rolls on rates, equity index, FX, and commodity futures diversify equity-centric stat-arb."
+    medallion_era: "1988+"
+    sources: [zuckerman2019]
+    claim_ids: [CLM-2027-006]
+    linked_signals: [SIG-003, SIG-004]
+
+  - name: index_futures_micro
+    category: traditional
+    earliest_year: 1982
+    cost: medium
+    storage_gb_per_year: 5
+    compute: workstation
+    coverage: equity index, rates
+    latency: tick/eod
+    viability: high
+    predictive_viability: "Index and micro contracts improve hedging and short-horizon macro beta management versus single-stock baskets."
+    medallion_era: "1988+"
+    sources: [zuckerman2019]
+    claim_ids: [CLM-2027-006]
+    linked_signals: [SIG-001, SIG-010]
 
   - name: fx_spot_tick
     category: traditional
@@ -42,6 +87,26 @@ datasets:
     coverage: G10
     latency: ms
     viability: high
+    predictive_viability: "FX microstructure and carry-style signals become viable with electronic interbank quote history."
+    medallion_era: "1990+"
+    sources: [zuckerman2019]
+    claim_ids: [CLM-2027-005]
+    linked_signals: [SIG-002, SIG-003]
+
+  - name: fx_forwards_swaps
+    category: traditional
+    earliest_year: 1992
+    cost: medium
+    storage_gb_per_year: 15
+    compute: workstation
+    coverage: G10
+    latency: eod
+    viability: medium
+    predictive_viability: "Forward points and swap curves support cross-currency stat-arb and macro hedging sleeves."
+    medallion_era: "1993+"
+    sources: [zuckerman2019]
+    claim_ids: [CLM-2027-005]
+    linked_signals: [SIG-004]
 
   - name: order_book_l2
     category: traditional
@@ -52,6 +117,11 @@ datasets:
     coverage: US equities
     latency: micro
     viability: high
+    predictive_viability: "Depth and queue position features power order-flow imbalance and short-horizon liquidity signals."
+    medallion_era: "2000+ industry; earlier RenTech access unknown (E1)"
+    sources: [hasbrouck2007]
+    claim_ids: [CLM-2027-003]
+    linked_signals: [SIG-007, SIG-014]
 
   - name: options_chain_eod
     category: traditional
@@ -62,6 +132,26 @@ datasets:
     coverage: US listed
     latency: eod
     viability: high
+    predictive_viability: "End-of-day chains support volatility arbitrage, dispersion, and variance-risk-premium research."
+    medallion_era: "1993+"
+    sources: [patterson2010]
+    claim_ids: [CLM-2027-004]
+    linked_signals: [SIG-008, SIG-009, SIG-010]
+
+  - name: options_intraday_quotes
+    category: traditional
+    earliest_year: 2005
+    cost: high
+    storage_gb_per_year: 200
+    compute: cluster
+    coverage: US listed
+    latency: seconds
+    viability: medium
+    predictive_viability: "Intraday options quotes improve surface fitting and short-dated vol signals at higher storage cost."
+    medallion_era: "2005+"
+    sources: [hasbrouck2007]
+    claim_ids: [CLM-2027-004]
+    linked_signals: [SIG-008]
 
   - name: volatility_surfaces
     category: traditional
@@ -72,6 +162,11 @@ datasets:
     coverage: indices + singles
     latency: eod/intraday
     viability: high
+    predictive_viability: "Fitted surfaces enable relative-value trades across strikes and tenors versus underlying dynamics."
+    medallion_era: "1995+"
+    sources: [patterson2010]
+    claim_ids: [CLM-2027-004]
+    linked_signals: [SIG-008, SIG-009]
 
   - name: corporate_actions
     category: traditional
@@ -82,6 +177,56 @@ datasets:
     coverage: US
     latency: eod
     viability: high
+    predictive_viability: "Accurate splits, dividends, and symbol changes are prerequisite for any price-based signal at scale."
+    medallion_era: "1988+; quality likely differentiated RenTech (E1)"
+    sources: [zuckerman2019]
+    claim_ids: [CLM-2027-014]
+    linked_signals: [SIG-001, SIG-013]
+
+  - name: fundamentals_quarterly
+    category: traditional
+    earliest_year: 1963
+    cost: medium
+    storage_gb_per_year: 2
+    compute: desktop
+    coverage: US equities
+    latency: quarterly
+    viability: high
+    predictive_viability: "Point-in-time fundamentals support slower factors and NLP context; not primary for sub-day Medallion-style alpha."
+    medallion_era: "1990+ for systematic factor overlays"
+    sources: [wrds_research_guide, crsp_stock_database]
+    claim_ids: [CLM-2027-012]
+    linked_signals: [SIG-001, SIG-011]
+
+  - name: short_interest_borrow
+    category: traditional
+    earliest_year: 2003
+    cost: medium
+    storage_gb_per_year: 1
+    compute: desktop
+    coverage: US equities
+    latency: biweekly/daily
+    viability: medium
+    predictive_viability: "Borrow fees and short interest constrain stat-arb capacity and crowding on the short leg."
+    medallion_era: "2003+"
+    sources: [hasbrouck2007]
+    claim_ids: [CLM-2027-013]
+    linked_signals: [SIG-001]
+
+  - name: rates_bonds_eod
+    category: traditional
+    earliest_year: 1980
+    cost: low
+    storage_gb_per_year: 0.5
+    compute: desktop
+    coverage: US Treasuries, agencies
+    latency: eod
+    viability: high
+    predictive_viability: "Yield curve levels and spreads anchor macro regime models and futures cash-and-carry relationships."
+    medallion_era: "1988+"
+    sources: [zuckerman2019]
+    claim_ids: [CLM-2027-006]
+    linked_signals: [SIG-005, SIG-015]
 
   - name: weather_gridded
     category: alternative
@@ -92,6 +237,11 @@ datasets:
     coverage: regional
     latency: daily
     viability: medium
+    predictive_viability: "Weather shocks affect energy and ag commodities; alpha half-life is seasonal and capacity-limited."
+    medallion_era: "1990+ for commodity futures shops; peripheral for core Medallion narrative"
+    sources: [alt_data_industry_survey]
+    claim_ids: [CLM-2027-016]
+    linked_signals: [SIG-012]
 
   - name: satellite_imagery
     category: alternative
@@ -102,6 +252,11 @@ datasets:
     coverage: global
     latency: days
     viability: medium
+    predictive_viability: "Parking lots, oil storage, and crop imagery can lead equities and commodities before earnings."
+    medallion_era: "2005+ industry; RenTech use speculative (E1)"
+    sources: [alt_data_industry_survey]
+    claim_ids: [CLM-2027-010]
+    linked_signals: [SIG-012]
 
   - name: news_wire_archives
     category: alternative
@@ -112,6 +267,26 @@ datasets:
     coverage: financial news
     latency: minutes
     viability: high
+    predictive_viability: "Timestamped headlines support event studies and lexicon NLP with decay as strategies crowd."
+    medallion_era: "1995+ vendor; 2000+ NLP at scale"
+    sources: [alt_data_industry_survey, patterson2010]
+    claim_ids: [CLM-2027-007]
+    linked_signals: [SIG-011]
+
+  - name: text_corpora_financial
+    category: alternative
+    earliest_year: 1996
+    cost: high
+    storage_gb_per_year: 300
+    compute: nlp_pipeline
+    coverage: filings, news, transcripts
+    latency: hours
+    viability: high
+    predictive_viability: "Unified text corpora enable embedding and transformer features beyond wire headlines alone."
+    medallion_era: "2000+"
+    sources: [alt_data_industry_survey]
+    claim_ids: [CLM-2027-017]
+    linked_signals: [SIG-011, SIG-013]
 
   - name: earnings_transcripts
     category: alternative
@@ -122,6 +297,11 @@ datasets:
     coverage: US large cap
     latency: event
     viability: high
+    predictive_viability: "Call text supplies sentiment and topic drift around earnings; half-life shortened post-2010 alt-data arms race."
+    medallion_era: "2000+"
+    sources: [alt_data_industry_survey]
+    claim_ids: [CLM-2027-008]
+    linked_signals: [SIG-011]
 
   - name: economic_releases
     category: alternative
@@ -132,6 +312,11 @@ datasets:
     coverage: macro
     latency: scheduled
     viability: medium
+    predictive_viability: "Scheduled macro prints move futures and FX; predictable release timestamps matter more than surprise alone."
+    medallion_era: "1988+"
+    sources: [zuckerman2019]
+    claim_ids: [CLM-2027-006]
+    linked_signals: [SIG-003, SIG-005]
 
   - name: shipping_ais
     category: alternative
@@ -142,13 +327,98 @@ datasets:
     coverage: maritime
     latency: hours
     viability: medium
+    predictive_viability: "Vessel tracks proxy trade flows and commodity demand with latency measured in hours, not microseconds."
+    medallion_era: "2010+"
+    sources: [alt_data_industry_survey]
+    claim_ids: [CLM-2027-009]
+    linked_signals: [SIG-012]
 
   - name: sentiment_scores
     category: alternative
     earliest_year: 2008
     cost: medium
     storage_gb_per_year: 20
-    compute: nlp
+    compute: nlp_pipeline
     coverage: equities
     latency: daily
     viability: medium
+    predictive_viability: "Vendor sentiment indices aggregate text; useful as features in ensemble ML with fast decay."
+    medallion_era: "2008+"
+    sources: [alt_data_industry_survey]
+    claim_ids: [CLM-2027-017]
+    linked_signals: [SIG-011, SIG-013]
+
+  - name: geopolitical_events_structured
+    category: alternative
+    earliest_year: 2002
+    cost: high
+    storage_gb_per_year: 1
+    compute: desktop
+    coverage: global events
+    latency: hours
+    viability: medium
+    predictive_viability: "Coded conflict, sanctions, and policy events affect macro and commodity sleeves; sparse for equity microstructure."
+    medallion_era: "2002+ vendor era"
+    sources: [alt_data_industry_survey]
+    claim_ids: [CLM-2027-015]
+    linked_signals: [SIG-005]
+
+  - name: commodity_flows_freight
+    category: alternative
+    earliest_year: 2001
+    cost: high
+    storage_gb_per_year: 50
+    compute: cluster
+    coverage: trade, freight indices
+    latency: daily
+    viability: medium
+    predictive_viability: "Baltic dry and trade-payment proxies lead industrial commodities; complements AIS at lower frequency."
+    medallion_era: "2001+"
+    sources: [alt_data_industry_survey]
+    claim_ids: [CLM-2027-016]
+    linked_signals: [SIG-012]
+
+  - name: crypto_spot
+    category: alternative
+    earliest_year: 2010
+    cost: low
+    storage_gb_per_year: 10
+    compute: workstation
+    coverage: major tokens
+    latency: ms
+    viability: not_applicable
+    predictive_viability: "24/7 crypto markets are outside the historical Medallion reconstruction window and documented strategy focus."
+    medallion_era: "not_applicable"
+    sources: [wikipedia_renaissance_technologies]
+    claim_ids: [CLM-2027-018]
+    linked_signals: []
+
+  - name: equity_index_constituents
+    category: traditional
+    earliest_year: 1980
+    cost: low
+    storage_gb_per_year: 0.2
+    compute: desktop
+    coverage: major US indices
+    latency: eod
+    viability: high
+    predictive_viability: "Index membership and rebalances drive predictable flows and basket construction for stat-arb."
+    medallion_era: "1988+"
+    sources: [crsp_stock_database]
+    claim_ids: [CLM-2027-001]
+    linked_signals: [SIG-001, SIG-010]
+
+  - name: macro_futures_curve
+    category: traditional
+    earliest_year: 1985
+    cost: low
+    storage_gb_per_year: 3
+    compute: desktop
+    coverage: rates, commodities
+    latency: eod
+    viability: high
+    predictive_viability: "Curve shapes encode carry and term-premium signals complementary to spot momentum."
+    medallion_era: "1988+"
+    sources: [zuckerman2019]
+    claim_ids: [CLM-2027-006]
+    linked_signals: [SIG-003, SIG-005]

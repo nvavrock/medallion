@@ -13,6 +13,10 @@ Canonical store: [data/signals.yaml](../../data/signals.yaml)
 | SIG-011–014 | Modern ML / alt data | 2005–2015+ | 0.30–0.55 |
 | SIG-015 | Kelly sizing | 1980s+ | 0.40 |
 
+## Data dependencies (Phase II)
+
+Before deepening signal essays or running Phase VII experiments, map each signal to datasets in [phase_02_data/signal_data_map.md](../phase_02_data/signal_data_map.md) and cite matrix rows in experiment configs.
+
 ## PDF workstreams
 
 - **Options/volatility:** SIG-008, SIG-009, SIG-010 (see tags `options`, `volatility`)

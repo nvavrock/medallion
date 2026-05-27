@@ -75,6 +75,40 @@ def build_evidence_appendix() -> dict[str, dict]:
     return claims_map
 
 
+def build_data_matrix_appendix() -> None:
+    raw = load_yaml(ROOT / "research" / "phase_02_data" / "data_availability_matrix.yaml")
+    datasets = raw.get("datasets", [])
+    lines = [
+        "# Data availability matrix (generated)",
+        "",
+        f"*{len(datasets)} rows from `research/phase_02_data/data_availability_matrix.yaml`.*",
+        "",
+        "| Name | Category | From | Viability | Medallion era | Signals |",
+        "|------|----------|------|-----------|---------------|---------|",
+    ]
+    for d in datasets:
+        sigs = ", ".join(d.get("linked_signals", [])) or "—"
+        lines.append(
+            f"| {d['name']} | {d['category']} | {d['earliest_year']} | "
+            f"{d['viability']} | {d['medallion_era']} | {sigs} |"
+        )
+    lines.append("")
+    for d in datasets:
+        lines.append(f"### {d['name']}")
+        lines.append("")
+        lines.append(f"**Predictive viability:** {d['predictive_viability']}")
+        lines.append("")
+        lines.append(
+            f"*Cost:* {d['cost']} | *Storage GB/yr:* {d['storage_gb_per_year']} | "
+            f"*Compute:* {d['compute']} | *Latency:* {d['latency']}"
+        )
+        lines.append("")
+        if d.get("notes"):
+            lines.append(f"*{d['notes']}*")
+            lines.append("")
+    (APPENDICES / "_generated-data-matrix.md").write_text("\n".join(lines), encoding="utf-8")
+
+
 def build_signals_appendix() -> None:
     raw = load_yaml(DATA / "signals.yaml")
     signals = raw.get("signals", [])
@@ -114,6 +148,7 @@ def main() -> None:
     build_bib()
     build_evidence_appendix()
     build_signals_appendix()
+    build_data_matrix_appendix()
     print("Quarto assets written to quarto/")
 
 

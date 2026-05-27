@@ -1,8 +1,17 @@
-# Data manifest — large datasets stay external; paths documented here
-version: 1
-datasets: []
-# Example entry:
-#   - id: crsp_daily
-#     path: /data/external/crsp
-#     license: academic
-#     earliest_year: 1926
+# External data paths for Phase VII experiments (stubs only; no large downloads in Phase II)
+manifest_version: 1
+
+datasets:
+  - id: fred_macro
+    description: "FRED macro series (public API) for economic_releases row"
+    path: data/external/fred/
+    matrix_rows: [economic_releases]
+    license: public_domain
+    status: stub
+
+  - id: yfinance_equity_daily
+    description: "Yahoo Finance daily OHLCV placeholder for toy equity_daily_ohlcv experiments"
+    path: data/external/yfinance/
+    matrix_rows: [equity_daily_ohlcv]
+    license: vendor_terms
+    status: stub

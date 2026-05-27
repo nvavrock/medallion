@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.0] - 2026-05-26
+
+### Added
+
+- Phase II data architecture chapter: 28-row [data_availability_matrix.yaml](research/phase_02_data/data_availability_matrix.yaml) with `predictive_viability`, `medallion_era`, `claim_ids`, and `linked_signals`
+- JSON Schema [schemas/data_availability_row.schema.json](schemas/data_availability_row.schema.json) and [scripts/validate_data_matrix.py](scripts/validate_data_matrix.py) (Gate A checks in `make quarto-check`)
+- Eighteen data-era evidence records (CLM-2027-001–018); bibliography keys for CRSP, WRDS, SEC market structure, and alt-data surveys
+- Narrative deliverables: `era_availability.md`, `traditional_markets.md`, `alternative_data.md`, `methodology.md`, `signal_data_map.md` (15/15 signals)
+- Generated Quarto appendix `_generated-data-matrix.md`; manifest stubs for FRED and yfinance paths
+
+### Changed
+
+- [quarto/chapters/02-data.qmd](quarto/chapters/02-data.qmd) includes full Phase II prose; raw YAML dump removed
+- Phase III README links to `signal_data_map.md`
+
 ## [0.3.0] - 2026-05-26
 
 ### Added

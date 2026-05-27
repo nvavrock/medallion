@@ -4,8 +4,16 @@ title: "Phase II — Data Architecture"
 
 {{< include ../../research/phase_02_data/README.md >}}
 
-## Data availability matrix (YAML)
+{{< include ../../research/phase_02_data/era_availability.md >}}
 
-```yaml
-{{< include ../../research/phase_02_data/data_availability_matrix.yaml >}}
-```
+{{< include ../../research/phase_02_data/traditional_markets.md >}}
+
+{{< include ../../research/phase_02_data/alternative_data.md >}}
+
+{{< include ../../research/phase_02_data/methodology.md >}}
+
+{{< include ../../research/phase_02_data/signal_data_map.md >}}
+
+## Data availability matrix
+
+{{< include ../appendices/_generated-data-matrix.md >}}

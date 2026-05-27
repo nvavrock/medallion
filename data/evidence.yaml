@@ -308,3 +308,183 @@ claims:
     counterarguments: ["Medallion may have used substantial leverage with different risk controls"]
     confidence: 0.85
     last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-001
+    text: "CRSP-style US equity daily return databases document prices from the 1920s onward; academic systematic use is common from the 1960s."
+    evidence_level: E3
+    source_quality: S3
+    sources: [crsp_stock_database, wrds_research_guide]
+    replication_status: not_attempted
+    counterarguments: ["Survivorship-bias adjustments are vendor-specific"]
+    confidence: 0.9
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-002
+    text: "Consolidated US equity trade reporting (national tape) became the industry norm by the mid-1990s, enabling systematic tick research at scale."
+    evidence_level: E2
+    source_quality: S2
+    sources: [hasbrouck2007, sec_market_structure_nms, wikipedia_renaissance_technologies]
+    replication_status: not_attempted
+    counterarguments: ["Exact consolidation month varies by source"]
+    confidence: 0.75
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-003
+    text: "Commercial vendor feeds for US equity limit order book (L2) data became widely available around the 2000s for research and trading."
+    evidence_level: E2
+    source_quality: S2
+    sources: [hasbrouck2007]
+    replication_status: not_attempted
+    counterarguments: ["Depth and entitlements differ by exchange and vendor"]
+    confidence: 0.72
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-004
+    text: "Listed US equity options end-of-day chains were widely available to systematic traders by the 1990s."
+    evidence_level: E2
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies, patterson2010]
+    replication_status: not_attempted
+    counterarguments: ["Intraday options microstructure data arrived later"]
+    confidence: 0.78
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-005
+    text: "G10 FX spot electronic quotes and tick histories were viable systematic inputs by about 1990."
+    evidence_level: E2
+    source_quality: S2
+    sources: [zuckerman2019, wikipedia_renaissance_technologies]
+    replication_status: not_attempted
+    counterarguments: ["Retail vs institutional feed quality diverged"]
+    confidence: 0.7
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-006
+    text: "Continuous futures series for major contracts are documentable from roughly the 1980s in vendor histories."
+    evidence_level: E2
+    source_quality: S2
+    sources: [zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Roll rules and back-adjustment choices affect signals"]
+    confidence: 0.75
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-007
+    text: "Digitized financial news wire archives became commercially available in the mid-1990s for quantitative text research."
+    evidence_level: E2
+    source_quality: S2
+    sources: [alt_data_industry_survey, patterson2010]
+    replication_status: not_attempted
+    counterarguments: ["Licensing restricts redistribution and research use"]
+    confidence: 0.68
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-008
+    text: "Structured earnings call transcripts as vendor products emerged around 2000 for US large-cap coverage."
+    evidence_level: E2
+    source_quality: S2
+    sources: [alt_data_industry_survey]
+    replication_status: not_attempted
+    counterarguments: ["Historical backfill depth varies by vendor"]
+    confidence: 0.7
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-009
+    text: "AIS maritime vessel tracking data became commercially viable for systematic macro and commodity research around 2010."
+    evidence_level: E2
+    source_quality: S2
+    sources: [alt_data_industry_survey]
+    replication_status: not_attempted
+    counterarguments: ["Coverage and latency differ from satellite imagery"]
+    confidence: 0.65
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-010
+    text: "Commercial satellite imagery for economic activity monitoring rose in the mid-2000s as an alternative data category."
+    evidence_level: E2
+    source_quality: S2
+    sources: [alt_data_industry_survey]
+    replication_status: not_attempted
+    counterarguments: ["Resolution and revisit frequency drive signal decay"]
+    confidence: 0.65
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-011
+    text: "SEC market-structure reforms in the National Market System era increased quote and trade transparency for US equities over the 1990s–2000s."
+    evidence_level: E2
+    source_quality: S3
+    sources: [sec_market_structure_nms, hasbrouck2007]
+    replication_status: not_attempted
+    counterarguments: ["Regulatory changes are not a data vendor per se"]
+    confidence: 0.8
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-012
+    text: "Compustat-style quarterly fundamentals for US equities are available from vendor histories dating to the 1960s."
+    evidence_level: E2
+    source_quality: S3
+    sources: [wrds_research_guide, crsp_stock_database]
+    replication_status: not_attempted
+    counterarguments: ["Point-in-time correctness requires paid point-in-time products"]
+    confidence: 0.82
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-013
+    text: "Short interest and securities lending metrics as systematic datasets matured for US equities in the 2000s."
+    evidence_level: E2
+    source_quality: S2
+    sources: [hasbrouck2007]
+    replication_status: not_attempted
+    counterarguments: ["Reporting frequency and coverage changed over time"]
+    confidence: 0.6
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-014
+    text: "We hypothesize that proprietary data cleaning, symbology, and corporate-action handling at Renaissance was a major unobserved advantage versus raw vendor feeds."
+    evidence_level: E1
+    source_quality: S2
+    sources: [zuckerman2019, patterson2010]
+    replication_status: not_attempted
+    counterarguments: ["Many large shops invest in data engineering"]
+    confidence: 0.55
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-015
+    text: "Structured geopolitical event databases as vendor products are primarily a 2000s-and-later category for systematic funds."
+    evidence_level: E2
+    source_quality: S2
+    sources: [alt_data_industry_survey]
+    replication_status: not_attempted
+    counterarguments: ["Manual news coding existed earlier at lower scale"]
+    confidence: 0.6
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-016
+    text: "Commodity flow and freight indices as alternative data depend on shipping, trade, and payment datasets that mature after 2000."
+    evidence_level: E2
+    source_quality: S2
+    sources: [alt_data_industry_survey]
+    replication_status: not_attempted
+    counterarguments: ["Government trade statistics exist earlier at lower frequency"]
+    confidence: 0.58
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-017
+    text: "Large financial text corpora (filings, news, transcripts) enable NLP features primarily after mid-1990s digitization and vendor packaging."
+    evidence_level: E2
+    source_quality: S2
+    sources: [alt_data_industry_survey, zuckerman2019]
+    replication_status: not_attempted
+    counterarguments: ["Lexicon methods predate modern deep NLP"]
+    confidence: 0.7
+    last_verified: "2026-05-26"
+
+  - claim_id: CLM-2027-018
+    text: "Crypto spot markets are not applicable to historical Medallion reconstruction focused on pre-2010 systematic equities, futures, and FX."
+    evidence_level: E1
+    source_quality: S2
+    sources: [wikipedia_renaissance_technologies]
+    replication_status: not_attempted
+    counterarguments: ["RenTech may have explored crypto later; out of scope for this matrix era"]
+    confidence: 0.85
+    last_verified: "2026-05-26"

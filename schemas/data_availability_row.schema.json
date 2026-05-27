@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medallion.local/schemas/data_availability_row.schema.json",
+  "title": "DataAvailabilityRow",
+  "type": "object",
+  "required": [
+    "name",
+    "category",
+    "earliest_year",
+    "cost",
+    "storage_gb_per_year",
+    "compute",
+    "coverage",
+    "latency",
+    "viability",
+    "predictive_viability",
+    "medallion_era",
+    "sources",
+    "claim_ids",
+    "linked_signals"
+  ],
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "category": { "type": "string", "enum": ["traditional", "alternative"] },
+    "earliest_year": { "type": "integer", "minimum": 1960, "maximum": 2030 },
+    "cost": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "very_high"]
+    },
+    "storage_gb_per_year": { "type": "number", "minimum": 0 },
+    "compute": {
+      "type": "string",
+      "enum": ["desktop", "workstation", "cluster", "gpu_cluster", "nlp_pipeline"]
+    },
+    "coverage": { "type": "string" },
+    "latency": { "type": "string" },
+    "viability": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "not_applicable"]
+    },
+    "predictive_viability": { "type": "string", "minLength": 10 },
+    "medallion_era": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "claim_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^CLM-[0-9]{4}-[0-9]{3,}$" },
+      "minItems": 1
+    },
+    "linked_signals": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^SIG-[0-9]{3}$" }
+    },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

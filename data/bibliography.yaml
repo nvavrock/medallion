@@ -62,3 +62,31 @@ sources:
     year: null
     type: web
     note: "Search adviser CRD for Renaissance Technologies LLC; use for registration dates"
+
+  crsp_stock_database:
+    title: "CRSP US Stock Database documentation"
+    author: "Center for Research in Security Prices"
+    year: null
+    type: web
+    note: "Daily and monthly US equity history; academic standard"
+
+  wrds_research_guide:
+    title: "WRDS — Wharton Research Data Services overview"
+    author: "Wharton School"
+    year: null
+    type: web
+    note: "Vendor access to Compustat, TAQ, and related sets"
+
+  sec_market_structure_nms:
+    title: "SEC market structure and transparency reforms (NMS era)"
+    author: "U.S. Securities and Exchange Commission"
+    year: null
+    type: web
+    note: "Context for tape consolidation and quote transparency"
+
+  alt_data_industry_survey:
+    title: "Alternative data in investment management (industry surveys)"
+    author: "Various industry reports"
+    year: 2020
+    type: secondary
+    note: "Vendor-neutral summaries of alt-data adoption timelines"
