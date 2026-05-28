@@ -61,7 +61,7 @@ smoke: deps
 
 experiments: smoke
 
-reproduce: deps test claim-audit smoke
+reproduce: deps smoke test claim-audit
 	@echo "Reproduce pipeline complete."
 
 site: quarto-check smoke
