@@ -37,7 +37,7 @@ Record outcomes in each experiment `results/summary.json`.
 - [ ] `make reproduce` passes on maintainer machine
 - [x] CHANGELOG v0.5.0
 - [ ] Git tag v0.5.0 (after merge)
-- [ ] Repository public + GitHub Pages enabled (M6; see [publishing.md](publishing.md))
+- [x] Repository public + GitHub Pages enabled (M6; see [publishing.md](publishing.md))
 
 ## Review gates summary
 
