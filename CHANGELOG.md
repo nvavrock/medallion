@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.1] - 2026-05-28
+
+### Added
+
+- **`make qa`** and **`make qa-full`** — single entry for gates A–D (and A–E with site render)
+- **PR CI** ([.github/workflows/ci.yml](.github/workflows/ci.yml)): `make reproduce` + `make quarto-check` without full Pages deploy
+- **Validators:** `validate_experiment_contracts.py`, `validate_experiment_summaries.py`, `rubric_lint.py` (wired into `quarto-check`)
+- **Live link check** ([.github/workflows/link-check.yml](.github/workflows/link-check.yml)) — weekly github.io crawl (non-blocking)
+- [docs/qa_manual_checklist.md](docs/qa_manual_checklist.md), [scripts/sample_evidence.py](scripts/sample_evidence.py), [docs/qa_reports/2026-05-28.md](docs/qa_reports/2026-05-28.md)
+
+### Changed
+
+- [docs/test_plan.md](docs/test_plan.md), [README.md](README.md), [CONTRIBUTING.md](CONTRIBUTING.md), [docs/traceability.md](docs/traceability.md), [docs/publishing.md](docs/publishing.md) — QA workflow documented
+
 ## [1.0.0] - 2026-05-28
 
 Charter-complete public reconstruction (Epics 2–5).

@@ -26,10 +26,12 @@ sudo apt install python3-venv   # if not using uv
 
 ```bash
 make install       # Python deps
-make reproduce     # tests, claim audit, experiments
-make site          # build Quarto website
+make qa            # tests, claim audit, validators, experiments (gates A–D)
+make site          # build Quarto website (Gate E)
 make preview       # live preview of the site
 ```
+
+Before a PR: `make qa` (CI runs the same checks without a full site render).
 
 ## Structure
 
@@ -52,6 +54,7 @@ make claim-audit
 
 ## Releases
 
+- **v1.0.1** — QA suite: `make qa`, PR CI, contract/rubric validators, manual checklist — [CHANGELOG.md](CHANGELOG.md)
 - **v1.0.0** — Charter-complete corpus (Epics 2–5): evidence coverage, phase depth, 6 experiments — [CHANGELOG.md](CHANGELOG.md) · [CONTRIBUTING.md](CONTRIBUTING.md)
 - **v0.6.0** — Quarto link fixes, CI `make reproduce`, Gate D closure
 - **v0.5.0** — Phase III–VI depth, Gate B automation, synthesis remediation

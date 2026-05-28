@@ -16,7 +16,7 @@ See [docs/agent-git-policy.md](docs/agent-git-policy.md) for commit/tag conventi
 
 - Assertive statements in `research/` must use `[[claim:CLM-...]]` with a record in [data/evidence.yaml](data/evidence.yaml).
 - Follow [docs/evidence_rubric.md](docs/evidence_rubric.md) (E0–E4 language, Sharpe/leverage bands).
-- Run `make claim-audit` and `make quarto-check` before opening a PR.
+- Run `make qa` before opening a PR (same gates as [CI](.github/workflows/ci.yml): `reproduce` + `quarto-check`).
 
 ## Signals and data matrix
 
@@ -33,6 +33,6 @@ See [docs/agent-git-policy.md](docs/agent-git-policy.md) for commit/tag conventi
 
 1. Fork and branch from `main`.
 2. Keep scope focused; update [CHANGELOG.md](CHANGELOG.md) for user-visible changes.
-3. Ensure CI passes (Quarto Publish workflow on merge).
+3. Ensure **CI** passes on the PR (`make reproduce` + `make quarto-check`). Merges to `main` also run **Quarto Publish** (full site + Pages).
 
 Not investment advice; not affiliated with Renaissance Technologies — see [docs/disclaimer.md](docs/disclaimer.md).

@@ -1,5 +1,5 @@
 .PHONY: install venv deps test claim-audit reproduce experiments smoke clean
-.PHONY: quarto-assets quarto-check site preview
+.PHONY: quarto-assets quarto-check site preview qa qa-full
 
 PYTHON ?= python3
 VENV ?= .venv
@@ -46,6 +46,9 @@ quarto-check: quarto-assets claim-audit
 	$(PY) scripts/validate_data_matrix.py
 	$(PY) scripts/validate_signals.py
 	$(PY) scripts/validate_evidence_coverage.py
+	$(PY) scripts/validate_experiment_contracts.py
+	$(PY) scripts/validate_experiment_summaries.py
+	$(PY) scripts/rubric_lint.py --strict
 	bash scripts/check_quarto_warnings.sh
 
 smoke: deps
@@ -78,6 +81,12 @@ preview: quarto-check smoke
 		exit 1; \
 	}
 	cd quarto && "$(QUARTO)" preview
+
+qa: reproduce quarto-check
+	@echo "QA gates A–D passed (run 'make qa-full' or 'make site' for Gate E render)."
+
+qa-full: qa site
+	@echo "QA full (gates A–E) complete."
 
 clean:
 	rm -rf $(VENV) quarto/_site quarto/.quarto

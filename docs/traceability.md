@@ -1,6 +1,6 @@
 # Requirements traceability
 
-**Last updated:** 2026-05-28 (v1.0.0)
+**Last updated:** 2026-05-28 (v1.0.1)
 
 | ID | Deliverable | Path | Gate |
 |----|-------------|------|------|
@@ -22,7 +22,10 @@
 | R9 | Quarto site | quarto/ | E |
 | NFR1 | Claim audit | scripts/claim_audit.py, validate_evidence_coverage.py | quarto-check |
 | NFR2 | Costs in sims | experiments/*/contract.yaml | smoke |
-| NFR3 | Rubric language | docs/evidence_rubric.md | manual |
+| NFR3 | Rubric language | scripts/rubric_lint.py, docs/evidence_rubric.md | quarto-check + manual |
+| NFR8 | Experiment contracts | scripts/validate_experiment_contracts.py | quarto-check |
+| NFR9 | Summary sanity | scripts/validate_experiment_summaries.py | quarto-check |
+| NFR10 | PR CI | .github/workflows/ci.yml | PR / main |
 | NFR4 | Bibliography | data/bibliography.yaml → quarto/references.bib | quarto-assets |
 | NFR5 | Reproduce | Makefile `reproduce` | CI |
 | NFR6 | Disclaimer | quarto/index.qmd, about.qmd | E |

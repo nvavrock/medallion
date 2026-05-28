@@ -44,6 +44,10 @@ gh workflow run quarto-publish.yml -R nvavrock/medallion
 
 The workflow runs on **push to `main`** and on **workflow_dispatch**. Deploy job uses the `github-pages` environment.
 
+**PR checks:** [.github/workflows/ci.yml](../.github/workflows/ci.yml) runs `make reproduce` and `make quarto-check` (no full render).
+
+**Live link check:** [.github/workflows/link-check.yml](../.github/workflows/link-check.yml) crawls the published site weekly (non-blocking; see Actions artifacts).
+
 ### Troubleshooting 404
 
 | Symptom | Likely cause |
