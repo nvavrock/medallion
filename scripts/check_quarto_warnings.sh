@@ -20,3 +20,4 @@ if [[ "$COUNT" -gt 0 ]]; then
   exit 1
 fi
 echo "Quarto link check passed (0 unresolved links)."
+bash "$ROOT/scripts/check_claim_links.sh"

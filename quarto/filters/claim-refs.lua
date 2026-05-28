@@ -31,10 +31,34 @@ end
 
 local pattern = "%[%[claim:(CLM%-%d+%-%d+)%]%]"
 
+-- Relative path to evidence registry HTML (no fragment). Same-page returns "".
+local function registry_base()
+  if not (quarto and quarto.doc and quarto.doc.input_file) then
+    return ""
+  end
+  local input = quarto.doc.input_file:gsub("\\", "/")
+  if input:match("appendices/evidence%-registry%.qmd$") then
+    return ""
+  end
+  if input:match("^chapters/") or input:match("/chapters/")
+      or input:match("^notebooks/") or input:match("/notebooks/") then
+    return "../appendices/evidence-registry.html"
+  end
+  return "appendices/evidence-registry.html"
+end
+
+local function claim_href(cid)
+  local base = registry_base()
+  if base == "" then
+    return "#claim-" .. cid
+  end
+  return base .. "#claim-" .. cid
+end
+
 local function replace_claims(text, map)
   return (text:gsub(pattern, function(cid)
     if map[cid] then
-      return string.format("[%s](#claim-%s)", cid, cid)
+      return string.format("[%s](%s)", cid, claim_href(cid))
     end
     table.insert(unknown_ids, cid)
     return "[[" .. cid .. " MISSING]]"

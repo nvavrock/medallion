@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2] - 2026-05-28
+
+### Fixed
+
+- **Claim ref links:** `[[claim:CLM-*]]` in chapters now link to [evidence registry](quarto/appendices/evidence-registry.qmd) (`../appendices/evidence-registry.html#claim-*`) instead of broken same-page `#claim-*` anchors
+- Regression guard: [`scripts/check_claim_links.sh`](scripts/check_claim_links.sh) in `make quarto-check`
+
 ## [1.0.1] - 2026-05-28
 
 ### Added
