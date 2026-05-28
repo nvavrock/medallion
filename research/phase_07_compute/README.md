@@ -9,10 +9,10 @@
 
 | ID | Path | Linked signals |
 |----|------|----------------|
-| EXP-03 | [experiments/03_mean_reversion/](../../experiments/03_mean_reversion/) | SIG-002 |
-| EXP-04 | [experiments/04_almgren_chriss/](../../experiments/04_almgren_chriss/) | SIG-007 |
-| EXP-05 | [experiments/05_vol_target_kelly/](../../experiments/05_vol_target_kelly/) | SIG-015 |
-| EXP-07 | [experiments/07_multi_signal/](../../experiments/07_multi_signal/) | SIG-002, SIG-003 |
+| EXP-03 | [03_mean_reversion](https://github.com/nvavrock/medallion/tree/main/experiments/03_mean_reversion) | SIG-002 |
+| EXP-04 | [04_almgren_chriss](https://github.com/nvavrock/medallion/tree/main/experiments/04_almgren_chriss) | SIG-007 |
+| EXP-05 | [05_vol_target_kelly](https://github.com/nvavrock/medallion/tree/main/experiments/05_vol_target_kelly) | SIG-015 |
+| EXP-07 | [07_multi_signal](https://github.com/nvavrock/medallion/tree/main/experiments/07_multi_signal) | SIG-002, SIG-003 |
 
 Each experiment includes `contract.yaml` per schema.
 

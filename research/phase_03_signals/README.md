@@ -4,7 +4,7 @@
 
 ## Signal Hypothesis Database
 
-Canonical store: [data/signals.yaml](../../data/signals.yaml)
+Canonical store: [data/signals.yaml](https://github.com/nvavrock/medallion/blob/main/data/signals.yaml)
 
 | Signal ID | Class | Era | Confidence |
 |-----------|-------|-----|------------|
@@ -19,13 +19,13 @@ Canonical store: [data/signals.yaml](../../data/signals.yaml)
 
 | Essay | Signals | Requirement |
 |-------|---------|-------------|
-| [core_stat_arb.md](core_stat_arb.md) | SIG-001–007 | R3 |
-| [options_vol.md](options_vol.md) | SIG-008–010 | R3a |
-| [modern_ml.md](modern_ml.md) | SIG-011–014, SIG-013 | R3b |
+| [Core stat arb](#core-stat-arb) | SIG-001–007 | R3 |
+| [Options / vol](#options-vol) | SIG-008–010 | R3a |
+| [Modern ML](#modern-ml) | SIG-011–014, SIG-013 | R3b |
 
 ## Data dependencies (Phase II)
 
-Before deepening signal essays or running Phase VII experiments, map each signal to datasets in [phase_02_data/signal_data_map.md](../phase_02_data/signal_data_map.md) and cite matrix rows in experiment configs.
+Before deepening signal essays or running Phase VII experiments, map each signal to datasets in [signal → data crosswalk](../chapters/02-data.html#signal-data-map) and cite matrix rows in experiment configs.
 
 ## Replication (Gate B)
 

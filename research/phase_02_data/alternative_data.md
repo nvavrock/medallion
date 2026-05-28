@@ -1,4 +1,4 @@
-# Alternative data
+# Alternative data {#alternative-data}
 
 **Last updated:** 2026-05-26
 
@@ -30,7 +30,7 @@ Alt-data is **not** RenTech-specific; industry surveys document adoption curves 
 
 **Earnings transcripts** — Structured vendor products ~2000 [[claim:CLM-2027-008]]; event-driven drift decays as NLP commoditizes.
 
-**Sentiment scores** — Vendor indices from ~2008; feature inputs with **months** half-life in [signals.yaml](../../data/signals.yaml), not standalone HFT alpha.
+**Sentiment scores** — Vendor indices from ~2008; feature inputs with **months** half-life in [signals.yaml](https://github.com/nvavrock/medallion/blob/main/data/signals.yaml), not standalone HFT alpha.
 
 ## Physical and flow alt-data (SIG-012)
 
@@ -54,4 +54,4 @@ Alt-data is **not** RenTech-specific; industry surveys document adoption curves 
 
 ## Alpha half-life vs data latency
 
-Alt-data with **days-to-quarters** latency (satellite, AIS, freight) cannot support SIG-002/SIG-007 microstructure horizons. NLP at **minutes-to-daily** can overlap SIG-011 but faces crowding. Phase VII experiments using these rows must document license and era constraints in [data/manifest.yaml](../../data/manifest.yaml).
+Alt-data with **days-to-quarters** latency (satellite, AIS, freight) cannot support SIG-002/SIG-007 microstructure horizons. NLP at **minutes-to-daily** can overlap SIG-011 but faces crowding. Phase VII experiments using these rows must document license and era constraints in [data/manifest.yaml](https://github.com/nvavrock/medallion/blob/main/data/manifest.yaml).

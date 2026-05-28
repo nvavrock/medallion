@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-28
 
-See [disclaimer](../../docs/disclaimer.md).
+See [disclaimer](../about.html).
 
 ## Models studied
 
@@ -39,13 +39,13 @@ Permanent and temporary impact constrain how much notional can be turned over be
 
 ## Experiment (R4b)
 
-[experiments/04_almgren_chriss/](../../experiments/04_almgren_chriss/) — EXP-04 implements a cost-aware Almgren–Chriss-style toy:
+[EXP-04](https://github.com/nvavrock/medallion/tree/main/experiments/04_almgren_chriss) — EXP-04 implements a cost-aware Almgren–Chriss-style toy:
 
 - Inputs: participation rate, impact coefficients, commission and slippage bps
 - Outputs: implementation shortfall versus naive schedule
 - Linked signals: SIG-007 (microstructure), SIG-014 (execution inference)
 
-Sensitivity: vary `participation_rate` per [test plan](../../docs/test_plan.md); record in `results/summary.json`.
+Sensitivity: vary `participation_rate` per the [test plan](https://github.com/nvavrock/medallion/blob/main/docs/test_plan.md); record in `results/summary.json`.
 
 ## Reinforcement learning (inference)
 

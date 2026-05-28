@@ -35,7 +35,7 @@ flowchart BT
 
 **Mechanisms:** Volatility targeting, fractional Kelly variants (SIG-015). Public leverage band **~5×–12× effective** is hypothesis E1 [[claim:CLM-2024-004]], not a fixed constant.
 
-**Experiment:** [experiments/05_vol_target_kelly/](../../experiments/05_vol_target_kelly/) — EXP-05 applies banded leverage with commission and slippage; compare gross versus net Sharpe in `results/summary.json`.
+**Experiment:** [EXP-05](https://github.com/nvavrock/medallion/tree/main/experiments/05_vol_target_kelly) — EXP-05 applies banded leverage with commission and slippage; compare gross versus net Sharpe in `results/summary.json`.
 
 ## Layer 4 — Execution
 
@@ -43,7 +43,7 @@ flowchart BT
 
 **Mechanisms:** Almgren–Chriss / Kyle frameworks; possible adaptive execution (SIG-014 E1). EXP-04 shows execution drag can erode naive alpha.
 
-**Link:** [Phase IV execution](../phase_04_execution/README.md).
+**Link:** [Phase IV — Execution](../chapters/04-execution.html).
 
 ## Layer 5 — Portfolio
 

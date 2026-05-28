@@ -1,6 +1,6 @@
-# Strategy Evolution Map
+# Strategy Evolution Map {#strategy-evolution-map}
 
-Sources: [zuckerman2019], [patterson2010], [wikipedia_renaissance_technologies]. See [disclaimer](../../docs/disclaimer.md).
+Sources: [zuckerman2019], [patterson2010], [wikipedia_renaissance_technologies]. See [disclaimer](../about.html).
 
 The diagram below is a **pedagogical** partition. Public sources emphasize **continuity** and overlapping sleeves rather than four clean handoffs [[claim:CLM-2024-002]].
 
@@ -15,7 +15,7 @@ flowchart LR
 
 **Instruments (public):** Currencies first under Monemetrics [[claim:CLM-2026-001]]; Baum/Ax lineage extended models toward **commodity futures** more broadly [[claim:CLM-2026-011]]. **Holding period:** public sources rarely give clean half-lives for this era; we do not invent numbers.
 
-**Data available then (cross-check Phase II):** Daily futures and FX existed; consolidated **equity tick** tape and modern **L2 order books** were **not** broadly available at today’s granularity until later decades. See [data_availability_matrix.yaml](../../research/phase_02_data/data_availability_matrix.yaml) rows `futures_continuous`, `fx_spot_tick`, `equity_tick_trades`, `order_book_l2`.
+**Data available then (cross-check Phase II):** Daily futures and FX existed; consolidated **equity tick** tape and modern **L2 order books** were **not** broadly available at today’s granularity until later decades. See [data_availability_matrix.yaml](https://github.com/nvavrock/medallion/blob/main/research/phase_02_data/data_availability_matrix.yaml) rows `futures_continuous`, `fx_spot_tick`, `equity_tick_trades`, `order_book_l2`.
 
 **Narrative:** Simons accumulated price data and iterated on models while recruiting mathematicians rather than traditional traders [[claim:CLM-2026-003]] [[claim:CLM-2024-009]].
 
@@ -49,7 +49,7 @@ Discrete stages help readers; the evidence supports **overlapping** evolution mo
 
 ## Forward link
 
-Detailed **dataset-era feasibility** lives in [Phase II — Data](../../research/phase_02_data/README.md) and the [availability matrix YAML](../../research/phase_02_data/data_availability_matrix.yaml).
+Detailed **dataset-era feasibility** lives in [Phase II — Data](../chapters/02-data.html) and the [availability matrix YAML](https://github.com/nvavrock/medallion/blob/main/research/phase_02_data/data_availability_matrix.yaml).
 
 ## Bridge to later phases (scope control)
 

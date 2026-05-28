@@ -1,8 +1,8 @@
-# Core statistical arbitrage cluster
+# Core statistical arbitrage cluster {#core-stat-arb}
 
 **Last updated:** 2026-05-28
 
-Signals **SIG-001** through **SIG-007** form the best-sourced reconstruction cluster: equity and futures stat-arb, short-horizon mean reversion, momentum, pairs/cointegration, state-space tools, and order-flow microstructure. Each row below ties the hypothesis to Phase II data rows in [signal_data_map.md](../phase_02_data/signal_data_map.md).
+Signals **SIG-001** through **SIG-007** form the best-sourced reconstruction cluster: equity and futures stat-arb, short-horizon mean reversion, momentum, pairs/cointegration, state-space tools, and order-flow microstructure. Each row below ties the hypothesis to Phase II data rows in [signal → data crosswalk](../chapters/02-data.html#signal-data-map).
 
 ## SIG-001 — Statistical arbitrage (equity baskets)
 
@@ -16,7 +16,7 @@ Signals **SIG-001** through **SIG-007** form the best-sourced reconstruction clu
 
 ## SIG-002 — Short-horizon mean reversion
 
-**Theory:** Microstructure overreaction and liquidity provision. **Replication:** partial — toy replication in [experiments/03_mean_reversion/](../../experiments/03_mean_reversion/) (EXP-03) on synthetic data with explicit costs.
+**Theory:** Microstructure overreaction and liquidity provision. **Replication:** partial — toy replication in [EXP-03](https://github.com/nvavrock/medallion/tree/main/experiments/03_mean_reversion) (EXP-03) on synthetic data with explicit costs.
 
 **Data:** `equity_tick_trades`, `equity_intraday_ohlc`, `fx_spot_tick`, `order_book_l2` (L2 from ~2000s [[claim:CLM-2027-003]]). **Era gate:** consolidated US tape ~1993 [[claim:CLM-2027-002]].
 
@@ -24,7 +24,7 @@ Signals **SIG-001** through **SIG-007** form the best-sourced reconstruction clu
 
 ## SIG-003 — Momentum
 
-**Theory:** Slow information diffusion. **Replication:** replicated — factor literature and multi-sleeve toy [experiments/07_multi_signal/](../../experiments/07_multi_signal/) (EXP-07) combine with mean reversion under costs.
+**Theory:** Slow information diffusion. **Replication:** replicated — factor literature and multi-sleeve toy [EXP-07](https://github.com/nvavrock/medallion/tree/main/experiments/07_multi_signal) (EXP-07) combine with mean reversion under costs.
 
 **Data:** `equity_daily_ohlcv`, `futures_continuous`, `fx_spot_tick`, `economic_releases`. **Failure mode:** momentum crashes (2009, 2020-style episodes).
 

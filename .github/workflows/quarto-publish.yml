@@ -32,6 +32,9 @@ jobs:
 
       - uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Reproduce pipeline
+        run: make reproduce
+
       - name: Build site
         run: make site
 

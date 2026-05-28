@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-28
 
-See [disclaimer](../../docs/disclaimer.md).
+See [disclaimer](../about.html).
 
 ## Integrated framework
 
@@ -10,10 +10,10 @@ Public reconstruction supports a **layered** explanation: diversified short-hori
 
 ## What plausibly explains performance
 
-1. **Diversified short-horizon predictive signals** (stat arb, momentum, micro) with rigorous neutralization (SIG-001–007). See [core_stat_arb.md](../phase_03_signals/core_stat_arb.md).
+1. **Diversified short-horizon predictive signals** (stat arb, momentum, micro) with rigorous neutralization (SIG-001–007). See [core stat arb cluster](../chapters/03-signals.html#core-stat-arb).
 2. **Risk stack** — vol targeting, banded leverage [[claim:CLM-2024-004]], portfolio diversification [[claim:CLM-2024-003]]. Gross Sharpe **point estimates above ~7** are treated as speculative upper range, not replicated facts.
 3. **Execution quality** — reduces drag but unlikely sole driver [[claim:CLM-2024-007]]; EXP-04 bounds static impact costs.
-4. **Options/volatility sleeves** — plausible but under-sourced [[claim:CLM-2024-008]] (SIG-008–010); see [options_vol.md](../phase_03_signals/options_vol.md).
+4. **Options/volatility sleeves** — plausible but under-sourced [[claim:CLM-2024-008]] (SIG-008–010); see [options / vol cluster](../chapters/03-signals.html#options-vol).
 5. **Organizational moat** — hiring, secrecy, long-horizon R&D [[claim:CLM-2024-009]]; peers share traits without identical outcomes.
 
 ## Performance metrics (ranges only)
@@ -50,7 +50,7 @@ These cannot be quantified from public data; they belong in sensitivity analysis
 
 ## Modern ML
 
-Post-2010 NLP and alt-data (SIG-011–012) are **industry-wide**; RenTech’s early ML scale-up [[claim:CLM-2024-006]] suggests advantage in **integration and data hygiene**, not necessarily novel architectures alone. See [modern_ml.md](../phase_03_signals/modern_ml.md).
+Post-2010 NLP and alt-data (SIG-011–012) are **industry-wide**; RenTech’s early ML scale-up [[claim:CLM-2024-006]] suggests advantage in **integration and data hygiene**, not necessarily novel architectures alone. See [modern ML cluster](../chapters/03-signals.html#modern-ml).
 
 ## Simulation limits
 

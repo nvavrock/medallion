@@ -1,6 +1,6 @@
-# Infrastructure Timeline
+# Infrastructure Timeline {#infrastructure-timeline}
 
-Sources: [zuckerman2019], [patterson2010], [wikipedia_renaissance_technologies]. See [disclaimer](../../docs/disclaimer.md).
+Sources: [zuckerman2019], [patterson2010], [wikipedia_renaissance_technologies]. See [disclaimer](../about.html).
 
 This table mixes **industry-wide** developments (usable as context) with **Renaissance-specific** claims only where we have citations. Petabyte-scale language is **modern journalism**, not audited engineering disclosure [[claim:CLM-2026-017]] [[claim:CLM-2026-018]].
 
@@ -20,7 +20,7 @@ Use the matrix for **earliest_year** discipline when inferring what signals were
 2. **L2 order books** — see `order_book_l2` (2000+ in matrix).
 3. **Options chains EOD** — see `options_chain_eod` (1990+).
 
-Full YAML: [data_availability_matrix.yaml](../../research/phase_02_data/data_availability_matrix.yaml).
+Full YAML: [data_availability_matrix.yaml](https://github.com/nvavrock/medallion/blob/main/research/phase_02_data/data_availability_matrix.yaml).
 
 ## Industry vs firm (wording discipline)
 

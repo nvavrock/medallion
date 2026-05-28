@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.6.0] - 2026-05-28
+
+### Fixed
+
+- Quarto cross-links on GitHub Pages: in-chapter `#` anchors (Phase II), `../chapters/*.html` and `../appendices/*.html` paths, GitHub blob URLs for repo source files
+- Zero unresolved link warnings enforced by `scripts/check_quarto_warnings.sh` in `make quarto-check`
+
+### Changed
+
+- CI ([quarto-publish.yml](.github/workflows/quarto-publish.yml)) runs `make reproduce` before `make site`
+- [docs/test_plan.md](docs/test_plan.md), [docs/charter.md](docs/charter.md), and [README.md](README.md) aligned with live Pages and Gate D pass
+
 ## [0.5.0] - 2026-05-28
 
 ### Added

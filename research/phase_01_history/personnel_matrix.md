@@ -1,6 +1,6 @@
-# Personnel Contribution Matrix
+# Personnel Contribution Matrix {#personnel-contribution-matrix}
 
-Sources: [zuckerman2019], [patterson2010], [wikipedia_renaissance_technologies], [berkeley_news_berlekamp2019]. See [disclaimer](../../docs/disclaimer.md).
+Sources: [zuckerman2019], [patterson2010], [wikipedia_renaissance_technologies], [berkeley_news_berlekamp2019]. See [disclaimer](../about.html).
 
 ## Matrix (high level)
 

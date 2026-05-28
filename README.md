@@ -6,7 +6,7 @@
 
 Public, evidence-driven reconstruction of plausible operating principles behind Renaissance Technologies’ Medallion Fund—**public sources only**, with reproducible experiments and a [Quarto](https://quarto.org/) research site.
 
-> **Site:** [https://nvavrock.github.io/medallion/](https://nvavrock.github.io/medallion/) (available after the repository is public and GitHub Pages is enabled). Build locally with `make site` / `make preview`.
+> **Site (live):** [https://nvavrock.github.io/medallion/](https://nvavrock.github.io/medallion/) — also build locally with `make site` / `make preview`.
 
 See [docs/disclaimer.md](docs/disclaimer.md) — not investment advice; not affiliated with RenTech.
 
@@ -52,7 +52,8 @@ make claim-audit
 
 ## Releases
 
-- **v0.5.0** — Phase III–VI depth, Gate B automation, synthesis remediation — [CHANGELOG.md](CHANGELOG.md)
+- **v0.6.0** — Quarto link fixes, CI `make reproduce`, Gate D closure — [CHANGELOG.md](CHANGELOG.md)
+- **v0.5.0** — Phase III–VI depth, Gate B automation, synthesis remediation
 - **v0.4.0** — Phase II data architecture matrix and narratives
 - **v0.2.0** — Public Quarto site (preview; enable Pages when repo is public)
 - **v0.1.0** — Research corpus + code

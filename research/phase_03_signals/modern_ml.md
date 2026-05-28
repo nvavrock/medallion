@@ -1,4 +1,4 @@
-# Modern ML, NLP, and alt-data cluster
+# Modern ML, NLP, and alt-data cluster {#modern-ml}
 
 **Last updated:** 2026-05-28
 
@@ -13,7 +13,7 @@ Workstream **R3b** covers **SIG-011** through **SIG-014**, plus ensemble core **
 | SIG-013 Ensemble ML | 1993+ multi-modal (post Brown/Mercer) | Overfit; compute |
 | SIG-014 RL execution | 2015+ industry; L2 ~2000+ | Simulator-to-real; RenTech E1 |
 
-Alt-data rows require [data/manifest.yaml](../../data/manifest.yaml) paths before any download experiment; stubs remain for FRED/yfinance placeholders.
+Alt-data rows require [data/manifest.yaml](https://github.com/nvavrock/medallion/blob/main/data/manifest.yaml) paths before any download experiment; stubs remain for FRED/yfinance placeholders.
 
 ## SIG-011 — NLP on news and earnings
 
@@ -31,11 +31,11 @@ Alt-data rows require [data/manifest.yaml](../../data/manifest.yaml) paths befor
 
 **Theory:** Nonlinear feature interactions. **Evidence:** Mercer/Brown public accounts (E2). **Replication:** partial — industry-wide adoption; advantage hypothesis is **data hygiene and ensemble discipline**, not a unique architecture.
 
-**Data:** crosses tick, daily, and text rows per [signal_data_map.md](../phase_02_data/signal_data_map.md). Pairs with SIG-001 and SIG-007 features in production-grade shops (inferred).
+**Data:** crosses tick, daily, and text rows per [signal → data crosswalk](../chapters/02-data.html#signal-data-map). Pairs with SIG-001 and SIG-007 features in production-grade shops (inferred).
 
 ## SIG-014 — Reinforcement learning for execution
 
-**Theory:** Adaptive execution reduces impact. **Replication:** partial — [experiments/04_almgren_chriss/](../../experiments/04_almgren_chriss/) (EXP-04) bounds **static** optimal execution under impact; it is not RL but shows execution cannot be ignored.
+**Theory:** Adaptive execution reduces impact. **Replication:** partial — [EXP-04](https://github.com/nvavrock/medallion/tree/main/experiments/04_almgren_chriss) (EXP-04) bounds **static** optimal execution under impact; it is not RL but shows execution cannot be ignored.
 
 RenTech use of RL is **E1 unconfirmed**. Feasibility improves with `order_book_l2` (SIG-007 era gate).
 

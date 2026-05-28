@@ -1,4 +1,4 @@
-# Methodology — matrix estimates
+# Methodology — matrix estimates {#methodology}
 
 **Last updated:** 2026-05-26
 
@@ -30,7 +30,7 @@ python scripts/validate_data_matrix.py
 make claim-audit
 ```
 
-The JSON Schema is [schemas/data_availability_row.schema.json](../../schemas/data_availability_row.schema.json). Gate A requires named core asset classes and ≥6 alternative rows.
+The JSON Schema is [data_availability_row.schema.json](https://github.com/nvavrock/medallion/blob/main/schemas/data_availability_row.schema.json). Gate A requires named core asset classes and ≥6 alternative rows.
 
 ## What we do not claim
 
@@ -38,8 +38,8 @@ The JSON Schema is [schemas/data_availability_row.schema.json](../../schemas/dat
 - That any single dataset was **the** source of Medallion returns.
 - Point-in-time fundamentals without a paid point-in-time product (see [[claim:CLM-2027-012]] counterarguments).
 
-Future Phase VII experiments must cite matrix rows before using alt-data in simulations (see Phase I bridge text in [strategy_evolution.md](../phase_01_history/strategy_evolution.md)).
+Future Phase VII experiments must cite matrix rows before using alt-data in simulations (see Phase I bridge text in [strategy evolution](../chapters/01-history.html#strategy-evolution-map)).
 
 ## Maintenance
 
-When adding a matrix row, update: (1) `claim_ids` in [data/evidence.yaml](../../data/evidence.yaml) first, (2) `linked_signals` for affected SIG-* entries, (3) [signal_data_map.md](signal_data_map.md), and (4) re-run `python scripts/validate_data_matrix.py`. Regenerate the Quarto table with `make quarto-assets`.
+When adding a matrix row, update: (1) `claim_ids` in [data/evidence.yaml](https://github.com/nvavrock/medallion/blob/main/data/evidence.yaml) first, (2) `linked_signals` for affected SIG-* entries, (3) [signal → data crosswalk](#signal-data-map), and (4) re-run `python scripts/validate_data_matrix.py`. Regenerate the Quarto table with `make quarto-assets`.

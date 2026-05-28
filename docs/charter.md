@@ -75,6 +75,15 @@ This is **quantitative archaeology**: assembling fragmented public evidence, aca
 | M5 | Release v0.1.0 (research corpus + code) |
 | M6 | Public Quarto site v0.2.0 |
 
+### Milestone status (2026-05)
+
+| Milestone | Status |
+|-----------|--------|
+| M0–M1 | Complete — SDLC docs; Phase I–II depth (v0.3–v0.4) |
+| M2–M4 | First draft complete (v0.5.0); narrative depth continues in v0.7+ |
+| M5 | Complete — v0.1.0 research corpus + code |
+| M6 | Complete — live site at https://nvavrock.github.io/medallion/; Actions deploy on `main` |
+
 Time is not a primary constraint; depth and accuracy are.
 
 ## Stakeholders
@@ -85,4 +94,4 @@ Time is not a primary constraint; depth and accuracy are.
 
 ## Approval
 
-This charter governs scope for release **v0.2.0** and later. Changes require an entry in CHANGELOG.md and, if scope-expanding, an update to requirements.md.
+This charter governs scope for release **v0.2.0** and later. Release hygiene and live publishing verified through **v0.6.0**. Changes require an entry in CHANGELOG.md and, if scope-expanding, an update to requirements.md.

@@ -1,8 +1,8 @@
-# Chronological Timeline — Renaissance / Medallion
+# Chronological Timeline — Renaissance / Medallion {#chronological-timeline}
 
 This chapter synthesizes **publicly documented** milestones for Monemetrics / Renaissance Technologies and the Medallion Fund. Where journalism and Wikipedia disagree on minor details, we cite multiple keys and keep confidence moderate. Nothing here is proprietary RenTech disclosure.
 
-**Primary reading:** [zuckerman2019], [patterson2010]. **Aggregated timeline cross-check:** [wikipedia_renaissance_technologies]. **Regulatory lookup:** [sec_iapd_renaissance] ([[claim:CLM-2026-020]]). See [disclaimer](../../docs/disclaimer.md).
+**Primary reading:** [zuckerman2019], [patterson2010]. **Aggregated timeline cross-check:** [wikipedia_renaissance_technologies]. **Regulatory lookup:** [sec_iapd_renaissance] ([[claim:CLM-2026-020]]). See [disclaimer](../about.html).
 
 ## Chronology (1978–2025)
 

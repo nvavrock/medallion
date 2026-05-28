@@ -1,4 +1,4 @@
-# Options and volatility cluster
+# Options and volatility cluster {#options-vol}
 
 **Last updated:** 2026-05-28
 
@@ -42,4 +42,4 @@ Options sleeves are **plausible from the 1990s** onward but should be labeled **
 - **Capacity:** Medallion’s closed structure may have absorbed vol premia early; crowding post-2010.
 - **Sourcing:** Journalism mentions derivatives exposure; magnitudes are not audited.
 
-See canonical fields in [data/signals.yaml](../../data/signals.yaml) and the [signal database](../../quarto/appendices/signal-database.qmd) appendix.
+See canonical fields in [data/signals.yaml](https://github.com/nvavrock/medallion/blob/main/data/signals.yaml) and the [signal database](../appendices/signal-database.html) appendix.
