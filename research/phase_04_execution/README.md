@@ -1,4 +1,4 @@
-# Phase IV — Market Microstructure & Execution
+## Overview
 
 **Last updated:** 2026-05-28
 

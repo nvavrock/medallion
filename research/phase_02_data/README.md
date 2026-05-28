@@ -1,4 +1,4 @@
-# Phase II — Data Architecture {#phase-ii-overview}
+## Overview {#phase-ii-overview}
 
 **Last updated:** 2026-05-28
 

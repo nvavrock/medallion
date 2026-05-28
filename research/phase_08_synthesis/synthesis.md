@@ -1,4 +1,4 @@
-# Phase VIII — Synthesis
+## Overview
 
 **Last updated:** 2026-05-28
 

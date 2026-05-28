@@ -1,4 +1,4 @@
-# Phase VII — Computational Reconstruction {#phase-vii-compute}
+## Overview {#phase-vii-compute}
 
 **Last updated:** 2026-05-28
 

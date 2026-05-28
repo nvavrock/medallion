@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.3] - 2026-05-28
+
+### Fixed
+
+- Duplicate phase titles on site chapters II–IV, VII–VIII: removed redundant H1 from included research READMEs/synthesis (Quarto `.qmd` `title:` is the page heading)
+
 ## [1.0.2] - 2026-05-28
 
 ### Fixed
