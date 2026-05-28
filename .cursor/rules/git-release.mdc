@@ -1,0 +1,32 @@
+---
+description: Commit and push after substantive work; tag versioned releases
+alwaysApply: true
+---
+
+# Git and releases (Medallion)
+
+## Default behavior
+
+Unless the user explicitly says **do not commit** or **do not push**:
+
+1. After completing a task that changed tracked files: stage relevant paths, **commit**, and **push** to `origin` on the current branch.
+2. Use clear commit messages (HEREDOC). Match style from `git log`.
+3. Before release-sized commits: run `make reproduce` when code, research, or Quarto assets changed; at minimum `make test` and `make quarto-check` when only docs/scripts changed.
+
+## Tags
+
+- Create a git tag **`vX.Y.Z`** when `pyproject.toml` and/or `CHANGELOG.md` are bumped for a release.
+- Push tags: `git push origin vX.Y.Z`.
+- Do **not** tag every small commit—tag **versioned releases** aligned with CHANGELOG sections.
+
+## Safety (always)
+
+- Never commit secrets (`.env`, credentials, API keys). Warn if asked.
+- Never update `git config`.
+- Never force-push `main` or `master`.
+- Never skip hooks (`--no-verify`) unless the user explicitly requests it.
+- Avoid `git commit --amend` unless the user requests it, or a hook auto-modified files after a successful commit you created (and it was not pushed).
+
+## Pull requests
+
+Use `gh` for PRs when asked. Push branch with `-u` before `gh pr create`.
