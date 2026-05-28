@@ -50,3 +50,19 @@ def load_signals(path: Path | None = None) -> list[SignalHypothesis]:
 
 def signals_by_tag(tag: str, path: Path | None = None) -> list[SignalHypothesis]:
     return [s for s in load_signals(path) if tag in s.tags]
+
+
+GATE_B_MIN_REPLICATED = 10
+
+
+def audit_gate_b(path: Path | None = None) -> list[str]:
+    """Gate B: at least GATE_B_MIN_REPLICATED signals with replication != not_attempted."""
+    signals = load_signals(path)
+    attempted = [s for s in signals if s.replication != "not_attempted"]
+    errors: list[str] = []
+    if len(attempted) < GATE_B_MIN_REPLICATED:
+        errors.append(
+            f"Gate B failed: {len(attempted)}/{GATE_B_MIN_REPLICATED} signals have "
+            "replication partial or replicated (not_attempted excluded)"
+        )
+    return errors

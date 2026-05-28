@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.5.0] - 2026-05-28
+
+### Added
+
+- Phase III signal cluster essays: `core_stat_arb.md`, `options_vol.md`, `modern_ml.md`; Quarto chapter 03 includes full prose
+- Gate B automation: `audit_gate_b()` in `medallion.signals`, `scripts/validate_signals.py`, wired into `make quarto-check`
+- Expanded Phase IV–VI narratives (execution, risk stack, org matrix) and Phase VIII synthesis (ranges, counterarguments, explicit rejection of win-rate mantra)
+
+### Changed
+
+- Six signals (SIG-005, 008, 010, 011, 012, 014) upgraded from `not_attempted` to `partial` with documented replication limits
+- GitHub Actions `quarto-publish.yml` runs on push to `main` (enable GitHub Pages when repository is public)
+- [docs/test_plan.md](docs/test_plan.md) updated for v0.5.0 gates
+
 ## [0.4.0] - 2026-05-26
 
 ### Added

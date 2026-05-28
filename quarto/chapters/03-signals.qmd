@@ -4,4 +4,10 @@ title: "Phase III — Signal Reconstruction"
 
 {{< include ../../research/phase_03_signals/README.md >}}
 
+{{< include ../../research/phase_03_signals/core_stat_arb.md >}}
+
+{{< include ../../research/phase_03_signals/options_vol.md >}}
+
+{{< include ../../research/phase_03_signals/modern_ml.md >}}
+
 See the full [signal database](../appendices/signal-database.qmd).

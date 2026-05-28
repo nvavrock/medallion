@@ -1,5 +1,7 @@
 # Phase III — Signal Reconstruction
 
+**Last updated:** 2026-05-28
+
 ## Signal Hypothesis Database
 
 Canonical store: [data/signals.yaml](../../data/signals.yaml)
@@ -13,14 +15,21 @@ Canonical store: [data/signals.yaml](../../data/signals.yaml)
 | SIG-011–014 | Modern ML / alt data | 2005–2015+ | 0.30–0.55 |
 | SIG-015 | Kelly sizing | 1980s+ | 0.40 |
 
+## Chapter sections
+
+| Essay | Signals | Requirement |
+|-------|---------|-------------|
+| [core_stat_arb.md](core_stat_arb.md) | SIG-001–007 | R3 |
+| [options_vol.md](options_vol.md) | SIG-008–010 | R3a |
+| [modern_ml.md](modern_ml.md) | SIG-011–014, SIG-013 | R3b |
+
 ## Data dependencies (Phase II)
 
 Before deepening signal essays or running Phase VII experiments, map each signal to datasets in [phase_02_data/signal_data_map.md](../phase_02_data/signal_data_map.md) and cite matrix rows in experiment configs.
 
-## PDF workstreams
+## Replication (Gate B)
 
-- **Options/volatility:** SIG-008, SIG-009, SIG-010 (see tags `options`, `volatility`)
-- **Modern ML/NLP:** SIG-011, SIG-012, SIG-013, SIG-014 (tag `ml`)
+Fifteen signals; **≥10** must have `replication` ≠ `not_attempted` (verified by `scripts/validate_signals.py`). Six signals upgraded to `partial` in v0.5.0 with explicit limitations (no silent `not_attempted` for industry-wide mechanisms).
 
 ## Evaluation criteria (per signal)
 

@@ -21,14 +21,38 @@ Output: `quarto/_site/` (gitignored). Open `quarto/_site/index.html` in a browse
 2. `scripts/claim_audit.py` — validate research claim IDs
 3. `quarto render quarto` — Lua filter resolves `[[claim:CLM-...]]`
 
-## GitHub Pages (when repo is public)
+## GitHub Pages
 
-1. Settings → General → change repository visibility to **Public**
-2. Settings → Pages → Build and deployment → Source: **GitHub Actions**
-3. Run workflow **Quarto Publish** (or push to `main` once triggers are enabled)
-4. Site URL: **https://nvavrock.github.io/medallion/**
+**Live site:** https://nvavrock.github.io/medallion/
 
-While the repo is private, the workflow runs on `workflow_dispatch` only; Pages will not serve until the repo is public.
+### One-time setup (required or you get a 404)
+
+GitHub does **not** publish anything until Pages is enabled **and** at least one **Quarto Publish** workflow run succeeds.
+
+1. Repository must be **Public** (or GitHub Enterprise Pages policy).
+2. **Settings → Pages → Build and deployment → Source:** **GitHub Actions** (not “Deploy from a branch”).
+3. Run the workflow once: **Actions → Quarto Publish → Run workflow**, or push to `main` (workflow triggers on push).
+
+CLI equivalent (maintainers):
+
+```bash
+gh api -X POST repos/nvavrock/medallion/pages -f build_type=workflow
+gh workflow run quarto-publish.yml -R nvavrock/medallion
+```
+
+### Ongoing deploys
+
+The workflow runs on **push to `main`** and on **workflow_dispatch**. Deploy job uses the `github-pages` environment.
+
+### Troubleshooting 404
+
+| Symptom | Likely cause |
+|---------|----------------|
+| `github.io/medallion/` returns GitHub 404 | Pages never enabled, or no successful deploy yet |
+| Workflow green but still 404 | Pages source still “branch” instead of Actions |
+| Stale content | Wait ~1 min for CDN; hard-refresh |
+
+Check: `gh api repos/nvavrock/medallion/pages` should return `html_url`, not 404.
 
 ## PDF export (optional)
 

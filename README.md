@@ -52,5 +52,7 @@ make claim-audit
 
 ## Releases
 
-- **v0.2.0** — Public Quarto site (preview; repo may remain private until launch)
-- **v0.1.0** — Research corpus + code — [CHANGELOG.md](CHANGELOG.md)
+- **v0.5.0** — Phase III–VI depth, Gate B automation, synthesis remediation — [CHANGELOG.md](CHANGELOG.md)
+- **v0.4.0** — Phase II data architecture matrix and narratives
+- **v0.2.0** — Public Quarto site (preview; enable Pages when repo is public)
+- **v0.1.0** — Research corpus + code

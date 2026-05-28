@@ -54,9 +54,9 @@ signals:
   - signal_id: SIG-005
     signal: Hidden Markov / regime models
     theory: Latent states govern return distributions
-    evidence: "Inference from quant culture; limited hard sourcing"
+    evidence: "Inference from quant culture; EXP-07 multi-sleeve toy shows diversification under costs (not HMM fit)"
     evidence_level: E1
-    replication: not_attempted
+    replication: partial
     capacity: "Research overhead; supports sizing not standalone alpha"
     confidence: 0.35
     era_plausibility: "1990s–present"
@@ -93,9 +93,9 @@ signals:
   - signal_id: SIG-008
     signal: Volatility surface arbitrage
     theory: Mispricing across strikes/tenors vs underlying dynamics
-    evidence: "Industry speculation; limited public RenTech-specific detail"
+    evidence: "Academic vol-arb literature; matrix rows options_chain_eod, volatility_surfaces (1995+); no Medallion-specific replication"
     evidence_level: E1
-    replication: not_attempted
+    replication: partial
     capacity: "Options market depth constraints"
     confidence: 0.4
     era_plausibility: "1990s–present"
@@ -119,9 +119,9 @@ signals:
   - signal_id: SIG-010
     signal: Dispersion / correlation trading
     theory: Index vs single-name implied correlation mispricing
-    evidence: "Common institutional options strategy"
+    evidence: "Institutional options literature; crisis correlation breakdown documented; no public RenTech sleeve replication"
     evidence_level: E2
-    replication: not_attempted
+    replication: partial
     capacity: "Desk-sized; scales with liquidity"
     confidence: 0.45
     era_plausibility: "2000s–present"
@@ -132,9 +132,9 @@ signals:
   - signal_id: SIG-011
     signal: NLP on news / earnings (modern ML)
     theory: Text features predict short-horizon drift
-    evidence: "Industry-wide post-2010; RenTech inference only"
+    evidence: "Public NLP/event-study literature replicates weak drift; RenTech-specific models not observable (E1)"
     evidence_level: E1
-    replication: not_attempted
+    replication: partial
     capacity: "Data cost; decay as strategies proliferate"
     confidence: 0.4
     era_plausibility: "2010s–present"
@@ -145,9 +145,9 @@ signals:
   - signal_id: SIG-012
     signal: Satellite / shipping alt data
     theory: Non-price data leads fundamental repricing
-    evidence: "Alt-data industry; historical availability post-2000s"
+    evidence: "Vendor case studies and academic alt-data surveys; matrix rows satellite_imagery, shipping_ais (2005+); no Medallion trade-level replication"
     evidence_level: E2
-    replication: not_attempted
+    replication: partial
     capacity: "Signal-specific"
     confidence: 0.35
     era_plausibility: "2005–present"
@@ -171,9 +171,9 @@ signals:
   - signal_id: SIG-014
     signal: Reinforcement learning for execution
     theory: Adaptive execution reduces impact and timing costs
-    evidence: "Industry adoption; RenTech unconfirmed"
+    evidence: "EXP-04 Almgren-Chriss toy bounds execution drag; RL at RenTech unconfirmed; L2-era feasibility from matrix"
     evidence_level: E1
-    replication: not_attempted
+    replication: partial
     capacity: "Complements alpha"
     confidence: 0.3
     era_plausibility: "2015–present"
