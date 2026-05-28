@@ -1,5 +1,7 @@
-# External data paths for Phase VII experiments (stubs only; no large downloads in Phase II)
+# External data paths for Phase VII experiments
 manifest_version: 1
+
+# CI uses synthetic toys only. Optional local datasets below are not required for make smoke.
 
 datasets:
   - id: fred_macro
@@ -7,11 +9,11 @@ datasets:
     path: data/external/fred/
     matrix_rows: [economic_releases]
     license: public_domain
-    status: stub
+    status: optional
 
   - id: yfinance_equity_daily
-    description: "Yahoo Finance daily OHLCV placeholder for toy equity_daily_ohlcv experiments"
+    description: "Yahoo Finance daily OHLCV for optional local equity_daily_ohlcv experiments"
     path: data/external/yfinance/
     matrix_rows: [equity_daily_ohlcv]
     license: vendor_terms
-    status: stub
+    status: optional

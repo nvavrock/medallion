@@ -26,10 +26,22 @@ Results from `make smoke` (toy simulations with costs). Re-run locally to refres
 {{< include ../../experiments/05_vol_target_kelly/results/summary.json >}}
 ```
 
+### EXP-06 — Variance risk premium (toy)
+
+```json
+{{< include ../../experiments/06_variance_risk_premium/results/summary.json >}}
+```
+
 ### EXP-07 — Multi-signal ensemble
 
 ```json
 {{< include ../../experiments/07_multi_signal/results/summary.json >}}
+```
+
+### EXP-08 — Regime-gated ensemble (toy)
+
+```json
+{{< include ../../experiments/08_regime_filter/results/summary.json >}}
 ```
 
 ::: {.callout-warning}

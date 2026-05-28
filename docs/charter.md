@@ -80,9 +80,20 @@ This is **quantitative archaeology**: assembling fragmented public evidence, aca
 | Milestone | Status |
 |-----------|--------|
 | M0–M1 | Complete — SDLC docs; Phase I–II depth (v0.3–v0.4) |
-| M2–M4 | First draft complete (v0.5.0); narrative depth continues in v0.7+ |
+| M2–M4 | Complete — signal DB, experiments, Phases III–VIII depth (v0.5–v1.0) |
 | M5 | Complete — v0.1.0 research corpus + code |
 | M6 | Complete — live site at https://nvavrock.github.io/medallion/; Actions deploy on `main` |
+
+### Success metrics (v1.0.0)
+
+| ID | Status |
+|----|--------|
+| SM1 | Evidence coverage enforced (`validate_evidence_coverage.py`) |
+| SM2 | Six cost-aware experiments + sensitivity on EXP-03/04/05 |
+| SM3 | Phases I–VIII cross-linked from synthesis corpus map |
+| SM4 | `make reproduce` in CI and CONTRIBUTING |
+| SM5 | PDF remediation: ranges, no win-rate mantra, options/ML/survivorship |
+| SM6 | Quarto site + Pages deploy |
 
 Time is not a primary constraint; depth and accuracy are.
 
@@ -94,4 +105,4 @@ Time is not a primary constraint; depth and accuracy are.
 
 ## Approval
 
-This charter governs scope for release **v0.2.0** and later. Release hygiene and live publishing verified through **v0.6.0**. Changes require an entry in CHANGELOG.md and, if scope-expanding, an update to requirements.md.
+This charter governs scope for release **v0.2.0** and later. Charter-complete public reconstruction declared at **v1.0.0**. Changes require an entry in CHANGELOG.md and, if scope-expanding, an update to requirements.md.

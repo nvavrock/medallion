@@ -3,3 +3,9 @@ title: "Phase VIII — Synthesis"
 ---
 
 {{< include ../../research/phase_08_synthesis/synthesis.md >}}
+
+{{< include ../../research/phase_08_synthesis/experiment_integration.md >}}
+
+{{< include ../../research/phase_08_synthesis/failed_peers_extended.md >}}
+
+{{< include ../../research/phase_08_synthesis/evidence_index.md >}}

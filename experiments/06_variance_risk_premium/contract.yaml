@@ -1,0 +1,23 @@
+experiment_id: EXP-06
+title: Variance risk premium toy
+hypothesis: Harvesting implied-minus-realized vol spread shows positive gross Sharpe but net degrades with costs on vol exposure turnover.
+inputs:
+  n_days: 1260
+  vrp_bps: 2.0
+assumptions:
+  - Synthetic implied and realized vol series
+  - Linear costs on position changes in vol exposure
+cost_model:
+  commission_bps: 1.0
+  slippage_bps: 2.0
+  market_impact_model: none
+capacity_limit: "Vol sleeve turnover vs options depth (not modeled)"
+outputs:
+  - gross_sharpe
+  - net_sharpe
+  - mean_vrp_bps
+limitations:
+  - Not options market data
+  - No gap risk modeling
+linked_signals:
+  - SIG-009

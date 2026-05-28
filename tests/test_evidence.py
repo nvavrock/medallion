@@ -67,3 +67,13 @@ def test_validate_signals_script():
         text=True,
     )
     assert proc.returncode == 0, proc.stderr
+
+
+def test_validate_evidence_coverage_script():
+    proc = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "validate_evidence_coverage.py")],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    assert proc.returncode == 0, proc.stderr

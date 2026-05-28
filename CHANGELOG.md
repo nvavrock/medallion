@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.0.0] - 2026-05-28
+
+Charter-complete public reconstruction (Epics 2–5).
+
+### Added
+
+- **Epic 2:** `scripts/validate_evidence_coverage.py`; sensitivity sweeps in EXP-03/04/05 `summary.json`; [evidence_index.md](research/phase_08_synthesis/evidence_index.md)
+- **Epic 3:** Phase IV–VI and VIII narrative depth (models, risk layers, org culture/workflow, experiment integration, failed peers)
+- **Epic 4:** EXP-06 (VRP toy), EXP-08 (regime gate toy); manifest `optional` local data policy
+- **Epic 5:** [CONTRIBUTING.md](CONTRIBUTING.md), [docs/traceability.md](docs/traceability.md), synthesis corpus map
+
+### Changed
+
+- Quarto chapters 04–08 multi-include structure; six experiments in `make smoke`
+- Charter M2–M4 and SM1–SM6 status; requirements PDF table marked Done
+
 ## [0.6.0] - 2026-05-28
 
 ### Fixed

@@ -4,6 +4,20 @@
 
 See [disclaimer](../about.html).
 
+## Corpus map
+
+| Phase | Site chapter |
+|-------|----------------|
+| I History | [01-history](../chapters/01-history.html) |
+| II Data | [02-data](../chapters/02-data.html) |
+| III Signals | [03-signals](../chapters/03-signals.html) |
+| IV Execution | [04-execution](../chapters/04-execution.html) |
+| V Risk | [05-risk](../chapters/05-risk.html) |
+| VI Organization | [06-organization](../chapters/06-organization.html) |
+| VII Experiments | [07-experiments](../chapters/07-experiments.html) |
+| Evidence registry | [appendix](../appendices/evidence-registry.html) |
+| Signal database | [appendix](../appendices/signal-database.html) |
+
 ## Integrated framework
 
 Public reconstruction supports a **layered** explanation: diversified short-horizon signals (Phase III) → neutralization and sizing (Phase V) → execution cost control (Phase IV) → organizational and capacity discipline (Phase VI). No layer alone matches reported Medallion metrics in our toys or in audited public filings.

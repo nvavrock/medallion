@@ -52,7 +52,8 @@ make claim-audit
 
 ## Releases
 
-- **v0.6.0** — Quarto link fixes, CI `make reproduce`, Gate D closure — [CHANGELOG.md](CHANGELOG.md)
+- **v1.0.0** — Charter-complete corpus (Epics 2–5): evidence coverage, phase depth, 6 experiments — [CHANGELOG.md](CHANGELOG.md) · [CONTRIBUTING.md](CONTRIBUTING.md)
+- **v0.6.0** — Quarto link fixes, CI `make reproduce`, Gate D closure
 - **v0.5.0** — Phase III–VI depth, Gate B automation, synthesis remediation
 - **v0.4.0** — Phase II data architecture matrix and narratives
 - **v0.2.0** — Public Quarto site (preview; enable Pages when repo is public)

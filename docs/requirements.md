@@ -39,14 +39,14 @@ Traceability: each requirement links to `research/` folders, `quarto/`, and opti
 
 | Item | Requirement ID | Status target |
 |------|----------------|---------------|
-| Label sourced vs inferred | NFR3, rubric | All high-impact metrics use ranges/hypothesis labels |
-| Options/volatility coverage | R3a | Signals in DB |
-| Regulatory/structural edges | R8 | Section in synthesis |
-| Modern ML/NLP | R3b | Signals in DB |
-| Failed peers (LTCM, etc.) | R8 | Survivorship section |
-| Simulation rigor (not coin-flip only) | NFR2, R7 | ≥3 cost-aware experiments |
-| Reduce repetition | NFR3 | No duplicate win-rate mantra without new evidence |
-| Citation cleanup | NFR4 | Bibliography in Quarto |
+| Label sourced vs inferred | NFR3, rubric | Done — ranges in risk/synthesis |
+| Options/volatility coverage | R3a | Done — signals + options_vol.md |
+| Regulatory/structural edges | R8 | Done — synthesis section |
+| Modern ML/NLP | R3b | Done — signals + modern_ml.md |
+| Failed peers (LTCM, etc.) | R8 | Done — survivorship + failed_peers_extended.md |
+| Simulation rigor (not coin-flip only) | NFR2, R7 | Done — 6 experiments + sensitivity |
+| Reduce repetition | NFR3 | Done — win-rate rejected in synthesis |
+| Citation cleanup | NFR4 | Done — bibliography in Quarto |
 
 ## Review Gates
 

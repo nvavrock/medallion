@@ -3,3 +3,7 @@ title: "Phase IV — Microstructure & Execution"
 ---
 
 {{< include ../../research/phase_04_execution/README.md >}}
+
+{{< include ../../research/phase_04_execution/models_deep_dive.md >}}
+
+{{< include ../../research/phase_04_execution/execution_edge_assessment.md >}}

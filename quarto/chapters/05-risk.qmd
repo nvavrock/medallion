@@ -3,3 +3,9 @@ title: "Phase V — Portfolio Construction & Risk"
 ---
 
 {{< include ../../research/phase_05_risk/risk_stack.md >}}
+
+{{< include ../../research/phase_05_risk/neutralization_and_factors.md >}}
+
+{{< include ../../research/phase_05_risk/sizing_and_leverage.md >}}
+
+{{< include ../../research/phase_05_risk/tail_risk_and_crisis.md >}}

@@ -3,3 +3,9 @@ title: "Phase VI — Organizational Reverse Engineering"
 ---
 
 {{< include ../../research/phase_06_org/comparison_matrix.md >}}
+
+{{< include ../../research/phase_06_org/culture_and_secrecy.md >}}
+
+{{< include ../../research/phase_06_org/hiring_and_recruitment.md >}}
+
+{{< include ../../research/phase_06_org/research_workflow.md >}}

@@ -45,13 +45,16 @@ quarto-assets: deps
 quarto-check: quarto-assets claim-audit
 	$(PY) scripts/validate_data_matrix.py
 	$(PY) scripts/validate_signals.py
+	$(PY) scripts/validate_evidence_coverage.py
 	bash scripts/check_quarto_warnings.sh
 
 smoke: deps
 	$(PY) experiments/03_mean_reversion/run.py
 	$(PY) experiments/04_almgren_chriss/run.py
 	$(PY) experiments/05_vol_target_kelly/run.py
+	$(PY) experiments/06_variance_risk_premium/run.py
 	$(PY) experiments/07_multi_signal/run.py
+	$(PY) experiments/08_regime_filter/run.py
 
 experiments: smoke
 

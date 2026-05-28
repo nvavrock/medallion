@@ -135,3 +135,50 @@ def vol_target_kelly_simulation(
         "net_sharpe": sharpe(pd.Series(net)),
         "mean_leverage": float(lev.mean()),
     }
+
+
+def simulate_variance_risk_premium(
+    n_days: int = 252 * 5,
+    vrp_bps: float = 2.0,
+    vol_of_vol: float = 0.15,
+    cost: CostModel | None = None,
+    seed: int = 3,
+) -> dict[str, float]:
+    """Toy VRP: harvest implied-realized spread with costs on vol exposure changes."""
+    rng = np.random.default_rng(seed)
+    cost = cost or CostModel()
+    realized = pd.Series(rng.normal(0.12, vol_of_vol, n_days))
+    implied = realized + vrp_bps / 10_000
+    position = ((implied - realized) / implied.clip(lower=0.05)).fillna(0)
+    pnl = position.shift(1).fillna(0) * (implied - realized)
+    turnover = position.diff().abs().fillna(0)
+    net = pnl - turnover * cost.round_trip_cost()
+
+    def sharpe(x: pd.Series) -> float:
+        return float(x.mean() / x.std() * np.sqrt(252)) if x.std() > 0 else 0.0
+
+    gross = sharpe(pd.Series(pnl.fillna(0)))
+    net_s = sharpe(pd.Series(net.fillna(0)))
+    return {"gross_sharpe": gross, "net_sharpe": net_s, "mean_vrp_bps": vrp_bps}
+
+
+def simulate_regime_gated_ensemble(
+    n_days: int = 1260,
+    cost: CostModel | None = None,
+    seed: int = 11,
+) -> dict[str, float]:
+    """Toy regime gate: scale mean-reversion sleeve when rolling vol is elevated."""
+    cost = cost or CostModel()
+    mr_high = simulate_mean_reversion(n_days=n_days, cost=cost, seed=seed)
+    mr_low = simulate_mean_reversion(n_days=n_days, cost=cost, seed=seed + 1)
+    rng = np.random.default_rng(seed + 2)
+    ret = rng.normal(0, 0.01, n_days)
+    vol = pd.Series(ret).rolling(20).std() * np.sqrt(252)
+    gate = (vol > vol.median()).astype(float)
+    gated_net = float((mr_high.net_sharpe * gate.mean()) + (mr_low.net_sharpe * (1 - gate.mean())))
+    always_on = (mr_high.net_sharpe + mr_low.net_sharpe) / 2
+    return {
+        "always_on_net_sharpe": always_on,
+        "regime_gated_net_sharpe": gated_net,
+        "high_vol_fraction": float(gate.mean()),
+    }
