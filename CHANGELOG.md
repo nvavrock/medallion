@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.5] - 2026-05-29
+
+### Fixed
+
+- **Berkeley obituary URL:** `berkeley_news_berlekamp2019` in [`data/bibliography.yaml`](data/bibliography.yaml) now points to the live April 18, 2019 Berkeley News article (was a 404 with wrong date/slug)
+
 ## [1.0.4] - 2026-05-28
 
 ### Added
