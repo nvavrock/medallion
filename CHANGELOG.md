@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Changed
+
+- Untrack local reference PDFs/DOCX (moved to `~/keepsake`); `.gitignore` now ignores `*.pdf` and `*.docx`
+
 ## [1.0.11] - 2026-05-29
 
 ### Added

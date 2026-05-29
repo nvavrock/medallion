@@ -15,3 +15,7 @@ quarto/.quarto/
 quarto/references.bib
 quarto/filters/claims-map.json
 quarto/appendices/_generated-*.md
+
+# Local reference documents (store under ~/keepsake, not in repo)
+*.pdf
+*.docx
