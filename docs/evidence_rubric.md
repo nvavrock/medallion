@@ -55,9 +55,9 @@ Avoid repeating “51% win rate × thousands of trades” without new supporting
 
 ## Citation Format
 
-- Use bibliography keys in `data/bibliography.yaml` (e.g., `[zuckerman2019]`)
+- Use Pandoc citations with bibliography keys from `data/bibliography.yaml` (e.g., `[@zuckerman2019]`)
 - Do **not** embed messy `#:~:text` URL fragments in prose
-- Full URLs only in bibliography entries
+- Full URLs only in bibliography entries (`url` field in `bibliography.yaml`)
 
 ## Claim Audit (QA)
 

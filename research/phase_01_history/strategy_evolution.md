@@ -1,6 +1,6 @@
 # Strategy Evolution Map {#strategy-evolution-map}
 
-Sources: [zuckerman2019], [patterson2010], [wikipedia_renaissance_technologies]. See [disclaimer](../about.html).
+Sources: [@zuckerman2019], [@patterson2010], [@wikipedia_renaissance_technologies]. See [disclaimer](../about.html).
 
 The diagram below is a **pedagogical** partition. Public sources emphasize **continuity** and overlapping sleeves rather than four clean handoffs [[claim:CLM-2024-002]].
 
@@ -29,7 +29,7 @@ flowchart LR
 
 ## Stage C — Statistical equities, IBM speech talent, Simons CEO era (1993–2009)
 
-**Instruments:** Public narrative: broader **equities** and cross-sectional statistical effects alongside legacy futures work [[claim:CLM-2024-002]]. **IBM hires 1993** brought speech/NLP-style computational talent that later maps to “ML at scale” stories [[claim:CLM-2024-006]] [patterson2010].
+**Instruments:** Public narrative: broader **equities** and cross-sectional statistical effects alongside legacy futures work [[claim:CLM-2024-002]]. **IBM hires 1993** brought speech/NLP-style computational talent that later maps to “ML at scale” stories [[claim:CLM-2024-006]] [@patterson2010].
 
 **Data:** **Options chains EOD** and richer **equity** datasets become industry-standard through the 1990s–2000s (Phase II rows `options_chain_eod`, `equity_tick_trades` with post-1993 tick consolidation caveat).
 
@@ -55,7 +55,7 @@ Detailed **dataset-era feasibility** lives in [Phase II — Data](../chapters/02
 
 Phase I intentionally **does not** estimate Sharpe, alpha, or capacity numbers beyond what is already isolated in evidence records [[claim:CLM-2024-003]] [[claim:CLM-2024-004]]. **Phase III** will map candidate **signal classes** to eras; **Phase VII** will run toy **replications** whose parameters must cite rows from the Phase II matrix (e.g., do not attribute 2005-era alt-data signals to 1988 without an explicit **counterfactual** label). When you extend this chapter, add new `CLM-*` rows **before** inserting additional table rows so `make claim-audit` stays green.
 
-**Peer context:** Patterson’s industry-wide account of IBM speech hires and quant culture helps interpret **Mercer/Brown** as part of a broader **speech→finance** talent pipeline—not a uniquely RenTech invention [[claim:CLM-2024-006]] [patterson2010]. That framing reduces **survivorship** exaggeration when reading Medallion-only lore.
+**Peer context:** Patterson’s industry-wide account of IBM speech hires and quant culture helps interpret **Mercer/Brown** as part of a broader **speech→finance** talent pipeline—not a uniquely RenTech invention [[claim:CLM-2024-006]] [@patterson2010]. That framing reduces **survivorship** exaggeration when reading Medallion-only lore.
 
 **Regulatory:** For adviser existence and form timelines, prefer **IAPD** pulls over forum posts [[claim:CLM-2026-020]]. Filings will not validate performance but can anchor **registration dates** when cross-checking journalism.
 

@@ -8,9 +8,9 @@ See [disclaimer](../about.html).
 
 | Model | Role | Citation |
 |-------|------|----------|
-| **Almgren–Chriss** | Optimal execution with temporary/permanent impact | [almgren_chriss2000] |
-| **Kyle (1985)** | Informed trading, market depth, adverse selection | [kyle1985] |
-| **Hasbrouck** | Microstructure econometrics, price discovery | [hasbrouck2007] |
+| **Almgren–Chriss** | Optimal execution with temporary/permanent impact | [@almgren_chriss2000] |
+| **Kyle (1985)** | Informed trading, market depth, adverse selection | [@kyle1985] |
+| **Hasbrouck** | Microstructure econometrics, price discovery | [@hasbrouck2007] |
 | **Propagator / impact** | Transient impact from order flow (literature analogue) | Industry microstructure surveys |
 
 ## Mechanisms evaluated

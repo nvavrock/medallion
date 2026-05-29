@@ -1,6 +1,10 @@
 ---
 title: "Appendix — Bibliography"
+nocite: |
+  @*
 ---
+
+Canonical source metadata lives in [`data/bibliography.yaml`](https://github.com/nvavrock/medallion/blob/main/data/bibliography.yaml). In research prose, cite with Pandoc syntax: `[@key]`.
 
 ::: {#refs}
 :::

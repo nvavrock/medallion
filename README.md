@@ -54,8 +54,9 @@ make claim-audit
 
 ## Releases
 
+- **v1.0.4** — Bibliography appendix + Pandoc `[@key]` citations — [CHANGELOG.md](CHANGELOG.md)
+- **v1.0.3** — Remove duplicate phase titles on site chapters — [CHANGELOG.md](CHANGELOG.md)
 - **v1.0.2** — Fix claim ref links to evidence registry — [CHANGELOG.md](CHANGELOG.md)
-- **v1.0.1** — QA suite: `make qa`, PR CI, contract/rubric validators, manual checklist — [CHANGELOG.md](CHANGELOG.md)
 - **v1.0.0** — Charter-complete corpus (Epics 2–5): evidence coverage, phase depth, 6 experiments — [CHANGELOG.md](CHANGELOG.md) · [CONTRIBUTING.md](CONTRIBUTING.md)
 - **v0.6.0** — Quarto link fixes, CI `make reproduce`, Gate D closure
 - **v0.5.0** — Phase III–VI depth, Gate B automation, synthesis remediation

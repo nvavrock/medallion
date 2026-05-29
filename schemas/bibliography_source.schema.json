@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medallion.local/schemas/bibliography_source.schema.json",
+  "title": "BibliographySource",
+  "type": "object",
+  "required": ["title", "type"],
+  "properties": {
+    "title": { "type": "string" },
+    "author": { "type": "string" },
+    "year": { "type": ["integer", "null"] },
+    "type": {
+      "type": "string",
+      "enum": ["book", "paper", "essay", "web", "secondary"]
+    },
+    "url": { "type": "string", "format": "uri" },
+    "note": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -46,6 +46,7 @@ quarto-check: quarto-assets claim-audit
 	$(PY) scripts/validate_data_matrix.py
 	$(PY) scripts/validate_signals.py
 	$(PY) scripts/validate_evidence_coverage.py
+	$(PY) scripts/validate_bibliography.py
 	$(PY) scripts/validate_experiment_contracts.py
 	$(PY) scripts/validate_experiment_summaries.py
 	$(PY) scripts/rubric_lint.py --strict

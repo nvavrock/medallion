@@ -2,7 +2,7 @@
 
 This chapter synthesizes **publicly documented** milestones for Monemetrics / Renaissance Technologies and the Medallion Fund. Where journalism and Wikipedia disagree on minor details, we cite multiple keys and keep confidence moderate. Nothing here is proprietary RenTech disclosure.
 
-**Primary reading:** [zuckerman2019], [patterson2010]. **Aggregated timeline cross-check:** [wikipedia_renaissance_technologies]. **Regulatory lookup:** [sec_iapd_renaissance] ([[claim:CLM-2026-020]]). See [disclaimer](../about.html).
+**Primary reading:** [@zuckerman2019], [@patterson2010]. **Aggregated timeline cross-check:** [@wikipedia_renaissance_technologies]. **Regulatory lookup:** [@sec_iapd_renaissance] ([[claim:CLM-2026-020]]). See [disclaimer](../about.html).
 
 ## Chronology (1978–2025)
 
@@ -34,7 +34,7 @@ Simons moved from Stony Brook chairmanship into markets with a scientist-first h
 
 ### 1989–1993: Crisis, Berlekamp overhaul, employee-only pivot
 
-The 1989 drawdown and Ax departure are central to the “quant discipline beats intuition” story in [zuckerman2019] and [wikipedia_renaissance_technologies] [[claim:CLM-2026-005]]. Berlekamp’s six-month engineering sprint and 1990 rebound are among the best-attested performance facts—still **secondary**, not audited public filings [[claim:CLM-2026-006]]. Closing Medallion to outsiders in **1993** is a structural fact for capacity and secrecy narratives [[claim:CLM-2026-007]].
+The 1989 drawdown and Ax departure are central to the “quant discipline beats intuition” story in [@zuckerman2019] and [@wikipedia_renaissance_technologies] [[claim:CLM-2026-005]]. Berlekamp’s six-month engineering sprint and 1990 rebound are among the best-attested performance facts—still **secondary**, not audited public filings [[claim:CLM-2026-006]]. Closing Medallion to outsiders in **1993** is a structural fact for capacity and secrecy narratives [[claim:CLM-2026-007]].
 
 ### 1993–2009: IBM hires, equities scaling, Simons CEO era
 
@@ -57,7 +57,7 @@ Executive succession to Brown/Mercer and Simons’s chairman role are documented
 
 ## Source methodology
 
-We **prefer** [zuckerman2019] for narrative sequencing where it aligns with multiple secondaries. [wikipedia_renaissance_technologies] is used as a **concordance** table for dates that appear consistently across Bloomberg excerpts, Zuckerman, and fund-history essays—always with the caveat that Wikipedia can introduce smoothing errors [[claim:CLM-2024-006]]. [berkeley_news_berlekamp2019] elevates specific claims about Berlekamp’s Axcom/Medallion episode toward **E2–E3** when it overlaps independent journalism. We avoid treating **tertiary blogs** as primary evidence for performance figures; where only blogs repeat a statistic, we omit it or downgrade to **E1** with an explicit hypothesis label elsewhere in the corpus [[claim:CLM-2024-003]].
+We **prefer** [@zuckerman2019] for narrative sequencing where it aligns with multiple secondaries. [@wikipedia_renaissance_technologies] is used as a **concordance** table for dates that appear consistently across Bloomberg excerpts, Zuckerman, and fund-history essays—always with the caveat that Wikipedia can introduce smoothing errors [[claim:CLM-2024-006]]. [@berkeley_news_berlekamp2019] elevates specific claims about Berlekamp’s Axcom/Medallion episode toward **E2–E3** when it overlaps independent journalism. We avoid treating **tertiary blogs** as primary evidence for performance figures; where only blogs repeat a statistic, we omit it or downgrade to **E1** with an explicit hypothesis label elsewhere in the corpus [[claim:CLM-2024-003]].
 
 When this chapter conflicts with older drafts in the repo (for example, a casual “1997 hire” date for Brown/Mercer), we treat **1993** as better supported in current public timelines and have corrected downstream tables [[claim:CLM-2024-006]]. Future edits should preserve **dated citations** in `data/bibliography.yaml` and bump `last_verified` when sources change.
 

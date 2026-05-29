@@ -26,7 +26,7 @@
 | NFR8 | Experiment contracts | scripts/validate_experiment_contracts.py | quarto-check |
 | NFR9 | Summary sanity | scripts/validate_experiment_summaries.py | quarto-check |
 | NFR10 | PR CI | .github/workflows/ci.yml | PR / main |
-| NFR4 | Bibliography | data/bibliography.yaml → quarto/references.bib | quarto-assets |
+| NFR4 | Bibliography | data/bibliography.yaml → references.bib; validate_bibliography.py | quarto-check |
 | NFR5 | Reproduce | Makefile `reproduce` | CI |
 | NFR6 | Disclaimer | quarto/index.qmd, about.qmd | E |
 | NFR7 | Claim refs | quarto/filters/claim-refs.lua | site build |

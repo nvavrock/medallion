@@ -33,6 +33,9 @@ def build_bib() -> None:
         lines.append(f"  author = {{{author}}},")
         lines.append(f"  title = {{{title}}},")
         lines.append(f"  year = {{{year}}},")
+        url = src.get("url")
+        if url:
+            lines.append(f"  url = {{{url}}},")
         if note:
             lines.append(f"  note = {{{note}}},")
         lines.append("}")
@@ -62,7 +65,8 @@ def build_evidence_appendix() -> dict[str, dict]:
         )
         lines.append("")
         if c.get("sources"):
-            lines.append(f"*Sources:* {', '.join(c['sources'])}")
+            cites = "; ".join(f"[@{s}]" for s in c["sources"])
+            lines.append(f"*Sources:* {cites}")
             lines.append("")
         if c.get("counterarguments"):
             lines.append("*Counterarguments:*")

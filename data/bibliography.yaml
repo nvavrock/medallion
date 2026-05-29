@@ -1,4 +1,4 @@
-# Normalized bibliography — cite as [key] in research markdown
+# Normalized bibliography — cite as [@key] in research markdown
 sources:
   zuckerman2019:
     title: "The Man Who Solved the Market"
@@ -47,6 +47,7 @@ sources:
     author: "Wikipedia contributors"
     year: 2026
     type: secondary
+    url: "https://en.wikipedia.org/wiki/Renaissance_Technologies"
     note: "Aggregated timeline; cross-check primary sources for contentious rows"
 
   berkeley_news_berlekamp2019:
@@ -54,6 +55,7 @@ sources:
     author: "UC Berkeley News"
     year: 2019
     type: web
+    url: "https://news.berkeley.edu/2019/05/13/elwyn-b-j-berlekamp-game-theorist-and-coding-pioneer-dies-at-78/"
     note: "Obituary; Axcom/Medallion leadership and 1990 sale to Simons"
 
   sec_iapd_renaissance:
@@ -61,6 +63,7 @@ sources:
     author: "U.S. Securities and Exchange Commission"
     year: null
     type: web
+    url: "https://adviserinfo.sec.gov/"
     note: "Search adviser CRD for Renaissance Technologies LLC; use for registration dates"
 
   crsp_stock_database:
@@ -68,6 +71,7 @@ sources:
     author: "Center for Research in Security Prices"
     year: null
     type: web
+    url: "https://www.crsp.org/products/research-products/crsp-us-stock-databases"
     note: "Daily and monthly US equity history; academic standard"
 
   wrds_research_guide:
@@ -75,6 +79,7 @@ sources:
     author: "Wharton School"
     year: null
     type: web
+    url: "https://wrds-www.wharton.upenn.edu/"
     note: "Vendor access to Compustat, TAQ, and related sets"
 
   sec_market_structure_nms:
@@ -82,6 +87,7 @@ sources:
     author: "U.S. Securities and Exchange Commission"
     year: null
     type: web
+    url: "https://www.sec.gov/marketstructure"
     note: "Context for tape consolidation and quote transparency"
 
   alt_data_industry_survey:

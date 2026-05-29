@@ -15,6 +15,7 @@ See [docs/agent-git-policy.md](docs/agent-git-policy.md) for commit/tag conventi
 ## Evidence and claims
 
 - Assertive statements in `research/` must use `[[claim:CLM-...]]` with a record in [data/evidence.yaml](data/evidence.yaml).
+- Add bibliography keys to [data/bibliography.yaml](data/bibliography.yaml) before citing; use Pandoc syntax `[@key]` in prose.
 - Follow [docs/evidence_rubric.md](docs/evidence_rubric.md) (E0–E4 language, Sharpe/leverage bands).
 - Run `make qa` before opening a PR (same gates as [CI](.github/workflows/ci.yml): `reproduce` + `quarto-check`).
 

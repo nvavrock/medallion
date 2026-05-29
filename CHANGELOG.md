@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.4] - 2026-05-28
+
+### Added
+
+- **Bibliography appendix:** `nocite: @*` populates full reference list on [bibliography.qmd](quarto/appendices/bibliography.qmd)
+- Pandoc citations `[@key]` in research prose and evidence registry sources
+- [`scripts/validate_bibliography.py`](scripts/validate_bibliography.py), [`scripts/check_bibliography.sh`](scripts/check_bibliography.sh), [`schemas/bibliography_source.schema.json`](schemas/bibliography_source.schema.json)
+- `url` fields on web/secondary bibliography entries; emitted in `references.bib`
+
+### Changed
+
+- Migrated legacy `[key]` → `[@key]` in Phase I history and Phase IV execution prose
+- [`docs/evidence_rubric.md`](docs/evidence_rubric.md), [CONTRIBUTING.md](CONTRIBUTING.md), [docs/qa_manual_checklist.md](docs/qa_manual_checklist.md)
+
 ## [1.0.3] - 2026-05-28
 
 ### Fixed

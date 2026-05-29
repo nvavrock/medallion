@@ -1,6 +1,6 @@
 # Personnel Contribution Matrix {#personnel-contribution-matrix}
 
-Sources: [zuckerman2019], [patterson2010], [wikipedia_renaissance_technologies], [berkeley_news_berlekamp2019]. See [disclaimer](../about.html).
+Sources: [@zuckerman2019], [@patterson2010], [@wikipedia_renaissance_technologies], [@berkeley_news_berlekamp2019]. See [disclaimer](../about.html).
 
 ## Matrix (high level)
 
@@ -29,7 +29,7 @@ Chern–Simons work and Stony Brook chairmanship predate finance. Public timelin
 
 ### Elwyn Berlekamp
 
-UC Berkeley mathematician and coding theorist; **Axcom / Medallion** presidency in public CV summaries; obituary coverage details **1990** sale of stake back to Simons and return to academia [[claim:CLM-2026-006]] [berkeley_news_berlekamp2019].
+UC Berkeley mathematician and coding theorist; **Axcom / Medallion** presidency in public CV summaries; obituary coverage details **1990** sale of stake back to Simons and return to academia [[claim:CLM-2026-006]] [@berkeley_news_berlekamp2019].
 
 ### Sandor Straus and Henry Laufer
 

@@ -1,6 +1,6 @@
 # Infrastructure Timeline {#infrastructure-timeline}
 
-Sources: [zuckerman2019], [patterson2010], [wikipedia_renaissance_technologies]. See [disclaimer](../about.html).
+Sources: [@zuckerman2019], [@patterson2010], [@wikipedia_renaissance_technologies]. See [disclaimer](../about.html).
 
 This table mixes **industry-wide** developments (usable as context) with **Renaissance-specific** claims only where we have citations. Petabyte-scale language is **modern journalism**, not audited engineering disclosure [[claim:CLM-2026-017]] [[claim:CLM-2026-018]].
 

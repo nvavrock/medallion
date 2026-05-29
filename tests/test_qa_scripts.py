@@ -84,7 +84,15 @@ def test_rubric_win_rate_error():
         path.unlink()
 
 
-def test_rubric_win_rate_allowed_disclaimer():
+def test_validate_bibliography_script():
+    proc = subprocess.run(
+        [sys.executable, str(SCRIPTS / "validate_bibliography.py")],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    assert proc.returncode == 0, proc.stderr + proc.stdout
+
     with tempfile.NamedTemporaryFile(mode="w", suffix=".md", delete=False) as f:
         f.write("Win rate is **not used** as an evidentiary metric.\n")
         path = Path(f.name)
