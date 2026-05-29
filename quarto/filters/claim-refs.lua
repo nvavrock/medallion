@@ -55,29 +55,39 @@ local function claim_href(cid)
   return base .. "#claim-" .. cid
 end
 
-local function replace_claims(text, map)
-  return (text:gsub(pattern, function(cid)
-    if map[cid] then
-      return string.format("[%s](%s)", cid, claim_href(cid))
+local function claim_inlines(text, map)
+  local result = {}
+  local pos = 1
+  while true do
+    local s, e, cid = text:find(pattern, pos)
+    if not s then
+      if pos <= #text then
+        table.insert(result, pandoc.Str(text:sub(pos)))
+      end
+      break
     end
-    table.insert(unknown_ids, cid)
-    return "[[" .. cid .. " MISSING]]"
-  end))
-end
-
-local function markdown_to_inlines(md)
-  local doc = pandoc.read(md, "markdown")
-  if #doc.blocks == 0 then
-    return { pandoc.Str(md) }
+    if s > pos then
+      table.insert(result, pandoc.Str(text:sub(pos, s - 1)))
+    end
+    local claim = map[cid]
+    if claim then
+      local tip = claim.text or ""
+      table.insert(
+        result,
+        pandoc.Link(
+          { pandoc.Str(cid) },
+          claim_href(cid),
+          tip,
+          pandoc.Attr("", { "claim-ref" }, { ["data-claim-tip"] = tip })
+        )
+      )
+    else
+      table.insert(unknown_ids, cid)
+      table.insert(result, pandoc.Str("[[" .. cid .. " MISSING]]"))
+    end
+    pos = e + 1
   end
-  local b = doc.blocks[1]
-  if b.t == "Para" then
-    return b.content
-  end
-  if b.t == "Plain" then
-    return b.content
-  end
-  return { pandoc.Str(md) }
+  return result
 end
 
 local function transform_inlines(inlines, map)
@@ -85,11 +95,7 @@ local function transform_inlines(inlines, map)
   if not text:find("[[claim:", 1, true) then
     return inlines
   end
-  local newt = replace_claims(text, map)
-  if newt == text then
-    return inlines
-  end
-  return markdown_to_inlines(newt)
+  return claim_inlines(text, map)
 end
 
 function Plain(el)

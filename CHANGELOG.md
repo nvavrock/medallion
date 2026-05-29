@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.11] - 2026-05-29
+
+### Added
+
+- **Claim link tooltips:** hovering `[[claim:CLM-*]]` links shows the full evidence claim text in a styled popup (no need to open the registry for a quick read); click still opens the evidence registry
+
 ## [1.0.10] - 2026-05-29
 
 ### Fixed

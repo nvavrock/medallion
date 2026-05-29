@@ -10,3 +10,50 @@ $link-color: #2980b9;
   border-left: 4px solid #e67e22;
   background: #fef9f3;
 }
+
+/* Evidence claim links: hover/focus shows full claim text without visiting the registry */
+a.claim-ref {
+  position: relative;
+  cursor: help;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.15em;
+}
+
+a.claim-ref::after {
+  content: attr(data-claim-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 0.45rem);
+  transform: translateX(-50%);
+  z-index: 1200;
+  display: block;
+  width: max-content;
+  max-width: min(22rem, 85vw);
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.35rem;
+  background: #2c3e50;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.12s ease, visibility 0.12s ease;
+}
+
+a.claim-ref:hover::after,
+a.claim-ref:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (hover: none) {
+  a.claim-ref:active::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}

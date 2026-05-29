@@ -36,4 +36,21 @@ fi
 if [[ "$BAD" -ne 0 ]]; then
   exit 1
 fi
+
+DATA="$SITE/chapters/02-data.html"
+if [[ -f "$DATA" ]]; then
+  if ! grep -q 'evidence-registry.html#claim-CLM-2027-001' "$DATA"; then
+    echo "ERROR: chapters/02-data.html missing registry link for CLM-2027-001" >&2
+    exit 1
+  fi
+  if ! grep -q 'class="claim-ref"' "$DATA"; then
+    echo "ERROR: claim links missing claim-ref class (expected styled tooltip)" >&2
+    exit 1
+  fi
+  if ! grep -q 'data-claim-tip="CRSP-style' "$DATA"; then
+    echo "ERROR: claim links missing data-claim-tip tooltip text" >&2
+    exit 1
+  fi
+fi
+
 echo "Claim link check passed (chapters/notebooks link to evidence registry)."
