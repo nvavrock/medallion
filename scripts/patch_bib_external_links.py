@@ -3,17 +3,13 @@
 
 from __future__ import annotations
 
-import json
 import re
-import time
 from pathlib import Path
 
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "quarto" / "_site"
-LOG_PATH = ROOT / ".cursor" / "debug-49b21d.log"
-SESSION_ID = "49b21d"
 BROKEN_SLUG = "2019/05/13/elwyn-b-j-berlekamp"
 BROKEN_URL = (
     "https://news.berkeley.edu/2019/05/13/"
@@ -33,23 +29,6 @@ BERKELEY_REF_EM_RE = re.compile(
     r'(<div id="ref-berkeley_news_berlekamp2019"[^>]*>[\s\S]*?)<em>([^<]+)</em>',
     re.IGNORECASE,
 )
-
-
-def _log(hypothesis_id: str, location: str, message: str, data: dict, run_id: str = "patch") -> None:
-    # #region agent log
-    payload = {
-        "sessionId": SESSION_ID,
-        "runId": run_id,
-        "hypothesisId": hypothesis_id,
-        "location": location,
-        "message": message,
-        "data": data,
-        "timestamp": int(time.time() * 1000),
-    }
-    LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with LOG_PATH.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(payload) + "\n")
-    # #endregion
 
 
 def load_url_map() -> dict[str, str]:
@@ -123,7 +102,6 @@ def main() -> int:
         return 1
 
     url_map = load_url_map()
-    _log("H3", "patch_bib_external_links.py:start", "URL map loaded", {"keys_with_url": list(url_map.keys())})
 
     totals = {
         "files": 0,
@@ -146,14 +124,7 @@ def main() -> int:
             totals.setdefault("berkeley_anchors_hardened", 0)
             totals["berkeley_anchors_hardened"] += stats["berkeley_anchors_hardened"]
             totals["berkeley_title_linked"] += stats["berkeley_title_linked"]
-            _log(
-                "H3",
-                "patch_bib_external_links.py:file",
-                "Patched HTML file",
-                {"file": str(hp.relative_to(ROOT)), **stats},
-            )
 
-    _log("H3", "patch_bib_external_links.py:done", "Patch complete", totals)
     print(
         f"Patched {totals['bibref_patched']} biblioref link(s) in {totals['files']} file(s); "
         f"replaced {totals['broken_slug_replaced']} broken slug occurrence(s); "

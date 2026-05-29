@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import json
-import time
 from pathlib import Path
 
 import yaml
@@ -14,24 +13,6 @@ DATA = ROOT / "data"
 QUARTO = ROOT / "quarto"
 APPENDICES = QUARTO / "appendices"
 FILTERS = QUARTO / "filters"
-DEBUG_LOG = ROOT / ".cursor" / "debug-49b21d.log"
-
-
-def _debug_log(hypothesis_id: str, location: str, message: str, data: dict) -> None:
-    # #region agent log
-    payload = {
-        "sessionId": "49b21d",
-        "runId": "build",
-        "hypothesisId": hypothesis_id,
-        "location": location,
-        "message": message,
-        "data": data,
-        "timestamp": int(time.time() * 1000),
-    }
-    DEBUG_LOG.parent.mkdir(parents=True, exist_ok=True)
-    with DEBUG_LOG.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(payload) + "\n")
-    # #endregion
 
 
 def load_yaml(path: Path) -> dict:
@@ -55,16 +36,6 @@ def build_bib() -> None:
         url = src.get("url")
         if url:
             lines.append(f"  url = {{{url}}},")
-            if key == "berkeley_news_berlekamp2019":
-                _debug_log(
-                    "H4",
-                    "build_quarto_assets.py:build_bib",
-                    "Emitting berkeley_news URL to references.bib",
-                    {
-                        "url": url,
-                        "broken_slug": "2019/05/13/elwyn-b-j-berlekamp" in url,
-                    },
-                )
         if note:
             lines.append(f"  note = {{{note}}},")
         lines.append("}")
