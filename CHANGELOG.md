@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.7] - 2026-05-29
+
+### Fixed
+
+- **In-text bibliography links:** `scripts/patch_bib_external_links.py` rewrites `(News, 2019)` and other web-source cites to open the external URL directly (not only `#ref-*` footnotes), so clicking the cite goes to Berkeley News instead of a same-page anchor
+
+### Changed
+
+- Runs after every `quarto render` (`make site`, CI, `check_quarto_warnings.sh`)
+
 ## [1.0.6] - 2026-05-29
 
 ### Fixed

@@ -73,6 +73,7 @@ site: quarto-check smoke
 		exit 1; \
 	}
 	cd quarto && "$(QUARTO)" render
+	$(PY) scripts/patch_bib_external_links.py
 
 preview: quarto-check smoke
 	@test -n "$(QUARTO)" && test -x "$(QUARTO)" || { \

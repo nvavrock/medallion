@@ -13,6 +13,7 @@ trap 'rm -f "$LOG"' EXIT
 make quarto-assets >/dev/null
 make smoke >/dev/null
 cd quarto && "$QUARTO" render 2>&1 | tee "$LOG"
+"$ROOT/.venv/bin/python" "$ROOT/scripts/patch_bib_external_links.py"
 COUNT=$(grep -c "Unable to resolve link target" "$LOG" || true)
 if [[ "$COUNT" -gt 0 ]]; then
   echo "ERROR: $COUNT unresolved Quarto link(s)." >&2
