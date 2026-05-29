@@ -19,5 +19,12 @@ Canonical source metadata lives in [`data/bibliography.yaml`](https://github.com
 The live article is the [April 18, 2019 UC Berkeley News obituary](https://news.berkeley.edu/2019/04/18/elwyn-berlekamp-game-theorist-and-coding-pioneer-dies-at-78/){target="_blank" rel="noopener noreferrer"}. Use that link (or the matching URL under **News, U. B. (2019)** below). If you still see “Page Not Found”, hard-refresh this page (Ctrl+Shift+R) or open the link in a private window.
 :::
 
+::: {.callout-tip}
+## Hasbrouck — free PDF (2004 edition)
+
+An earlier **Empirical Market Microstructure** PDF is hosted free by University at Buffalo: [Hasbrouck's book (PDF)](https://www.acsu.buffalo.edu/~keechung/MGF743/Readings/Hasbrouck's%20book.pdf){target="_blank" rel="noopener noreferrer"}. The published **2007 Oxford edition** is cited as [@hasbrouck2007]; the web entry **Hasbrouck (2004)** below is [@hasbrouck2004_pdf].
+
+:::
+
 ::: {#refs}
 :::

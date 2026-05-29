@@ -2,9 +2,17 @@
 
 ## [Unreleased]
 
-### Changed
+## [1.0.12] - 2026-05-28
 
-- Untrack local reference PDFs/DOCX (moved to `~/keepsake`); `.gitignore` now ignores `*.pdf` and `*.docx`
+### Added
+
+- **Rocksteady Analytics branding:** navbar logo, author credits on about/index/footer (Nate Vavrock)
+- **Hasbrouck free PDF:** `hasbrouck2004_pdf` bibliography entry and callout on the bibliography appendix
+- **Edit-link guard:** CI checks GitHub “Edit this page” URLs include the `quarto/` repo subdir
+
+### Fixed
+
+- **Edit this page 404:** `website.repo-subdir: quarto` so GitHub edit links target `quarto/chapters/*.qmd`
 
 ## [1.0.11] - 2026-05-29
 

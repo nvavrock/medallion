@@ -2,6 +2,10 @@
 title: "About, disclaimer & licenses"
 ---
 
+![Rocksteady Analytics](images/rockstedy-logo.png){width=120 fig-alt="Rocksteady Analytics rhino logo"}
+
+**Author:** Nate Vavrock · **Rocksteady Analytics**
+
 ## Disclaimer
 
 This project is an **educational, evidence-driven reconstruction** based solely on **publicly available** information.

@@ -30,6 +30,15 @@ sources:
     author: "Joel Hasbrouck"
     year: 2007
     type: book
+    note: "Published 2007 (Oxford). Free earlier-edition PDF: hasbrouck2004_pdf"
+
+  hasbrouck2004_pdf:
+    title: "Empirical Market Microstructure (2004 PDF)"
+    author: "Joel Hasbrouck"
+    year: 2004
+    type: web
+    url: "https://www.acsu.buffalo.edu/~keechung/MGF743/Readings/Hasbrouck's%20book.pdf"
+    note: "University at Buffalo course reading scan; not the 2007 Oxford edition"
   cornell_medallion:
     title: "Medallion Fund performance commentary"
     author: "Brad Cornell et al."

@@ -51,6 +51,14 @@ if [[ -f "$DATA" ]]; then
     echo "ERROR: claim links missing data-claim-tip tooltip text" >&2
     exit 1
   fi
+  if grep -q 'edit/main/chapters/' "$DATA"; then
+    echo "ERROR: Edit link missing repo-subdir quarto/ prefix" >&2
+    exit 1
+  fi
+  if ! grep -q 'edit/main/quarto/chapters/02-data.qmd' "$DATA"; then
+    echo "ERROR: Edit link should target quarto/chapters/02-data.qmd on GitHub" >&2
+    exit 1
+  fi
 fi
 
 echo "Claim link check passed (chapters/notebooks link to evidence registry)."

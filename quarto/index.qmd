@@ -11,6 +11,8 @@ subtitle: "Quantitative archaeology from public evidence"
 
 Build the highest-fidelity **public** reconstruction possible of the scientific, statistical, computational, organizational, and market mechanisms that could plausibly explain Medallion’s historical performance—using only public sources, academic analogues, and reproducible (toy) experiments.
 
+<p class="site-credit">Site by <strong>Nate Vavrock</strong> · <strong>Rocksteady Analytics</strong></p>
+
 ## How to read this site
 
 | Section | Content |

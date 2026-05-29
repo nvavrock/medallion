@@ -6,8 +6,11 @@ website:
   title: "Medallion Fund Reconstruction"
   site-url: https://nvavrock.github.io/medallion/
   repo-url: https://github.com/nvavrock/medallion
+  repo-subdir: quarto
   repo-actions: [edit, issue]
   navbar:
+    logo: images/rockstedy-logo.png
+    logo-alt: Rocksteady Analytics
     left:
       - href: index.qmd
         text: Home
