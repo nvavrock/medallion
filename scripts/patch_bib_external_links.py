@@ -20,6 +20,11 @@ BIBREF_RE = re.compile(
     r'(<a href="#ref-([a-zA-Z0-9_]+)" role="doc-biblioref">)',
     re.IGNORECASE,
 )
+# Footnote URL links from citeproc (no rel=) — add noreferrer so Berkeley/Cloudflare does not block github.io referer
+BERKELEY_ANCHOR_RE = re.compile(
+    r'<a href="(https://news\.berkeley\.edu[^"]+)"(?![^>]*\brel=)([^>]*)>',
+    re.IGNORECASE,
+)
 
 
 def _log(hypothesis_id: str, location: str, message: str, data: dict, run_id: str = "patch") -> None:
@@ -52,7 +57,7 @@ def load_url_map() -> dict[str, str]:
 def patch_file(path: Path, url_map: dict[str, str]) -> dict[str, int]:
     text = path.read_text(encoding="utf-8")
     original = text
-    stats = {"bibref_patched": 0, "broken_slug_replaced": 0}
+    stats = {"bibref_patched": 0, "broken_slug_replaced": 0, "berkeley_anchors_hardened": 0}
 
     if BROKEN_SLUG in text:
         text = text.replace(BROKEN_SLUG, GOOD_SLUG)
@@ -68,6 +73,15 @@ def patch_file(path: Path, url_map: dict[str, str]) -> dict[str, int]:
 
     text = BIBREF_RE.sub(repl, text)
 
+    def harden_berkeley(m: re.Match[str]) -> str:
+        stats["berkeley_anchors_hardened"] += 1
+        url, rest = m.group(1), m.group(2)
+        if "target=" in rest:
+            return f'<a href="{url}"{rest}>'
+        return f'<a href="{url}" target="_blank" rel="noopener noreferrer"{rest}>'
+
+    text = BERKELEY_ANCHOR_RE.sub(harden_berkeley, text)
+
     if text != original:
         path.write_text(text, encoding="utf-8")
     return stats
@@ -81,13 +95,15 @@ def main() -> int:
     url_map = load_url_map()
     _log("H3", "patch_bib_external_links.py:start", "URL map loaded", {"keys_with_url": list(url_map.keys())})
 
-    totals = {"files": 0, "bibref_patched": 0, "broken_slug_replaced": 0}
+    totals = {"files": 0, "bibref_patched": 0, "broken_slug_replaced": 0, "berkeley_anchors_hardened": 0}
     for hp in SITE.rglob("*.html"):
         stats = patch_file(hp, url_map)
-        if stats["bibref_patched"] or stats["broken_slug_replaced"]:
+        if stats["bibref_patched"] or stats["broken_slug_replaced"] or stats["berkeley_anchors_hardened"]:
             totals["files"] += 1
             totals["bibref_patched"] += stats["bibref_patched"]
             totals["broken_slug_replaced"] += stats["broken_slug_replaced"]
+            totals.setdefault("berkeley_anchors_hardened", 0)
+            totals["berkeley_anchors_hardened"] += stats["berkeley_anchors_hardened"]
             _log(
                 "H3",
                 "patch_bib_external_links.py:file",
@@ -98,7 +114,8 @@ def main() -> int:
     _log("H3", "patch_bib_external_links.py:done", "Patch complete", totals)
     print(
         f"Patched {totals['bibref_patched']} biblioref link(s) in {totals['files']} file(s); "
-        f"replaced {totals['broken_slug_replaced']} broken slug occurrence(s)."
+        f"replaced {totals['broken_slug_replaced']} broken slug occurrence(s); "
+        f"hardened {totals['berkeley_anchors_hardened']} Berkeley anchor(s)."
     )
     return 0
 

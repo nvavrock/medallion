@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8] - 2026-05-29
+
+### Fixed
+
+- Footnote Berkeley URL links on bibliography pages now include `rel="noopener noreferrer"` (avoids Cloudflare blocks from `github.io` referer)
+- Live deploy verification: `verify_bibliography_urls.py` checks history chapter for external (not `#ref-`) Berkeley biblioref links
+
 ## [1.0.7] - 2026-05-29
 
 ### Fixed

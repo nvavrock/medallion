@@ -45,6 +45,20 @@ def _http_status(url: str) -> int | str:
         return str(e)
 
 
+def _http_status_get(url: str) -> int | str:
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": "Mozilla/5.0 (compatible; medallion-verify/1.0)"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return resp.status
+    except urllib.error.HTTPError as e:
+        return e.code
+    except Exception as e:
+        return str(e)
+
+
 def main() -> int:
     import yaml
 
@@ -102,43 +116,59 @@ def main() -> int:
     if broken_hits:
         errors.append(f"Broken Berkeley URL in local HTML: {broken_hits}")
 
-    live_url = "https://nvavrock.github.io/medallion/appendices/bibliography.html"
-    try:
-        with urllib.request.urlopen(
-            urllib.request.Request(live_url, headers={"User-Agent": "medallion-verify/1.0"}),
-            timeout=20,
-        ) as resp:
-            live_html = resp.read().decode("utf-8", errors="ignore")
-        live_broken = BROKEN_BERKELEY in live_html
-        live_good = GOOD_BERKELEY in live_html
-        _log(
-            "H5",
-            "verify_bibliography_urls.py:live",
-            "Live GitHub Pages bibliography.html",
-            {
-                "url": live_url,
-                "has_broken_slug": live_broken,
-                "has_good_slug": live_good,
-            },
-        )
-        if live_broken:
-            errors.append("Live deployed bibliography.html still has broken Berkeley URL")
-        if not live_good:
-            errors.append("Live deployed bibliography.html missing good Berkeley URL")
-    except Exception as e:
-        _log("H5", "verify_bibliography_urls.py:live", "Live fetch failed", {"error": str(e)})
-        errors.append(f"Could not fetch live site: {e}")
+    live_pages = {
+        "bibliography": "https://nvavrock.github.io/medallion/appendices/bibliography.html",
+        "history": "https://nvavrock.github.io/medallion/chapters/01-history.html",
+    }
+    for label, live_url in live_pages.items():
+        try:
+            with urllib.request.urlopen(
+                urllib.request.Request(live_url, headers={"User-Agent": "medallion-verify/1.0"}),
+                timeout=20,
+            ) as resp:
+                live_html = resp.read().decode("utf-8", errors="ignore")
+            live_broken = BROKEN_BERKELEY in live_html
+            live_good = GOOD_BERKELEY in live_html
+            internal_berkeley = 'href="#ref-berkeley_news_berlekamp2019"' in live_html
+            external_berkeley = (
+                "news.berkeley.edu/2019/04/18/elwyn-berlekamp" in live_html
+                and 'role="doc-biblioref"' in live_html
+            )
+            _log(
+                "H5",
+                "verify_bibliography_urls.py:live",
+                f"Live GitHub Pages {label}",
+                {
+                    "url": live_url,
+                    "has_broken_slug": live_broken,
+                    "has_good_slug": live_good,
+                    "internal_berkeley_biblioref": internal_berkeley,
+                    "external_berkeley_biblioref": external_berkeley,
+                },
+                run_id="post-fix",
+            )
+            if live_broken:
+                errors.append(f"Live {label} still has broken Berkeley URL")
+            if label == "history" and internal_berkeley:
+                errors.append("Live history chapter still uses internal #ref-berkeley biblioref")
+            if label == "history" and not external_berkeley:
+                errors.append("Live history chapter missing external Berkeley biblioref link")
+        except Exception as e:
+            _log("H5", "verify_bibliography_urls.py:live", f"Live fetch failed ({label})", {"error": str(e)}, run_id="post-fix")
+            errors.append(f"Could not fetch live {label}: {e}")
 
     if berkeley_url:
-        status = _http_status(berkeley_url)
+        head_status = _http_status(berkeley_url)
+        get_status = _http_status_get(berkeley_url)
         _log(
-            "H1",
+            "H8",
             "verify_bibliography_urls.py:http",
-            "HEAD request to YAML Berkeley URL",
-            {"url": berkeley_url, "status": status},
+            "Berkeley URL reachability",
+            {"url": berkeley_url, "head_status": head_status, "get_status": get_status},
+            run_id="post-fix",
         )
-        if status != 200:
-            errors.append(f"Berkeley URL returned {status}: {berkeley_url}")
+        if get_status != 200:
+            errors.append(f"Berkeley URL GET returned {get_status}: {berkeley_url}")
 
     if errors:
         _log("ALL", "verify_bibliography_urls.py:exit", "Verification failed", {"errors": errors})
