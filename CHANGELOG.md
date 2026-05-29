@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.10] - 2026-05-29
+
+### Fixed
+
+- Bibliography callout no longer displays the obsolete `2019/05/13` Berkeley path (that text invited testing a URL that always 404s)
+- CI fails if deployed bibliography HTML contains the broken Berkeley slug
+
 ## [1.0.9] - 2026-05-29
 
 ### Fixed

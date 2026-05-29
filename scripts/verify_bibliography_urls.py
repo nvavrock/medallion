@@ -153,6 +153,8 @@ def main() -> int:
                 errors.append("Live history chapter still uses internal #ref-berkeley biblioref")
             if label == "history" and not external_berkeley:
                 errors.append("Live history chapter missing external Berkeley biblioref link")
+            if label == "bibliography" and live_broken:
+                errors.append("Live bibliography.html exposes broken Berkeley slug in HTML")
             if label == "bibliography":
                 title_linked = (
                     'ref-berkeley_news_berlekamp2019' in live_html
