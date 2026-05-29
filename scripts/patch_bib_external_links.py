@@ -15,6 +15,10 @@ SITE = ROOT / "quarto" / "_site"
 LOG_PATH = ROOT / ".cursor" / "debug-49b21d.log"
 SESSION_ID = "49b21d"
 BROKEN_SLUG = "2019/05/13/elwyn-b-j-berlekamp"
+BROKEN_URL = (
+    "https://news.berkeley.edu/2019/05/13/"
+    "elwyn-b-j-berlekamp-game-theorist-and-coding-pioneer-dies-at-78/"
+)
 GOOD_SLUG = "2019/04/18/elwyn-berlekamp"
 BIBREF_RE = re.compile(
     r'(<a href="#ref-([a-zA-Z0-9_]+)" role="doc-biblioref">)',
@@ -68,9 +72,14 @@ def patch_file(path: Path, url_map: dict[str, str]) -> dict[str, int]:
         "berkeley_title_linked": 0,
     }
 
+    berkeley_url = url_map.get("berkeley_news_berlekamp2019", "")
+
     if BROKEN_SLUG in text:
+        stats["broken_slug_replaced"] += text.count(BROKEN_SLUG)
         text = text.replace(BROKEN_SLUG, GOOD_SLUG)
-        stats["broken_slug_replaced"] = original.count(BROKEN_SLUG)
+    if BROKEN_URL in text and berkeley_url:
+        stats["broken_slug_replaced"] += text.count(BROKEN_URL)
+        text = text.replace(BROKEN_URL, berkeley_url)
 
     def repl(m: re.Match[str]) -> str:
         key = m.group(2)
@@ -90,8 +99,6 @@ def patch_file(path: Path, url_map: dict[str, str]) -> dict[str, int]:
         return f'<a href="{url}" target="_blank" rel="noopener noreferrer"{rest}>'
 
     text = BERKELEY_ANCHOR_RE.sub(harden_berkeley, text)
-
-    berkeley_url = url_map.get("berkeley_news_berlekamp2019")
 
     def link_title(m: re.Match[str]) -> str:
         prefix, title = m.group(1), m.group(2)
