@@ -25,6 +25,10 @@ BERKELEY_ANCHOR_RE = re.compile(
     r'<a href="(https://news\.berkeley\.edu[^"]+)"(?![^>]*\brel=)([^>]*)>',
     re.IGNORECASE,
 )
+BERKELEY_REF_EM_RE = re.compile(
+    r'(<div id="ref-berkeley_news_berlekamp2019"[^>]*>[\s\S]*?)<em>([^<]+)</em>',
+    re.IGNORECASE,
+)
 
 
 def _log(hypothesis_id: str, location: str, message: str, data: dict, run_id: str = "patch") -> None:
@@ -57,7 +61,12 @@ def load_url_map() -> dict[str, str]:
 def patch_file(path: Path, url_map: dict[str, str]) -> dict[str, int]:
     text = path.read_text(encoding="utf-8")
     original = text
-    stats = {"bibref_patched": 0, "broken_slug_replaced": 0, "berkeley_anchors_hardened": 0}
+    stats = {
+        "bibref_patched": 0,
+        "broken_slug_replaced": 0,
+        "berkeley_anchors_hardened": 0,
+        "berkeley_title_linked": 0,
+    }
 
     if BROKEN_SLUG in text:
         text = text.replace(BROKEN_SLUG, GOOD_SLUG)
@@ -82,6 +91,20 @@ def patch_file(path: Path, url_map: dict[str, str]) -> dict[str, int]:
 
     text = BERKELEY_ANCHOR_RE.sub(harden_berkeley, text)
 
+    berkeley_url = url_map.get("berkeley_news_berlekamp2019")
+
+    def link_title(m: re.Match[str]) -> str:
+        prefix, title = m.group(1), m.group(2)
+        if not berkeley_url or "<a href=" in prefix:
+            return m.group(0)
+        stats["berkeley_title_linked"] += 1
+        return (
+            f'{prefix}<a href="{berkeley_url}" target="_blank" rel="noopener noreferrer">'
+            f"<em>{title}</em></a>"
+        )
+
+    text = BERKELEY_REF_EM_RE.sub(link_title, text, count=1)
+
     if text != original:
         path.write_text(text, encoding="utf-8")
     return stats
@@ -95,15 +118,27 @@ def main() -> int:
     url_map = load_url_map()
     _log("H3", "patch_bib_external_links.py:start", "URL map loaded", {"keys_with_url": list(url_map.keys())})
 
-    totals = {"files": 0, "bibref_patched": 0, "broken_slug_replaced": 0, "berkeley_anchors_hardened": 0}
+    totals = {
+        "files": 0,
+        "bibref_patched": 0,
+        "broken_slug_replaced": 0,
+        "berkeley_anchors_hardened": 0,
+        "berkeley_title_linked": 0,
+    }
     for hp in SITE.rglob("*.html"):
         stats = patch_file(hp, url_map)
-        if stats["bibref_patched"] or stats["broken_slug_replaced"] or stats["berkeley_anchors_hardened"]:
+        if (
+            stats["bibref_patched"]
+            or stats["broken_slug_replaced"]
+            or stats["berkeley_anchors_hardened"]
+            or stats["berkeley_title_linked"]
+        ):
             totals["files"] += 1
             totals["bibref_patched"] += stats["bibref_patched"]
             totals["broken_slug_replaced"] += stats["broken_slug_replaced"]
             totals.setdefault("berkeley_anchors_hardened", 0)
             totals["berkeley_anchors_hardened"] += stats["berkeley_anchors_hardened"]
+            totals["berkeley_title_linked"] += stats["berkeley_title_linked"]
             _log(
                 "H3",
                 "patch_bib_external_links.py:file",
@@ -115,7 +150,8 @@ def main() -> int:
     print(
         f"Patched {totals['bibref_patched']} biblioref link(s) in {totals['files']} file(s); "
         f"replaced {totals['broken_slug_replaced']} broken slug occurrence(s); "
-        f"hardened {totals['berkeley_anchors_hardened']} Berkeley anchor(s)."
+        f"hardened {totals['berkeley_anchors_hardened']} Berkeley anchor(s); "
+        f"linked {totals['berkeley_title_linked']} title(s)."
     )
     return 0
 

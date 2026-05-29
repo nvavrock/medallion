@@ -153,6 +153,19 @@ def main() -> int:
                 errors.append("Live history chapter still uses internal #ref-berkeley biblioref")
             if label == "history" and not external_berkeley:
                 errors.append("Live history chapter missing external Berkeley biblioref link")
+            if label == "bibliography":
+                title_linked = (
+                    'ref-berkeley_news_berlekamp2019' in live_html
+                    and '<a href="https://news.berkeley.edu/2019/04/18' in live_html
+                    and "<em>Elwyn berlekamp" in live_html
+                )
+                _log(
+                    "H9",
+                    "verify_bibliography_urls.py:live",
+                    "Berkeley title link check",
+                    {"title_linked_in_entry": title_linked},
+                    run_id="post-fix",
+                )
         except Exception as e:
             _log("H5", "verify_bibliography_urls.py:live", f"Live fetch failed ({label})", {"error": str(e)}, run_id="post-fix")
             errors.append(f"Could not fetch live {label}: {e}")

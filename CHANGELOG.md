@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9] - 2026-05-29
+
+### Fixed
+
+- Berkeley bibliography entry: italic article title is now a direct external link (not only the trailing URL)
+- Bibliography appendix callout with canonical April 18, 2019 obituary link and hard-refresh note
+
 ## [1.0.8] - 2026-05-29
 
 ### Fixed
