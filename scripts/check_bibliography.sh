@@ -33,4 +33,13 @@ if [[ -f "$HIST" ]]; then
   fi
 fi
 
+BROKEN_SLUG="2019/05/13/elwyn-b-j-berlekamp"
+if grep -rq "$BROKEN_SLUG" "$SITE"; then
+  echo "ERROR: broken Berkeley URL ($BROKEN_SLUG) found in quarto/_site HTML" >&2
+  grep -rl "$BROKEN_SLUG" "$SITE" >&2
+  exit 1
+fi
+
+"$ROOT/.venv/bin/python" "$ROOT/scripts/verify_bibliography_urls.py"
+
 echo "Bibliography check passed (appendix populated, in-text cites linked)."

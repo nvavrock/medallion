@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.6] - 2026-05-29
+
+### Fixed
+
+- Bibliography appendix: no-cache meta headers to avoid stale cached HTML with the old Berkeley URL
+
+### Added
+
+- [`scripts/verify_bibliography_urls.py`](scripts/verify_bibliography_urls.py): validates YAML, `references.bib`, local `_site`, and live Pages for the Berkeley slug; wired into [`scripts/check_bibliography.sh`](scripts/check_bibliography.sh)
+
 ## [1.0.5] - 2026-05-29
 
 ### Fixed

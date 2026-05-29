@@ -2,6 +2,13 @@
 title: "Appendix — Bibliography"
 nocite: |
   @*
+format:
+  html:
+    include-in-header:
+      text: |
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
 ---
 
 Canonical source metadata lives in [`data/bibliography.yaml`](https://github.com/nvavrock/medallion/blob/main/data/bibliography.yaml). In research prose, cite with Pandoc syntax: `[@key]`.
