@@ -179,7 +179,7 @@ $brand-laptop-blue: #a8c6d3;
 }
 
 .intro-hero-tagline {
-  font-size: 0.9rem;
+  font-size: calc(0.9rem * 1.2 * 1.1);
   font-weight: 600;
   color: #5a6a7a;
   line-height: 1.2;
@@ -188,7 +188,7 @@ $brand-laptop-blue: #a8c6d3;
   padding: 0;
   text-align: right;
   white-space: nowrap;
-  transform: translate(calc(2rem - 48px), -58px);
+  transform: translate(calc(2rem - 16px), -58px);
 }
 
 .site-credit {

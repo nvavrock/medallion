@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.0.19] - 2026-05-28
+
+### Changed
+
+- **Intro tagline:** larger font and horizontal position tuned for “Quantitative archaeology from public evidence only.”
+
 ## [1.0.18] - 2026-05-28
 
 ### Changed
