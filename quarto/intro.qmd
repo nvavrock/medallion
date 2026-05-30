@@ -1,0 +1,42 @@
+---
+title: "Introduction"
+---
+
+::: {.intro-hero}
+<img src="./images/rockstedy-logo.png" alt="Rocksteady Analytics rhino logo" class="about-brand-logo">
+<p class="intro-hero-title">Medallion Fund Reconstruction</p>
+:::
+
+**Quantitative archaeology from public evidence only.**
+
+## What this project is
+
+This site is an **evidence-graded public reconstruction** of the scientific, statistical, computational, organizational, and market mechanisms that could plausibly explain Renaissance Technologies’ Medallion Fund historical performance.
+
+We assemble fragmented **public** sources—journalism, academic microstructure theory, regulatory filings, historical market data descriptions, and reproducible toy experiments—into a coherent explanatory framework. Every major claim is tied to the [evidence registry](appendices/evidence-registry.qmd) with rubric metadata (evidence level, source quality, replication status).
+
+## What we are not doing
+
+- Obtaining or inferring proprietary RenTech systems, source code, or confidential data
+- Impersonating Renaissance Technologies or claiming insider knowledge
+- Providing investment advice or live trading infrastructure
+- Treating performance anecdotes as audited facts without labeling uncertainty
+
+## How to read the site
+
+| Element | Purpose |
+|---------|---------|
+| **Evidence levels (E0–E4)** | How strongly a claim is supported by public material (see registry) |
+| **Phases I–VIII** | Eight research chapters from history through synthesis |
+| **Appendices** | [Evidence registry](appendices/evidence-registry.qmd), [signal database](appendices/signal-database.qmd), [bibliography](appendices/bibliography.qmd) |
+| **Claim links** | Hover `[[claim:CLM-*]]` references for quick claim text; click opens the registry |
+
+## Start here
+
+1. **[Home](index.qmd)** — mission, chapter map, and how to reproduce locally
+2. **[Phase I — History](chapters/01-history.qmd)** — timeline and strategy evolution
+3. **[Evidence registry](appendices/evidence-registry.qmd)** — all claims with rubric fields
+
+<p class="site-credit">Site by <strong>Nate Vavrock</strong> · <strong>Rocksteady Analytics</strong></p>
+
+Legal disclaimer and licenses: [About](about.qmd).

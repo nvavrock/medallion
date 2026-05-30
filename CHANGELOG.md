@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+## [1.0.13] - 2026-05-28
+
+### Added
+
+- **Introduction page:** onboarding for new readers (project scope, evidence rubric, where to start)
+- **Navbar branding:** larger logo, maroon overlapping site title
+
+### Fixed
+
+- **About page logo:** reliable `./images/` path and larger display (no tiny Pandoc figure)
+
 ## [1.0.12] - 2026-05-28
 
 ### Added

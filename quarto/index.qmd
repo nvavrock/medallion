@@ -7,6 +7,8 @@ subtitle: "Quantitative archaeology from public evidence"
 **Public research site.** This is an evidence-graded reconstruction for education—not investment advice, not insider knowledge, and not affiliated with Renaissance Technologies. See [About](about.qmd) for the full disclaimer and licenses.
 :::
 
+*New here? Read the [Introduction](intro.qmd).*
+
 ## Mission
 
 Build the highest-fidelity **public** reconstruction possible of the scientific, statistical, computational, organizational, and market mechanisms that could plausibly explain Medallion’s historical performance—using only public sources, academic analogues, and reproducible (toy) experiments.
