@@ -4,7 +4,9 @@ title: "Introduction"
 
 ::: {.intro-hero}
 <img src="./images/rockstedy-logo.png" alt="Rocksteady Analytics rhino logo" class="about-brand-logo">
+<div class="intro-title-banner">
 <p class="intro-hero-title">Medallion Fund Reconstruction</p>
+</div>
 :::
 
 **Quantitative archaeology from public evidence only.**

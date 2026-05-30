@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.0.14] - 2026-05-28
+
+### Fixed
+
+- **Navbar title clip:** light cream banner overlaps the logo (UserForm-style) so the full **Medallion Fund Reconstruction** title is visible; intro hero matches
+
 ## [1.0.13] - 2026-05-28
 
 ### Added
