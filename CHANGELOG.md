@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## [1.0.21] - 2026-05-28
+
+### Added
+
+- **Chapter & appendix dividers:** 5px maroon rule under page titles before first section
+
+### Changed
+
+- **Home & About:** intro-style hero (logo, title band, tagline) matching Introduction page
+
 ## [1.0.20] - 2026-05-28
 
 ### Changed

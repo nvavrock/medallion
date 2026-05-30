@@ -214,6 +214,16 @@ $brand-laptop-blue: #a8c6d3;
   background: #fef9f3;
 }
 
+// Horizontal rule between chapter/appendix page title and first section
+body:has(.quarto-page-breadcrumbs a[href*="chapters/"]),
+body:has(.quarto-page-breadcrumbs a[href*="appendices/"]) {
+  #title-block-header.quarto-title-block {
+    border-bottom: 5px solid #8b2942;
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
 /* Evidence claim links: hover/focus shows full claim text without visiting the registry */
 a.claim-ref {
   position: relative;

@@ -2,11 +2,15 @@
 title: "About, disclaimer & licenses"
 ---
 
-::: {.about-hero}
+::: {.intro-hero}
 <img src="./images/rockstedy-logo.png" alt="Rocksteady Analytics rhino logo" class="about-brand-logo">
+<div class="intro-title-stack">
+<p class="intro-hero-title">Medallion Fund Reconstruction</p>
+<p class="intro-hero-tagline">Quantitative archaeology from public evidence only.</p>
+</div>
 :::
 
-**Author:** Nate Vavrock · **Rocksteady Analytics**
+<p class="site-credit">Site by <strong>Nate Vavrock</strong> · <strong>Rocksteady Analytics</strong></p>
 
 ## Disclaimer
 
