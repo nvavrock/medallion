@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.0.18] - 2026-05-28
+
+### Changed
+
+- **Title position:** fine-tuned Medallion Fund Reconstruction placement (navbar + intro hero)
+
 ## [1.0.17] - 2026-05-28
 
 ### Added

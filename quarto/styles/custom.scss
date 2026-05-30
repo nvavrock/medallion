@@ -41,7 +41,7 @@ $brand-laptop-blue: #a8c6d3;
   display: inline-flex;
   align-items: center;
   font-size: 1.08em;
-  transform: translateY(8px);
+  transform: translate(-2px, 5px);
 }
 
 .navbar-brand-subnav {
@@ -175,7 +175,7 @@ $brand-laptop-blue: #a8c6d3;
   background: $brand-laptop-blue;
   padding: 0 0.65rem;
   border-radius: 0 3px 3px 0;
-  transform: translateY(20px);
+  transform: translate(-2px, 17px);
 }
 
 .intro-hero-tagline {
