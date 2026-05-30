@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [1.0.15] - 2026-05-28
+
+### Changed
+
+- **Navbar title position:** Medallion title raised to ~75% up the logo; transparent overlap banner (no cream box)
+- **Navigation:** Introduction moved from navbar to first item under Research in the sidebar
+
 ## [1.0.14] - 2026-05-28
 
 ### Fixed

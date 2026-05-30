@@ -12,8 +12,6 @@ website:
     logo: images/rockstedy-logo.png
     logo-alt: Rocksteady Analytics
     left:
-      - href: intro.qmd
-        text: Introduction
       - href: index.qmd
         text: Home
       - href: about.qmd
@@ -26,6 +24,8 @@ website:
     contents:
       - section: "Research"
         contents:
+          - href: intro.qmd
+            text: Introduction
           - chapters/01-history.qmd
           - chapters/02-data.qmd
           - chapters/03-signals.qmd
