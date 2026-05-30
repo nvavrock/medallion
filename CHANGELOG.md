@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.0.22] - 2026-05-29
+
+### Changed
+
+- **Logo:** replaced site branding with `rockstedy_logo_03.png` (navbar and hero pages)
+
 ## [1.0.21] - 2026-05-28
 
 ### Added

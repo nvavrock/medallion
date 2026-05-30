@@ -9,7 +9,7 @@ website:
   repo-subdir: quarto
   repo-actions: [edit, issue]
   navbar:
-    logo: images/rockstedy-logo.png
+    logo: images/rockstedy_logo_03.png
     logo-alt: Rocksteady Analytics
     left:
       - href: index.qmd
