@@ -40,7 +40,7 @@ Build the highest-fidelity **public** reconstruction possible of the scientific,
 
 Repository: [github.com/nvavrock/medallion](https://github.com/nvavrock/medallion)
 
-When the repository is public, the site will be hosted at `https://nvavrock.github.io/medallion/`.
+Live site: [https://nvavrock.github.io/medallion/](https://nvavrock.github.io/medallion/)
 
 ## Reproduce locally
 

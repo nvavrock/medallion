@@ -16,7 +16,7 @@ Run after `make qa` passes. For Gate E (full Quarto render), also run `make site
 - [ ] Corpus map links resolve
 - [ ] Timeline / chapter claim refs (e.g. CLM-2026-001) open Evidence registry entry
 - [ ] In-text citations (e.g. Zuckerman 2019) link to reference entry on page or Bibliography appendix
-- [ ] Phase II anchors work (strategy / data chapters)
+- [ ] Chapter II anchors work (strategy / data chapters)
 
 ## 3. Evidence spot-check (~10–15 min)
 

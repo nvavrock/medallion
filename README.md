@@ -54,12 +54,15 @@ make claim-audit
 
 ## Releases
 
-- **v1.0.4** — Bibliography appendix + Pandoc `[@key]` citations — [CHANGELOG.md](CHANGELOG.md)
-- **v1.0.3** — Remove duplicate phase titles on site chapters — [CHANGELOG.md](CHANGELOG.md)
-- **v1.0.2** — Fix claim ref links to evidence registry — [CHANGELOG.md](CHANGELOG.md)
-- **v1.0.0** — Charter-complete corpus (Epics 2–5): evidence coverage, phase depth, 6 experiments — [CHANGELOG.md](CHANGELOG.md) · [CONTRIBUTING.md](CONTRIBUTING.md)
+See [CHANGELOG.md](CHANGELOG.md) for full history. Recent site releases:
+
+- **v1.0.24** — Polish pass: copy, heading hierarchy, metadata, retroactive tags
+- **v1.0.23** — Navbar maroon icons; grey Home/About links
+- **v1.0.22** — Logo update (`rockstedy_logo_03.png`)
+- **v1.0.21** — Home/About hero; maroon chapter dividers
+- **v1.0.20** — Chapter naming and compact sidebar labels
 - **v0.6.0** — Quarto link fixes, CI `make reproduce`, Gate D closure
 - **v0.5.0** — Phase III–VI depth, Gate B automation, synthesis remediation
 - **v0.4.0** — Phase II data architecture matrix and narratives
-- **v0.2.0** — Public Quarto site (preview; enable Pages when repo is public)
+- **v0.2.0** — Public Quarto site
 - **v0.1.0** — Research corpus + code

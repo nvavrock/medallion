@@ -1,4 +1,4 @@
-# Research workflow (inferred) {#research-workflow}
+## Research workflow (inferred) {#research-workflow}
 
 **Last updated:** 2026-05-28
 
@@ -13,7 +13,7 @@ flowchart LR
   risk_monitor --> hypothesis
 ```
 
-## Stages (E1–E2 inference)
+### Stages (E1–E2 inference)
 
 | Stage | Medallion hypothesis | Public evidence |
 |-------|---------------------|-----------------|

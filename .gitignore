@@ -16,6 +16,10 @@ quarto/references.bib
 quarto/filters/claims-map.json
 quarto/appendices/_generated-*.md
 
+# Editor / local artifacts
+.cursor/
+/rockstedy_logo_03.png
+
 # Local reference documents (store under ~/keepsake, not in repo)
 *.pdf
 *.docx

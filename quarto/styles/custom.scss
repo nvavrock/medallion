@@ -204,7 +204,7 @@ $navbar-link-muted: rgba(255, 255, 255, 0.92);
 }
 
 .intro-hero-title {
-  color: #8b2942;
+  color: $brand-maroon;
   font-size: calc(1.75rem * 0.9 * 1.2);
   font-weight: 700;
   line-height: 1;
@@ -256,7 +256,7 @@ $navbar-link-muted: rgba(255, 255, 255, 0.92);
 body:has(.quarto-page-breadcrumbs a[href*="chapters/"]),
 body:has(.quarto-page-breadcrumbs a[href*="appendices/"]) {
   #title-block-header.quarto-title-block {
-    border-bottom: 5px solid #8b2942;
+    border-bottom: 5px solid $brand-maroon;
     padding-bottom: 1rem;
     margin-bottom: 1.25rem;
   }

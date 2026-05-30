@@ -1,10 +1,10 @@
-# Organizational Comparison Matrix
+## Organizational Comparison Matrix
 
 **Last updated:** 2026-05-28
 
 Comparative reconstruction of **organizational** traits versus large quant peers. Cells marked **(E1)** are inferred; **(E2)** follow journalism or firm public profiles. Not investment advice.
 
-## Dimension matrix
+### Dimension matrix
 
 | Dimension | Renaissance / Medallion (inferred) | Two Sigma | D.E. Shaw | Citadel |
 |-----------|-------------------------------------|-----------|-----------|---------|
@@ -18,18 +18,18 @@ Comparative reconstruction of **organizational** traits versus large quant peers
 | **ML / compute** | IBM hires 1993 [[claim:CLM-2024-006]]; scale-up inferred | ML-first branding | Tech + arbitrage | HFT + fundamental |
 | **Edge hypothesis (E1)** | Org + models + execution integration | ML + data scale | Tech + relative value | MM + multi-strategy |
 
-## Peer failure and dispersion lessons
+### Peer failure and dispersion lessons
 
 - **LTCM:** Concentrated relative value, extreme leverage — contrast with inferred Medallion diversification [[claim:CLM-2024-010]].
 - **Talent dispersion:** DE Shaw and other spin-outs show **shared hiring pools** without identical returns — org is **necessary, not sufficient** [[claim:CLM-2024-009]].
 
-## What org explains vs. does not
+### What org explains vs. does not
 
 **Plausibly explains:** retention of researchers, long-horizon model R&D, secrecy reducing alpha leakage, capacity discipline on Medallion.
 
 **Does not explain alone:** Magnitude of Sharpe or leverage paths (see Chapter V ranges); proprietary signal weights.
 
-## Conclusion
+### Conclusion
 
 Organizational design may be a **durable moat** alongside signals and risk stack, but peers adopted similar hiring and data strategies without replicating Medallion outcomes. Future sourcing should prefer **primary** interviews and regulatory filings over single-book narratives.
 

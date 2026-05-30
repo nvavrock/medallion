@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## [1.0.24] - 2026-05-29
+
+### Changed
+
+- **Copy:** remove stale “when the repository is public” wording on Home/About; README releases list updated
+- **Heading hierarchy:** demote duplicate H1s in Chapter I, V, and VI research includes
+- **Branding CSS:** use `$brand-maroon` for intro hero title and section dividers
+- **Metadata:** `pyproject.toml` version 1.0.24; ignore `.cursor/` and root logo duplicate
+
+### Added
+
+- **QA report:** [docs/qa_reports/2026-05-29.md](docs/qa_reports/2026-05-29.md)
+- **Retroactive tags:** v1.0.20–v1.0.23 on GitHub
+
 ## [1.0.23] - 2026-05-29
 
 ### Changed

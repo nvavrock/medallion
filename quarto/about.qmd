@@ -31,7 +31,7 @@ Many conclusions are **hypotheses** labeled with evidence level (E0–E4), sourc
 
 ## Contributing
 
-Issues and pull requests are welcome when the repository is public. Please:
+Issues and pull requests are welcome. Please:
 
 1. Add evidence records to `data/evidence.yaml` for new claims
 2. Run `make claim-audit` and `make site` before submitting

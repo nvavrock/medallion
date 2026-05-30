@@ -1,4 +1,4 @@
-# Risk Stack Reconstruction
+## Risk Stack Reconstruction
 
 **Last updated:** 2026-05-28
 
@@ -13,7 +13,7 @@ flowchart BT
   L5 --> L6[Tail_Risk_Layer]
 ```
 
-## Layer 1 — Signal
+### Layer 1 — Signal
 
 **Function:** Generate forecasts across instruments and horizons.
 
@@ -21,7 +21,7 @@ flowchart BT
 
 **Failure modes:** Regime shifts, crowding, structural breaks (SIG-004, SIG-005).
 
-## Layer 2 — Neutralization
+### Layer 2 — Neutralization
 
 **Function:** Remove factor and market beta exposure.
 
@@ -29,7 +29,7 @@ flowchart BT
 
 **Evidence:** E2 industry practice; RenTech-specific factor set unknown.
 
-## Layer 3 — Position sizing
+### Layer 3 — Position sizing
 
 **Function:** Translate forecasts into weights under risk budgets.
 
@@ -37,7 +37,7 @@ flowchart BT
 
 **Experiment:** [EXP-05](https://github.com/nvavrock/medallion/tree/main/experiments/05_vol_target_kelly) — EXP-05 applies banded leverage with commission and slippage; compare gross versus net Sharpe in `results/summary.json`.
 
-## Layer 4 — Execution
+### Layer 4 — Execution
 
 **Function:** Minimize implementation shortfall and timing risk.
 
@@ -45,7 +45,7 @@ flowchart BT
 
 **Link:** [Chapter IV — Execution](../chapters/04-execution.html).
 
-## Layer 5 — Portfolio
+### Layer 5 — Portfolio
 
 **Function:** Correlation control, capital allocation, leverage at fund level.
 
@@ -59,7 +59,7 @@ flowchart BT
 | Net Sharpe | Lower than gross; fees and capacity not precisely public |
 | Leverage | Band **~5×–12×** effective (E1) [[claim:CLM-2024-004]] |
 
-## Layer 6 — Tail risk
+### Layer 6 — Tail risk
 
 **Function:** Crisis behavior, drawdown control, de-grossing.
 
@@ -67,7 +67,7 @@ flowchart BT
 
 **Failure modes:** Correlation breakdown (SIG-010), vol spikes (SIG-009), liquidity freezes.
 
-## Stack conclusion
+### Stack conclusion
 
 No single layer explains Medallion in public data. Signal diversity plus sizing and execution discipline are **plausible necessary** components; precise attribution is **not** publicly identifiable.
 

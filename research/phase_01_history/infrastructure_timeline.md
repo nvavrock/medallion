@@ -1,4 +1,4 @@
-# Infrastructure Timeline {#infrastructure-timeline}
+## Infrastructure Timeline {#infrastructure-timeline}
 
 Sources: [@zuckerman2019], [@patterson2010], [@wikipedia_renaissance_technologies]. See [disclaimer](../about.html).
 
@@ -12,7 +12,7 @@ This table mixes **industry-wide** developments (usable as context) with **Renai
 | 2006–2014 | GPU experiments industry-wide; larger farms | Order-book vendor feeds (`order_book_l2`); options surfaces | Sub-ms races at cutting edge | Modern profiles allege **petabyte-scale** warehouse—treat as **characterization** [[claim:CLM-2026-017]] |
 | 2015+ | Cloud + GPU norm for ML industry | Alt-data explosion (Chapter II: news, transcripts, AIS, etc.) | Smart order routers, internalization debates | Secrecy dominates; internal pipeline **unknown** [[claim:CLM-2026-018]] |
 
-## Cross-links to Chapter II (data availability)
+### Cross-links to Chapter II (data availability)
 
 Use the matrix for **earliest_year** discipline when inferring what signals were even *possible* in each era:
 
@@ -22,7 +22,7 @@ Use the matrix for **earliest_year** discipline when inferring what signals were
 
 Full YAML: [data_availability_matrix.yaml](https://github.com/nvavrock/medallion/blob/main/research/phase_02_data/data_availability_matrix.yaml).
 
-## Industry vs firm (wording discipline)
+### Industry vs firm (wording discipline)
 
 **Industry-wide:** co-location, consolidated tape, vendor market data, GPU clusters for ML research.
 
@@ -30,10 +30,10 @@ Full YAML: [data_availability_matrix.yaml](https://github.com/nvavrock/medallion
 
 **Hypothesis (E1):** proprietary cleaning + workflow + organizational secrecy compounded generic hardware [[claim:CLM-2026-019]].
 
-## Regulatory footnote
+### Regulatory footnote
 
 Adviser registration and form history: [[claim:CLM-2026-020]] — useful for **legal existence** and reporting events, not for reverse-engineering models.
 
-## Reading discipline
+### Reading discipline
 
 When infrastructure claims appear in podcasts or documentaries, they often **compress decades** of industry progress into a single “they had supercomputers” beat. This chapter instead ties each era to **observable market-data milestones** (Chapter II) and labels **RenTech-internal** machinery as unknown unless a named source provides a checkable fact [[claim:CLM-2026-018]]. The result is less cinematic but more auditable: readers can see which advantages were **generic** (everyone got consolidated tape) versus **hypothesized** (proprietary cleaning stacks) [[claim:CLM-2026-019]].
