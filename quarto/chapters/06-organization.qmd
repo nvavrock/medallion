@@ -1,5 +1,5 @@
 ---
-title: "Phase VI — Organizational Reverse Engineering"
+title: "Chapter VI — Organizational Reverse Engineering"
 ---
 
 {{< include ../../research/phase_06_org/comparison_matrix.md >}}

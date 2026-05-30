@@ -12,7 +12,7 @@ Market depth and adverse selection: informed flow moves prices against liquidity
 
 ## Hasbrouck — price discovery
 
-Variance decomposition and information shares link trades/quotes to efficient price. Supports measuring **execution quality** and short-horizon signal decay. **Limit:** requires tick/L2 history (era-gated post-1993/2000 per Phase II).
+Variance decomposition and information shares link trades/quotes to efficient price. Supports measuring **execution quality** and short-horizon signal decay. **Limit:** requires tick/L2 history (era-gated post-1993/2000 per Chapter II).
 
 ## Propagator and inventory models
 

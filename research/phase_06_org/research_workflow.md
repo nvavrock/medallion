@@ -19,8 +19,8 @@ flowchart LR
 |-------|---------------------|-----------------|
 | Hypothesis | Scientist-led, long R&D | [[claim:CLM-2024-009]] |
 | Data | Proprietary cleaning | [[claim:CLM-2026-019]] |
-| Models | Ensemble / stat-arb | Phase III signals |
-| Portfolio | Neutralized, vol-targeted | Phase V |
+| Models | Ensemble / stat-arb | Chapter III signals |
+| Portfolio | Neutralized, vol-targeted | Chapter V |
 | Execution | Low drag | [[claim:CLM-2024-007]] |
 | Risk | De-gross in stress | [[claim:CLM-2024-010]] contrast |
 

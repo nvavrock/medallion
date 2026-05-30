@@ -19,14 +19,14 @@ Build the highest-fidelity **public** reconstruction possible of the scientific,
 
 | Section | Content |
 |---------|---------|
-| [Phase I — History](chapters/01-history.qmd) | Timeline, strategy evolution, key figures |
-| [Phase II — Data](chapters/02-data.qmd) | Historical data availability (1980–2025) |
-| [Phase III — Signals](chapters/03-signals.qmd) | Signal hypothesis database |
-| [Phase IV — Execution](chapters/04-execution.qmd) | Microstructure and execution edge |
-| [Phase V — Risk](chapters/05-risk.qmd) | Six-layer risk stack |
-| [Phase VI — Organization](chapters/06-organization.qmd) | Culture vs peer quant firms |
-| [Phase VII — Experiments](chapters/07-experiments.qmd) | Computational reconstructions |
-| [Phase VIII — Synthesis](chapters/08-synthesis.qmd) | Integrated conclusions |
+| [Chapter I — History](chapters/01-history.qmd) | Timeline, strategy evolution, key figures |
+| [Chapter II — Data](chapters/02-data.qmd) | Historical data availability (1980–2025) |
+| [Chapter III — Signals](chapters/03-signals.qmd) | Signal hypothesis database |
+| [Chapter IV — Execution](chapters/04-execution.qmd) | Microstructure and execution edge |
+| [Chapter V — Risk](chapters/05-risk.qmd) | Six-layer risk stack |
+| [Chapter VI — Organization](chapters/06-organization.qmd) | Culture vs peer quant firms |
+| [Chapter VII — Experiments](chapters/07-experiments.qmd) | Computational reconstructions |
+| [Chapter VIII — Synthesis](chapters/08-synthesis.qmd) | Integrated conclusions |
 | [Evidence registry](appendices/evidence-registry.qmd) | All claims with rubric metadata |
 
 ## Cite this work

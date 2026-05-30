@@ -23,9 +23,9 @@ Canonical store: [data/signals.yaml](https://github.com/nvavrock/medallion/blob/
 | [Options / vol](#options-vol) | SIG-008–010 | R3a |
 | [Modern ML](#modern-ml) | SIG-011–014, SIG-013 | R3b |
 
-## Data dependencies (Phase II)
+## Data dependencies (Chapter II)
 
-Before deepening signal essays or running Phase VII experiments, map each signal to datasets in [signal → data crosswalk](../chapters/02-data.html#signal-data-map) and cite matrix rows in experiment configs.
+Before deepening signal essays or running Chapter VII experiments, map each signal to datasets in [signal → data crosswalk](../chapters/02-data.html#signal-data-map) and cite matrix rows in experiment configs.
 
 ## Replication (Gate B)
 

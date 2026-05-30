@@ -8,7 +8,7 @@
 
 ## Answer
 
-**No** as a sole explanation [[claim:CLM-2024-007]]. Public reconstruction treats execution as **necessary** (cost and impact control) but **insufficient** without diversified predictive signals (Phase III) and risk stacking (Phase V).
+**No** as a sole explanation [[claim:CLM-2024-007]]. Public reconstruction treats execution as **necessary** (cost and impact control) but **insufficient** without diversified predictive signals (Chapter III) and risk stacking (Chapter V).
 
 ## EXP-04 interpretation (toy)
 
@@ -18,6 +18,6 @@ Typical frozen run magnitudes are **negative net Sharpe** at modest edge_bps onc
 
 ## Regulatory / structural increments (E1)
 
-Liquidity rebates, fee tiers, and tax-aware routing may add incremental net return (Phase VIII). These are not quantified here.
+Liquidity rebates, fee tiers, and tax-aware routing may add incremental net return (Chapter VIII). These are not quantified here.
 
 Requirement: R4

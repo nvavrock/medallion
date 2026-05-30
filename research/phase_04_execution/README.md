@@ -25,7 +25,7 @@ Market makers and HFT liquidity providers earn spreads but face inventory risk; 
 
 ### Cross-venue execution and latency
 
-Multi-venue routing, colocation, and fee tiers are **E1** for RenTech specifically but well documented industry-wide. They interact with regulatory edges (rebates, maker-taker) treated in Phase VIII.
+Multi-venue routing, colocation, and fee tiers are **E1** for RenTech specifically but well documented industry-wide. They interact with regulatory edges (rebates, maker-taker) treated in Chapter VIII.
 
 ### Market impact and capacity
 
@@ -35,7 +35,7 @@ Permanent and temporary impact constrain how much notional can be turned over be
 
 **Can execution edge alone explain a significant fraction of reported Medallion performance?**
 
-**Answer (sourced inference):** **No** as a sole explanation [[claim:CLM-2024-007]]. Transaction costs, impact, and capacity bind microstructure-only stories unless paired with predictive alpha. Execution is a **necessary cost control layer** (Phase V layer 4), not a substitute for signal diversity (Phase III).
+**Answer (sourced inference):** **No** as a sole explanation [[claim:CLM-2024-007]]. Transaction costs, impact, and capacity bind microstructure-only stories unless paired with predictive alpha. Execution is a **necessary cost control layer** (Chapter V layer 4), not a substitute for signal diversity (Chapter III).
 
 ## Experiment (R4b)
 
@@ -53,6 +53,6 @@ SIG-014 remains **E1** at RenTech. EXP-04 bounds **static** optimal execution; R
 
 ## Regulatory / structural edges (inference)
 
-We hypothesize (E1) that liquidity rebates, fee tiers, and tax-aware trading add **incremental** net return but are under-documented publicly. Quantitative treatment: Phase VIII — Synthesis.
+We hypothesize (E1) that liquidity rebates, fee tiers, and tax-aware trading add **incremental** net return but are under-documented publicly. Quantitative treatment: Chapter VIII — Synthesis.
 
 Requirements: R4, R4b

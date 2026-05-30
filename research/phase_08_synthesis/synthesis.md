@@ -20,7 +20,7 @@ See [disclaimer](../about.html).
 
 ## Integrated framework
 
-Public reconstruction supports a **layered** explanation: diversified short-horizon signals (Phase III) → neutralization and sizing (Phase V) → execution cost control (Phase IV) → organizational and capacity discipline (Phase VI). No layer alone matches reported Medallion metrics in our toys or in audited public filings.
+Public reconstruction supports a **layered** explanation: diversified short-horizon signals (Chapter III) → neutralization and sizing (Chapter V) → execution cost control (Chapter IV) → organizational and capacity discipline (Chapter VI). No layer alone matches reported Medallion metrics in our toys or in audited public filings.
 
 ## What plausibly explains performance
 

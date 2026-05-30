@@ -27,7 +27,7 @@ Comparative reconstruction of **organizational** traits versus large quant peers
 
 **Plausibly explains:** retention of researchers, long-horizon model R&D, secrecy reducing alpha leakage, capacity discipline on Medallion.
 
-**Does not explain alone:** Magnitude of Sharpe or leverage paths (see Phase V ranges); proprietary signal weights.
+**Does not explain alone:** Magnitude of Sharpe or leverage paths (see Chapter V ranges); proprietary signal weights.
 
 ## Conclusion
 

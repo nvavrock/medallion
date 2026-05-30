@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-26
 
-Weather, shipping, satellite, news/NLP, macro releases, geopolitical events, and commodity flows—emphasizing **cost**, **latency**, and **alpha half-life** versus Phase III signals (especially SIG-011 and SIG-012).
+Weather, shipping, satellite, news/NLP, macro releases, geopolitical events, and commodity flows—emphasizing **cost**, **latency**, and **alpha half-life** versus Chapter III signals (especially SIG-011 and SIG-012).
 
 ## Cost and compute profile
 
@@ -54,4 +54,4 @@ Alt-data is **not** RenTech-specific; industry surveys document adoption curves 
 
 ## Alpha half-life vs data latency
 
-Alt-data with **days-to-quarters** latency (satellite, AIS, freight) cannot support SIG-002/SIG-007 microstructure horizons. NLP at **minutes-to-daily** can overlap SIG-011 but faces crowding. Phase VII experiments using these rows must document license and era constraints in [data/manifest.yaml](https://github.com/nvavrock/medallion/blob/main/data/manifest.yaml).
+Alt-data with **days-to-quarters** latency (satellite, AIS, freight) cannot support SIG-002/SIG-007 microstructure horizons. NLP at **minutes-to-daily** can overlap SIG-011 but faces crowding. Chapter VII experiments using these rows must document license and era constraints in [data/manifest.yaml](https://github.com/nvavrock/medallion/blob/main/data/manifest.yaml).

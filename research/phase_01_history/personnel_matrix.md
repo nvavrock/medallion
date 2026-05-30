@@ -33,7 +33,7 @@ UC Berkeley mathematician and coding theorist; **Axcom / Medallion** presidency 
 
 ### Sandor Straus and Henry Laufer
 
-**Straus:** operational continuity after Berlekamp per Wikipedia-cited annual report summaries [[claim:CLM-2026-009]]. **Laufer:** consultant on early-1990s overhaul [[claim:CLM-2026-015]]; later-era public roles are outside this Phase I scope.
+**Straus:** operational continuity after Berlekamp per Wikipedia-cited annual report summaries [[claim:CLM-2026-009]]. **Laufer:** consultant on early-1990s overhaul [[claim:CLM-2026-015]]; later-era public roles are outside this Chapter I scope.
 
 ### Nick Patterson
 

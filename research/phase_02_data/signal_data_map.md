@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-26
 
-Maps each Phase III signal (`SIG-001` … `SIG-015` in [data/signals.yaml](https://github.com/nvavrock/medallion/blob/main/data/signals.yaml)) to required [matrix](https://github.com/nvavrock/medallion/blob/main/research/phase_02_data/data_availability_matrix.yaml) rows, earliest plausible Medallion era, and blockers. Use before Phase VII experiments.
+Maps each Chapter III signal (`SIG-001` … `SIG-015` in [data/signals.yaml](https://github.com/nvavrock/medallion/blob/main/data/signals.yaml)) to required [matrix](https://github.com/nvavrock/medallion/blob/main/research/phase_02_data/data_availability_matrix.yaml) rows, earliest plausible Medallion era, and blockers. Use before Chapter VII experiments.
 
 | Signal | Required matrix rows | Earliest Medallion era | Blockers |
 |--------|----------------------|------------------------|----------|
@@ -55,4 +55,4 @@ Maps each Phase III signal (`SIG-001` … `SIG-015` in [data/signals.yaml](https
 | equity_index_constituents | SIG-001, SIG-010 |
 | macro_futures_curve | SIG-003, SIG-005 |
 
-Tape consolidation [[claim:CLM-2027-002]] and L2 vendor eras [[claim:CLM-2027-003]] are the main **era gates** for microstructure signals. Alt-data rows require manifest paths before Phase VII download (see [data/manifest.yaml](https://github.com/nvavrock/medallion/blob/main/data/manifest.yaml)).
+Tape consolidation [[claim:CLM-2027-002]] and L2 vendor eras [[claim:CLM-2027-003]] are the main **era gates** for microstructure signals. Alt-data rows require manifest paths before Chapter VII download (see [data/manifest.yaml](https://github.com/nvavrock/medallion/blob/main/data/manifest.yaml)).

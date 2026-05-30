@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-28
 
-Frozen JSON in [Phase VII](../chapters/07-experiments.html) comes from `make smoke`. **None** replicate Medallion returns.
+Frozen JSON in [Chapter VII](../chapters/07-experiments.html) comes from `make smoke`. **None** replicate Medallion returns.
 
 | ID | Proves (directional) | Does not prove |
 |----|----------------------|----------------|

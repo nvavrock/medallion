@@ -43,7 +43,7 @@ flowchart BT
 
 **Mechanisms:** Almgren–Chriss / Kyle frameworks; possible adaptive execution (SIG-014 E1). EXP-04 shows execution drag can erode naive alpha.
 
-**Link:** [Phase IV — Execution](../chapters/04-execution.html).
+**Link:** [Chapter IV — Execution](../chapters/04-execution.html).
 
 ## Layer 5 — Portfolio
 

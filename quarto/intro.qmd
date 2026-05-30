@@ -28,14 +28,14 @@ We assemble fragmented **public** sources—journalism, academic microstructure 
 | Element | Purpose |
 |---------|---------|
 | **Evidence levels (E0–E4)** | How strongly a claim is supported by public material (see registry) |
-| **Phases I–VIII** | Eight research chapters from history through synthesis |
+| **Chapters I–VIII** | Eight research chapters from history through synthesis |
 | **Appendices** | [Evidence registry](appendices/evidence-registry.qmd), [signal database](appendices/signal-database.qmd), [bibliography](appendices/bibliography.qmd) |
 | **Claim links** | Hover `[[claim:CLM-*]]` references for quick claim text; click opens the registry |
 
 ## Start here
 
 1. **[Home](index.qmd)** — mission, chapter map, and how to reproduce locally
-2. **[Phase I — History](chapters/01-history.qmd)** — timeline and strategy evolution
+2. **[Chapter I — History](chapters/01-history.qmd)** — timeline and strategy evolution
 3. **[Evidence registry](appendices/evidence-registry.qmd)** — all claims with rubric fields
 
 <p class="site-credit">Site by <strong>Nate Vavrock</strong> · <strong>Rocksteady Analytics</strong></p>

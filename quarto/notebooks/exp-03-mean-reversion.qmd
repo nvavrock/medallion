@@ -4,6 +4,6 @@ execute:
   enabled: false
 ---
 
-Static results are in [Phase VII — Experiments](../chapters/07-experiments.qmd).
+Static results are in [Chapter VII — Experiments](../chapters/07-experiments.qmd).
 
 To execute: `make smoke` then `make site`.

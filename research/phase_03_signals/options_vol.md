@@ -4,7 +4,7 @@
 
 Workstream **R3a** covers **SIG-008**, **SIG-009**, and **SIG-010**. Public RenTech-specific options detail is thin [[claim:CLM-2024-008]]; we grade mechanisms from market structure theory and industry practice, not proprietary books.
 
-## Data foundation (Phase II)
+## Data foundation (Chapter II)
 
 | Signal | Matrix rows | Earliest plausible era |
 |--------|-------------|------------------------|
@@ -24,7 +24,7 @@ Listed US options chains are widely available by the mid-1990s [[claim:CLM-2027-
 
 **Theory:** Implied volatility systematically exceeds realized over horizons (VRP literature). **Replication:** partial — VRP is among the better-documented options factors in academia (E3 evidence on mechanism); fund-specific sizing unknown.
 
-**Failure modes:** 2008, 2020 vol spikes. **Capacity:** moderate until tail events; pairs with tail-risk layer (Phase V).
+**Failure modes:** 2008, 2020 vol spikes. **Capacity:** moderate until tail events; pairs with tail-risk layer (Chapter V).
 
 ## SIG-010 — Dispersion / correlation trading
 

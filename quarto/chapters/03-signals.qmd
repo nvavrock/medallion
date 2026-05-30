@@ -1,5 +1,5 @@
 ---
-title: "Phase III — Signal Reconstruction"
+title: "Chapter III — Signal Reconstruction"
 ---
 
 {{< include ../../research/phase_03_signals/README.md >}}

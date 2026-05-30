@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-28
 
-Signals **SIG-001** through **SIG-007** form the best-sourced reconstruction cluster: equity and futures stat-arb, short-horizon mean reversion, momentum, pairs/cointegration, state-space tools, and order-flow microstructure. Each row below ties the hypothesis to Phase II data rows in [signal → data crosswalk](../chapters/02-data.html#signal-data-map).
+Signals **SIG-001** through **SIG-007** form the best-sourced reconstruction cluster: equity and futures stat-arb, short-horizon mean reversion, momentum, pairs/cointegration, state-space tools, and order-flow microstructure. Each row below ties the hypothesis to Chapter II data rows in [signal → data crosswalk](../chapters/02-data.html#signal-data-map).
 
 ## SIG-001 — Statistical arbitrage (equity baskets)
 
@@ -20,7 +20,7 @@ Signals **SIG-001** through **SIG-007** form the best-sourced reconstruction clu
 
 **Data:** `equity_tick_trades`, `equity_intraday_ohlc`, `fx_spot_tick`, `order_book_l2` (L2 from ~2000s [[claim:CLM-2027-003]]). **Era gate:** consolidated US tape ~1993 [[claim:CLM-2027-002]].
 
-**Capacity:** High turnover; transaction costs dominate at scale [[claim:CLM-2024-007]]. Linked to execution layer (Phase IV), not standalone “Medallion explanation.”
+**Capacity:** High turnover; transaction costs dominate at scale [[claim:CLM-2024-007]]. Linked to execution layer (Chapter IV), not standalone “Medallion explanation.”
 
 ## SIG-003 — Momentum
 
@@ -46,8 +46,8 @@ Signals **SIG-001** through **SIG-007** form the best-sourced reconstruction clu
 
 **Theory:** Signed volume predicts short-horizon prices (Hasbrouck, Kyle). **Replication:** partial — microstructure literature; no proprietary order-book replay.
 
-**Data:** tick + L2 era 2000s+. **Capacity:** HFT-scale at minutes; capacity rises with holding period. Feeds Phase IV execution analysis and SIG-014 (inference).
+**Data:** tick + L2 era 2000s+. **Capacity:** HFT-scale at minutes; capacity rises with holding period. Feeds Chapter IV execution analysis and SIG-014 (inference).
 
 ## Cluster conclusion
 
-Core sleeves plausibly explain **diversified short-horizon alpha** but not reported Sharpe or leverage alone. Risk stacking (SIG-015, Phase V) and costs (Phase IV) are required for a coherent public reconstruction.
+Core sleeves plausibly explain **diversified short-horizon alpha** but not reported Sharpe or leverage alone. Risk stacking (SIG-015, Chapter V) and costs (Chapter IV) are required for a coherent public reconstruction.

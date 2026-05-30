@@ -4,7 +4,7 @@
 
 ## Summary
 
-Phase II documents **what data existed when** (1980–2025) for reconstructing a Medallion-like systematic shop: a claim-tagged [Historical Data Availability Matrix](https://github.com/nvavrock/medallion/blob/main/research/phase_02_data/data_availability_matrix.yaml), era narratives, traditional/alt deep dives, estimation methodology, and a **signal → dataset** crosswalk for Phase III and Phase VII.
+Chapter II documents **what data existed when** (1980–2025) for reconstructing a Medallion-like systematic shop: a claim-tagged [Historical Data Availability Matrix](https://github.com/nvavrock/medallion/blob/main/research/phase_02_data/data_availability_matrix.yaml), era narratives, traditional/alt deep dives, estimation methodology, and a **signal → dataset** crosswalk for Chapter III and Chapter VII.
 
 ## Reading order
 
@@ -38,13 +38,13 @@ Matrix rows cite `claim_ids` resolved in [data/evidence.yaml](https://github.com
 
 ## Links
 
-- Phase I strategy eras: [Phase I — History](../chapters/01-history.html#strategy-evolution-map)  
-- Phase III signals: [Phase III — Signals](../chapters/03-signals.html)  
-- This chapter on the site: [Phase II — Data](../chapters/02-data.html)
+- Chapter I strategy eras: [Chapter I — History](../chapters/01-history.html#strategy-evolution-map)  
+- Chapter III signals: [Chapter III — Signals](../chapters/03-signals.html)  
+- This chapter on the site: [Chapter II — Data](../chapters/02-data.html)
 
 ## How this chapter fits the reconstruction
 
-Phase I established **when** strategies and personnel changed; Phase II establishes **what inputs could exist** in each era. Rows are conservative on RenTech-specific access: where public sources only document industry timelines, `medallion_era` strings label **E1** hypotheses explicitly. Phase III signal essays should cite both a signal ID and the matrix rows in the [signal → data crosswalk](#signal-data-map) before claiming a data-dependent mechanism. Phase VII toy experiments must register external paths in [data/manifest.yaml](https://github.com/nvavrock/medallion/blob/main/data/manifest.yaml) even when using public APIs (FRED, yfinance stubs)—so provenance stays auditable when the site is published.
+Chapter I established **when** strategies and personnel changed; Chapter II establishes **what inputs could exist** in each era. Rows are conservative on RenTech-specific access: where public sources only document industry timelines, `medallion_era` strings label **E1** hypotheses explicitly. Chapter III signal essays should cite both a signal ID and the matrix rows in the [signal → data crosswalk](#signal-data-map) before claiming a data-dependent mechanism. Chapter VII toy experiments must register external paths in [data/manifest.yaml](https://github.com/nvavrock/medallion/blob/main/data/manifest.yaml) even when using public APIs (FRED, yfinance stubs)—so provenance stays auditable when the site is published.
 
 ## QA
 

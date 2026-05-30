@@ -1,15 +1,15 @@
-# Phase I — Historical Reconstruction
+# Chapter I — Historical Reconstruction
 
 **Last updated:** 2026-05-26
 
 ## Summary
 
-Phase I reconstructs the **public** arc of Monemetrics / Renaissance Technologies and the Medallion Fund: founding, early crises, Berlekamp overhaul, employee-only structure, IBM hires, and succession—without claiming proprietary detail.
+Chapter I reconstructs the **public** arc of Monemetrics / Renaissance Technologies and the Medallion Fund: founding, early crises, Berlekamp overhaul, employee-only structure, IBM hires, and succession—without claiming proprietary detail.
 
 ## Reading order
 
 1. [timeline.md](timeline.md) — master chronology and era narratives  
-2. [strategy_evolution.md](strategy_evolution.md) — strategy eras with Phase II data cross-links  
+2. [strategy_evolution.md](strategy_evolution.md) — strategy eras with Chapter II data cross-links  
 3. [personnel_matrix.md](personnel_matrix.md) — people, periods, mini-bios  
 4. [infrastructure_timeline.md](infrastructure_timeline.md) — compute/data/execution context  
 

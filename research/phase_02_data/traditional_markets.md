@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-26
 
-Deep dive on core market datasets grouped by **latency tier**: end-of-day → intraday bars → tick/trades → limit order book (L2). Cross-reference [signal → data crosswalk](#signal-data-map) for Phase III links.
+Deep dive on core market datasets grouped by **latency tier**: end-of-day → intraday bars → tick/trades → limit order book (L2). Cross-reference [signal → data crosswalk](#signal-data-map) for Chapter III links.
 
 ## End-of-day tier
 

@@ -1,5 +1,5 @@
 ---
-title: "Phase II — Data Architecture"
+title: "Chapter II — Data Architecture"
 ---
 
 {{< include ../../research/phase_02_data/README.md >}}

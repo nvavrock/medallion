@@ -8,11 +8,11 @@ This table mixes **industry-wide** developments (usable as context) with **Renai
 |-----|-------------------------|----------------------|----------------------------|------------------------------|
 | 1978–1988 | Unix-era workstations; early clusters industry-wide | Futures/FX; improving futures histories; limited equity tick | Phone/broker-era latency; manual ops common | Long Island operations; scientist-led data accumulation [[claim:CLM-2026-001]] [[claim:CLM-2026-016]] |
 | 1989–1993 | Same class as leading quant shops of the era | EOD equities widely available; tick tape emerging | Floor + electronic transition period | Post-drawdown **system rewrite** under Berlekamp cohort [[claim:CLM-2026-006]] |
-| 1993–2005 | Industry moves toward Linux clusters, more RAM | Consolidated US equity tape (see Phase II `equity_tick_trades`); options chains EOD | Co-location arms race begins for equity HFT broadly | IBM hires bring speech/NLP compute culture [[claim:CLM-2024-006]]; **2005** outside-investor buyout [[claim:CLM-2026-008]] |
+| 1993–2005 | Industry moves toward Linux clusters, more RAM | Consolidated US equity tape (see Chapter II `equity_tick_trades`); options chains EOD | Co-location arms race begins for equity HFT broadly | IBM hires bring speech/NLP compute culture [[claim:CLM-2024-006]]; **2005** outside-investor buyout [[claim:CLM-2026-008]] |
 | 2006–2014 | GPU experiments industry-wide; larger farms | Order-book vendor feeds (`order_book_l2`); options surfaces | Sub-ms races at cutting edge | Modern profiles allege **petabyte-scale** warehouse—treat as **characterization** [[claim:CLM-2026-017]] |
-| 2015+ | Cloud + GPU norm for ML industry | Alt-data explosion (Phase II: news, transcripts, AIS, etc.) | Smart order routers, internalization debates | Secrecy dominates; internal pipeline **unknown** [[claim:CLM-2026-018]] |
+| 2015+ | Cloud + GPU norm for ML industry | Alt-data explosion (Chapter II: news, transcripts, AIS, etc.) | Smart order routers, internalization debates | Secrecy dominates; internal pipeline **unknown** [[claim:CLM-2026-018]] |
 
-## Cross-links to Phase II (data availability)
+## Cross-links to Chapter II (data availability)
 
 Use the matrix for **earliest_year** discipline when inferring what signals were even *possible* in each era:
 
@@ -36,4 +36,4 @@ Adviser registration and form history: [[claim:CLM-2026-020]] — useful for **l
 
 ## Reading discipline
 
-When infrastructure claims appear in podcasts or documentaries, they often **compress decades** of industry progress into a single “they had supercomputers” beat. This chapter instead ties each era to **observable market-data milestones** (Phase II) and labels **RenTech-internal** machinery as unknown unless a named source provides a checkable fact [[claim:CLM-2026-018]]. The result is less cinematic but more auditable: readers can see which advantages were **generic** (everyone got consolidated tape) versus **hypothesized** (proprietary cleaning stacks) [[claim:CLM-2026-019]].
+When infrastructure claims appear in podcasts or documentaries, they often **compress decades** of industry progress into a single “they had supercomputers” beat. This chapter instead ties each era to **observable market-data milestones** (Chapter II) and labels **RenTech-internal** machinery as unknown unless a named source provides a checkable fact [[claim:CLM-2026-018]]. The result is less cinematic but more auditable: readers can see which advantages were **generic** (everyone got consolidated tape) versus **hypothesized** (proprietary cleaning stacks) [[claim:CLM-2026-019]].

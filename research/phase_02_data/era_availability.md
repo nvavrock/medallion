@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-05-26
 
-This document maps [data_availability_matrix.yaml](https://github.com/nvavrock/medallion/blob/main/research/phase_02_data/data_availability_matrix.yaml) rows to **industry-available** versus **plausible for Renaissance Technologies** eras, aligned with [Phase I strategy eras](../chapters/01-history.html#strategy-evolution-map). Evidence anchors use `[[claim:CLM-...]]` from [data/evidence.yaml](https://github.com/nvavrock/medallion/blob/main/data/evidence.yaml).
+This document maps [data_availability_matrix.yaml](https://github.com/nvavrock/medallion/blob/main/research/phase_02_data/data_availability_matrix.yaml) rows to **industry-available** versus **plausible for Renaissance Technologies** eras, aligned with [Chapter I strategy eras](../chapters/01-history.html#strategy-evolution-map). Evidence anchors use `[[claim:CLM-...]]` from [data/evidence.yaml](https://github.com/nvavrock/medallion/blob/main/data/evidence.yaml).
 
 ## 1980s — Monemetrics / early RenTech
 
@@ -55,4 +55,4 @@ This document maps [data_availability_matrix.yaml](https://github.com/nvavrock/m
 
 **Plausible for RenTech:** Satellite/shipping alt data (SIG-012) and modern NLP (SIG-011) are **industry-wide**; attribution to Medallion remains E1–E2. Core short-horizon stat-arb likely still rests on price, futures, and FX microstructure with alt-data as diversifiers.
 
-**Review Gate A:** Core traditional rows plus ≥6 alternative categories are present in the matrix; see [Phase II overview](#phase-ii-overview) checklist.
+**Review Gate A:** Core traditional rows plus ≥6 alternative categories are present in the matrix; see [Chapter II overview](#phase-ii-overview) checklist.

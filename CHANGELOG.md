@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [1.0.20] - 2026-05-28
+
+### Changed
+
+- **Chapter naming:** page titles use `Chapter I–VIII`; sidebar section renamed to Chapters with compact labels (`I — Historical Reconstruction`, etc.)
+- **Cross-links:** research corpus and site index/intro updated from Phase to Chapter references
+
 ## [1.0.19] - 2026-05-28
 
 ### Changed

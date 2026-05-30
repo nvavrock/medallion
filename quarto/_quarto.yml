@@ -22,18 +22,26 @@ website:
   sidebar:
     style: floating
     contents:
-      - section: "Research"
+      - section: "Chapters"
         contents:
           - href: intro.qmd
             text: Introduction
-          - chapters/01-history.qmd
-          - chapters/02-data.qmd
-          - chapters/03-signals.qmd
-          - chapters/04-execution.qmd
-          - chapters/05-risk.qmd
-          - chapters/06-organization.qmd
-          - chapters/07-experiments.qmd
-          - chapters/08-synthesis.qmd
+          - href: chapters/01-history.qmd
+            text: I — Historical Reconstruction
+          - href: chapters/02-data.qmd
+            text: II — Data Architecture
+          - href: chapters/03-signals.qmd
+            text: III — Signal Reconstruction
+          - href: chapters/04-execution.qmd
+            text: IV — Microstructure & Execution
+          - href: chapters/05-risk.qmd
+            text: V — Portfolio Construction & Risk
+          - href: chapters/06-organization.qmd
+            text: VI — Organizational Reverse Engineering
+          - href: chapters/07-experiments.qmd
+            text: VII — Computational Reconstruction
+          - href: chapters/08-synthesis.qmd
+            text: VIII — Synthesis
       - section: "Appendices"
         contents:
           - appendices/evidence-registry.qmd

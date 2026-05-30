@@ -1,5 +1,5 @@
 ---
-title: "Phase I — Historical Reconstruction"
+title: "Chapter I — Historical Reconstruction"
 ---
 
 {{< include ../../research/phase_01_history/timeline.md >}}

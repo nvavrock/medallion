@@ -1,5 +1,5 @@
 ---
-title: "Phase VII — Computational Reconstruction"
+title: "Chapter VII — Computational Reconstruction"
 ---
 
 {{< include ../../research/phase_07_compute/README.md >}}
