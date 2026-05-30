@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.0.23] - 2026-05-29
+
+### Changed
+
+- **Navbar accents:** maroon GitHub and search icons; Home/About links light grey on dark bar (title band unchanged)
+
 ## [1.0.22] - 2026-05-29
 
 ### Changed

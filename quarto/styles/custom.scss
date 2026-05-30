@@ -6,6 +6,9 @@ $link-color: #2980b9;
 $navbar-logo-height: 64px;
 $intro-hero-logo-height: 180px;
 $brand-laptop-blue: #a8c6d3;
+$brand-maroon: #8b2942;
+$brand-maroon-bright: #c4566a;
+$navbar-link-muted: rgba(255, 255, 255, 0.92);
 
 .navbar-brand-container {
   display: flex;
@@ -67,11 +70,46 @@ $brand-laptop-blue: #a8c6d3;
   font-weight: 600;
   padding: 0.1rem 0.25rem;
   line-height: 1.2;
+  color: $navbar-link-muted;
   opacity: 0.92;
 }
 
 .navbar-brand-subnav .nav-link:hover,
 .navbar-brand-subnav .nav-link:focus {
+  color: #fff;
+  opacity: 1;
+}
+
+.navbar .navbar-nav.ms-auto .nav-link,
+.navbar .navbar-nav.ms-auto .nav-link i,
+.navbar #quarto-search .aa-DetachedSearchButton,
+.navbar #quarto-search .aa-DetachedSearchButtonIcon,
+.navbar #quarto-search button,
+.navbar #quarto-search .bi,
+.navbar .quarto-navbar-tools a {
+  color: $brand-maroon-bright !important;
+}
+
+.navbar .navbar-nav.ms-auto .nav-link:hover,
+.navbar .navbar-nav.ms-auto .nav-link:focus,
+.navbar #quarto-search .aa-DetachedSearchButton:hover,
+.navbar #quarto-search button:hover,
+.navbar .quarto-navbar-tools a:hover {
+  color: lighten($brand-maroon-bright, 10%) !important;
+}
+
+.navbar #quarto-search svg {
+  fill: $brand-maroon-bright;
+}
+
+.navbar-collapse .navbar-nav.me-auto:not(.navbar-brand-subnav) .nav-link {
+  color: $navbar-link-muted;
+  opacity: 0.92;
+}
+
+.navbar-collapse .navbar-nav.me-auto:not(.navbar-brand-subnav) .nav-link:hover,
+.navbar-collapse .navbar-nav.me-auto:not(.navbar-brand-subnav) .nav-link:focus {
+  color: #fff;
   opacity: 1;
 }
 
@@ -109,7 +147,7 @@ $brand-laptop-blue: #a8c6d3;
 }
 
 .navbar-brand-text-stack > .navbar-brand:not(.navbar-brand-logo) .navbar-title {
-  color: #8b2942;
+  color: $brand-maroon;
   font-size: 1em;
   font-weight: 700;
   line-height: 1;
