@@ -47,6 +47,7 @@ format:
       - styles/custom.scss
     toc: true
     code-copy: true
+    include-in-header: _includes/navbar-subnav.html
     include-after-body: _includes/disclaimer-footer.html
 
 bibliography: references.bib

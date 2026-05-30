@@ -1,0 +1,80 @@
+<script>
+(function () {
+  var collapseId = "navbarCollapse";
+  var stackClass = "navbar-brand-text-stack";
+  var subnavClass = "navbar-brand-subnav";
+  var mq = window.matchMedia("(min-width: 992px)");
+
+  function leftNav() {
+    var collapse = document.getElementById(collapseId);
+    return collapse ? collapse.querySelector(".navbar-nav.me-auto") : null;
+  }
+
+  function restoreMobile(leftNavEl, collapse) {
+    var brandContainer = document.querySelector(".navbar-brand-container");
+    var stack = brandContainer
+      ? brandContainer.querySelector("." + stackClass)
+      : null;
+
+    if (leftNavEl) {
+      leftNavEl.classList.remove(subnavClass);
+      if (leftNavEl.parentNode !== collapse) {
+        var githubNav = collapse.querySelector(".navbar-nav.ms-auto");
+        collapse.insertBefore(leftNavEl, githubNav || null);
+      }
+    }
+
+    if (stack && brandContainer) {
+      var titleInStack = stack.querySelector(
+        ".navbar-brand:not(.navbar-brand-logo)"
+      );
+      if (titleInStack) {
+        brandContainer.appendChild(titleInStack);
+      }
+      stack.remove();
+    }
+  }
+
+  function layoutDesktop() {
+    var brandContainer = document.querySelector(".navbar-brand-container");
+    var titleBrand = brandContainer
+      ? brandContainer.querySelector(".navbar-brand:not(.navbar-brand-logo)")
+      : null;
+    var leftNavEl = leftNav();
+    var collapse = document.getElementById(collapseId);
+    if (!brandContainer || !titleBrand || !leftNavEl || !collapse) return;
+
+    var stack = brandContainer.querySelector("." + stackClass);
+    if (!stack) {
+      stack = document.createElement("div");
+      stack.className = stackClass;
+      brandContainer.appendChild(stack);
+    }
+    if (titleBrand.parentNode !== stack) {
+      stack.appendChild(titleBrand);
+    }
+    leftNavEl.classList.add(subnavClass);
+    if (leftNavEl.parentNode !== stack) {
+      stack.appendChild(leftNavEl);
+    }
+  }
+
+  function update() {
+    var collapse = document.getElementById(collapseId);
+    var leftNavEl = leftNav();
+    if (!leftNavEl || !collapse) return;
+    if (mq.matches) {
+      layoutDesktop();
+    } else {
+      restoreMobile(leftNavEl, collapse);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", update);
+  } else {
+    update();
+  }
+  mq.addEventListener("change", update);
+})();
+</script>

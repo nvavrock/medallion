@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+## [1.0.17] - 2026-05-28
+
+### Added
+
+- **Navbar subnav layout:** Home and About sit below the site title (desktop); intro hero tagline matches
+
+### Changed
+
+- **Title styling:** laptop-blue background on Medallion title (navbar + intro); tuned font size, vertical position, and compact band height
+- **Intro hero:** tagline stacked under title with aligned positioning
+
 ## [1.0.16] - 2026-05-28
 
 ### Fixed
