@@ -3,6 +3,9 @@ $primary: #2c3e50;
 $link-color: #2980b9;
 
 /*-- scss:rules --*/
+$navbar-logo-height: 64px;
+$intro-hero-logo-height: 180px;
+
 .navbar-brand-container {
   display: flex;
   align-items: flex-end;
@@ -14,20 +17,22 @@ $link-color: #2980b9;
   position: relative;
   z-index: 1;
   flex-shrink: 0;
+  margin-bottom: 0;
 }
 
 .navbar-brand img,
 .navbar-logo {
-  max-height: 64px;
+  max-height: $navbar-logo-height;
   width: auto;
+  display: block;
 }
 
 .navbar-brand:not(.navbar-brand-logo) {
   margin-left: -44px;
-  margin-bottom: 16px;
+  margin-bottom: calc(#{$navbar-logo-height} - 1.1em - 2px);
   position: relative;
   z-index: 2;
-  padding: 0.35rem 0.75rem 0.35rem 1.1rem;
+  padding: 0 0.75rem 0 1.1rem;
   background: transparent;
 }
 
@@ -56,18 +61,22 @@ $link-color: #2980b9;
 
 .intro-hero .about-brand-logo {
   margin: 0;
-  max-width: 180px;
+  max-width: $intro-hero-logo-height;
+  max-height: $intro-hero-logo-height;
+  width: auto;
+  height: auto;
   position: relative;
   z-index: 1;
   flex-shrink: 0;
+  margin-bottom: 0;
 }
 
 .intro-title-banner {
   margin-left: -44px;
-  margin-bottom: 16px;
+  margin-bottom: calc(#{$intro-hero-logo-height} - 1.75rem * 1.2 - 6px);
   position: relative;
   z-index: 2;
-  padding: 0.35rem 0.75rem 0.35rem 1.1rem;
+  padding: 0 0.75rem 0 1.1rem;
   background: transparent;
 }
 

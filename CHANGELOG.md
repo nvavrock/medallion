@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.0.16] - 2026-05-28
+
+### Fixed
+
+- **Brand title vertical align:** Medallion title sits above the rhino horn (navbar + intro hero); transparent overlap retained
+
 ## [1.0.15] - 2026-05-28
 
 ### Changed
