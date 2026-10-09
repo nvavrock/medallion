@@ -1,5 +1,7 @@
 # EXP-09 finish checklist
 
+Plan: [PLAN.md](PLAN.md).
+
 Check items in order. Do not mark a block done until every box in it is checked.
 
 ## 1. Simulation

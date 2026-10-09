@@ -2,7 +2,9 @@
 
 **Status:** active. This folder is the current primary objective for the Medallion repo. Other work waits until the checklist is done.
 
-**Plan:** Baum–Welch experiment (EXP-09). Finish criteria live in [CHECKLIST.md](CHECKLIST.md).
+**Plan:** [Baum–Welch experiment (EXP-09)](PLAN.md). Finish criteria live in [CHECKLIST.md](CHECKLIST.md).
+
+Start here next session: open [PLAN.md](PLAN.md), then work [CHECKLIST.md](CHECKLIST.md) from the top.
 
 ## What this objective is
 
